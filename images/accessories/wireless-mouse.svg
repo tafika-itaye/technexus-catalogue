@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="240" viewBox="0 0 300 240">
+  <defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" style="stop-color:#333"/><stop offset="100%" style="stop-color:#333bb"/>
+  </linearGradient></defs>
+  <rect width="300" height="240" fill="url(#g)" rx="8"/>
+  <rect x="75" y="75" width="150" height="105" rx="8" fill="rgba(255,255,255,.15)" stroke="rgba(255,255,255,.4)" stroke-width="2"/><circle cx="150" cy="128" r="22" fill="rgba(255,255,255,.12)"/>
+  <text x="150" y="214" text-anchor="middle" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" opacity=".9">Logitech</text>
+  <text x="150" y="230" text-anchor="middle" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="9.5" opacity=".7">Wireless Mouse 2.4GHz</text>
+</svg>
