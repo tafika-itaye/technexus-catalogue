@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TechNexus — IT Solutions, Language Services & Equipment Supply</title>
+<style>
+:root{--navy:#0d1b2a;--blue:#1565c0;--accent:#e53935;--gold:#f9a825;--light:#f4f6fb;--card:#ffffff;--text:#1a1a2e;--muted:#5a6880;--radius:12px;--shadow:0 4px 24px rgba(13,27,42,.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:var(--light);color:var(--text)}
+.site-header{background:var(--navy);color:#fff}
+.header-top{display:flex;align-items:center;justify-content:space-between;padding:18px 40px;border-bottom:3px solid var(--blue)}
+.logo-area h1{font-size:1.7rem;font-weight:800;letter-spacing:.5px}
+.logo-area .tagline{font-size:.75rem;color:#90afc5;letter-spacing:1.5px;text-transform:uppercase;margin-top:2px}
+.contact-bar{text-align:right;font-size:.85rem;color:#b0c4de}
+.contact-bar a{color:#90caf9;text-decoration:none}
+.contact-bar .ci{display:flex;align-items:center;justify-content:flex-end;gap:6px;margin-bottom:4px}
+.hero{background:linear-gradient(135deg,var(--navy) 60%,#1565c0 100%);color:#fff;padding:64px 40px;text-align:center}
+.hero h2{font-size:2.2rem;font-weight:700;margin-bottom:12px}
+.hero p{color:#90caf9;font-size:1.05rem;max-width:650px;margin:0 auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;max-width:1200px;margin:56px auto;padding:0 24px}
+.scard{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;border:1.5px solid #e8ecf3;transition:transform .2s,box-shadow .2s;text-decoration:none;color:inherit;display:flex;flex-direction:column}
+.scard:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(13,27,42,.2)}
+.simg{height:200px;display:flex;align-items:center;justify-content:center;position:relative}
+.simg .ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(13,27,42,.75),transparent 60%);display:flex;align-items:flex-end;padding:20px}
+.simg .ov span{color:#fff;font-size:1.4rem;font-weight:800}
+.sicon{font-size:3.5rem;filter:drop-shadow(0 4px 12px rgba(0,0,0,.3))}
+.sbody{padding:24px;flex:1;display:flex;flex-direction:column}
+.sbody h3{font-size:1.15rem;color:var(--navy);margin-bottom:8px;font-weight:700}
+.sbody p{font-size:.88rem;color:var(--muted);line-height:1.6;flex:1}
+.scta{display:inline-block;margin-top:16px;padding:10px 24px;background:var(--blue);color:#fff;border-radius:8px;font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;text-align:center}
+footer{background:var(--navy);color:#90afc5;text-align:center;padding:32px 24px;margin-top:48px;font-size:.83rem;line-height:1.8}
+footer strong{color:#fff}
+footer a{color:#90caf9;text-decoration:none}
+@media(max-width:640px){
+  .header-top{flex-direction:column;gap:12px;text-align:center}
+  .contact-bar{text-align:center}
+  .hero{padding:40px 20px}
+  .hero h2{font-size:1.6rem}
+}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-top">
+    <div class="logo-area"><h1>TechNexus</h1><div class="tagline">IT Solutions &amp; Equipment Supply</div></div>
+    <div class="contact-bar">
+      <div class="ci">📞 <a href="https://wa.me/265889941700">+265 889 9 41 700</a></div>
+      <div class="ci">📧 <a href="mailto:technexus_mw@proton.me">technexus_mw@proton.me</a></div>
+      <div class="ci">📍 Blantyre, Malawi</div>
+    </div>
+  </div>
+</header>
+<div class="hero">
+  <h2>Technology. Language. Infrastructure.</h2>
+  <p>End-to-end IT hardware supply, professional language services, and custom PC assembly for businesses across Southern &amp; East Africa.</p>
+</div>
+<div class="grid">
+  <a href="catalogue.html" class="scard">
+    <div class="simg" style="background:linear-gradient(135deg,#1565c0,#0d1b2a)">
+      <span class="sicon">💻</span>
+      <div class="ov"><span>Product Catalogue</span></div>
+    </div>
+    <div class="sbody">
+      <h3>IT Hardware &amp; Equipment</h3>
+      <p>Certified HP, Dell, Lenovo, Samsung, Synology, APC, Canon hardware. Business laptops, desktops, NAS, UPS, printers, components, peripherals, and accessories. Bulk pricing available.</p>
+      <span class="scta">View Catalogue →</span>
+    </div>
+  </a>
+  <a href="computer-assembly.html" class="scard">
+    <div class="simg" style="background:linear-gradient(135deg,#2e7d32,#1b5e20)">
+      <span class="sicon">🖥️</span>
+      <div class="ov"><span>PC Assembly</span></div>
+    </div>
+    <div class="sbody">
+      <h3>Custom Desktop PC Assembly</h3>
+      <p>Office and educational desktop PCs built to spec. Intel i5 platforms, quality components, Windows 11 Pro, assembled and QA-tested. Volume pricing for schools, government, and enterprise.</p>
+      <span class="scta">View Builds →</span>
+    </div>
+  </a>
+  <a href="language-services.html" class="scard">
+    <div class="simg" style="background:linear-gradient(135deg,#e65100,#bf360c)">
+      <span class="sicon">🌍</span>
+      <div class="ov"><span>Language Services</span></div>
+    </div>
+    <div class="sbody">
+      <h3>TechNexus Scripts</h3>
+      <p>Professional translation, transcription, subtitling, interpretation, and language training. English, Portuguese, Chichewa, Swahili. HIPAA/GDPR-aware. Serving government, diplomatic, NGO, legal, and health sectors.</p>
+      <span class="scta">View Services →</span>
+    </div>
+  </a>
+</div>
+<footer>
+  <strong>TechNexus</strong> | Blantyre, Malawi<br>
+  📞 <a href="https://wa.me/265889941700">+265 889 9 41 700</a> · 📧 <a href="mailto:technexus_mw@proton.me">technexus_mw@proton.me</a><br>
+  <div style="margin-top:12px;font-size:.72rem;color:#5a7fa0">© 2026 TechNexus. All rights reserved.</div>
+</footer>
+</body>
+</html>
