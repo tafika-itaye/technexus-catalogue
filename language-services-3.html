@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TechNexus Scripts — Professional Language Services</title>
+<style>
+:root{
+  --bg:#0a1628;--surface:#0d1b2a;--card-bg:rgba(255,255,255,.05);--card-border:rgba(255,255,255,.1);
+  --teal:#00bfa5;--teal-dim:#00897b;--amber:#f0a030;--text:#e0e8f0;--muted:#7a90a8;
+  --radius:14px;
+  --glass:rgba(255,255,255,.04);--glass-border:rgba(255,255,255,.1);
+  --shadow:0 8px 32px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text)}
+a{color:var(--teal);text-decoration:none}
+
+header{background:var(--surface);border-bottom:1px solid var(--glass-border)}
+.header-top{display:flex;align-items:center;justify-content:space-between;padding:16px 40px}
+.logo-area h1{font-size:1.6rem;font-weight:800}
+.logo-area h1 a{color:#fff}
+.logo-area .sub{font-size:.82rem;color:var(--teal);font-weight:600;margin-top:2px}
+.logo-area .tagline{font-size:.72rem;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-top:2px}
+.contact-bar{text-align:right;font-size:.82rem;color:var(--muted)}
+.contact-bar a{color:var(--teal)}
+.ci{display:flex;align-items:center;justify-content:flex-end;gap:6px;margin-bottom:3px}
+
+nav{background:rgba(0,191,165,.06);border-top:1px solid var(--glass-border);padding:8px 40px;display:flex;gap:10px;flex-wrap:wrap}
+nav a{color:var(--muted);font-size:.78rem;padding:4px 14px;border:1px solid var(--glass-border);border-radius:20px;transition:all .2s}
+nav a:hover,nav .nav-active{color:var(--teal);border-color:var(--teal);background:rgba(0,191,165,.08)}
+
+.hero{background:linear-gradient(135deg,var(--surface) 0%,#0a2a2a 100%);padding:48px 40px;text-align:center}
+.hero h2{font-size:2rem;font-weight:700;color:#fff;margin-bottom:8px}
+.hero p{color:var(--muted);font-size:.95rem;max-width:620px;margin:0 auto}
+.hero .pill{display:inline-block;background:var(--glass);border:1px solid var(--glass-border);border-radius:30px;padding:6px 20px;font-size:.82rem;color:var(--muted);margin-top:12px}
+.lang-pills{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+.lang-pills span{background:var(--glass);border:1px solid var(--glass-border);border-radius:24px;padding:5px 16px;font-size:.82rem;color:var(--teal)}
+
+.search-wrap{max-width:460px;margin:0 auto;position:relative}
+.search-wrap input{width:100%;padding:11px 18px 11px 40px;border:1px solid var(--glass-border);border-radius:24px;background:var(--glass);color:#fff;font-size:.9rem;outline:none;transition:border .2s;backdrop-filter:blur(8px)}
+.search-wrap input::placeholder{color:var(--muted)}
+.search-wrap input:focus{border-color:var(--teal)}
+.search-wrap .si{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:.95rem;opacity:.5}
+.search-count{text-align:center;font-size:.75rem;color:var(--muted);margin-top:6px;min-height:16px}
+.no-match{display:none!important}
+
+.gcard{background:var(--card-bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--card-border);border-radius:var(--radius);overflow:hidden;transition:transform .25s,border-color .25s}
+.gcard:hover{transform:translateY(-4px);border-color:var(--teal)}
+
+.srv{background:var(--card-bg);backdrop-filter:blur(12px);border:1px solid var(--card-border);border-radius:var(--radius);overflow:hidden;transition:transform .25s,border-color .25s}
+.srv:hover{transform:translateY(-4px);border-color:var(--teal)}
+
+.content{max-width:1100px;margin:40px auto;padding:0 24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:1200px;margin:48px auto;padding:0 24px}
+.srv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;margin-bottom:40px}
+.sh{border-left:4px solid var(--teal);padding-left:14px;margin:36px 0 18px}
+.sh h2{font-size:1.15rem;color:#fff;font-weight:700}
+.sd{color:var(--muted);font-size:.82rem;margin-top:3px}
+
+table{width:100%;border-collapse:collapse;background:var(--card-bg);backdrop-filter:blur(8px);border:1px solid var(--card-border);border-radius:var(--radius);overflow:hidden;margin-bottom:28px}
+thead{background:rgba(0,191,165,.1)}
+th{padding:11px 14px;text-align:left;font-size:.72rem;letter-spacing:.5px;text-transform:uppercase;font-weight:600;color:var(--teal)}
+td{padding:10px 14px;border-bottom:1px solid var(--glass-border);font-size:.84rem}
+tbody tr:hover{background:rgba(0,191,165,.05)}
+.pn{font-weight:600;color:#fff}
+.pr{font-weight:700;color:var(--teal);white-space:nowrap}
+.mk{font-size:.76rem;color:var(--muted);white-space:nowrap}
+.sn{font-weight:600;color:#fff}
+.rate{font-weight:700;color:var(--teal)}
+
+.srv-img{height:200px;overflow:hidden;position:relative}
+.srv-img img{width:100%;height:100%;object-fit:cover;display:block}
+.srv-img .ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,22,40,.85),transparent 55%);display:flex;align-items:flex-end;padding:16px}
+.srv-img .ov span{color:#fff;font-size:1.05rem;font-weight:700}
+.srv-body{padding:18px 22px}
+.srv-body p{font-size:.84rem;color:var(--muted);line-height:1.6;margin-bottom:10px}
+.srv-price{display:inline-block;background:rgba(0,191,165,.1);color:var(--teal);font-weight:700;font-size:.85rem;padding:5px 12px;border-radius:8px;border:1px solid rgba(0,191,165,.2)}
+
+.sectors{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin:28px 0}
+.sector{background:var(--card-bg);backdrop-filter:blur(8px);border:1px solid var(--card-border);border-radius:var(--radius);padding:18px;text-align:center}
+.sector .icon{font-size:1.6rem;margin-bottom:6px}
+.sector h4{font-size:.82rem;color:#fff;font-weight:600}
+
+.compliance{background:rgba(0,191,165,.06);border-radius:var(--radius);padding:28px;margin:36px 0;border:1px solid rgba(0,191,165,.2)}
+.compliance h3{color:var(--teal);margin-bottom:10px;font-size:1rem}
+.compliance p{font-size:.85rem;color:var(--muted);line-height:1.7}
+
+.local-rates{background:var(--card-bg);backdrop-filter:blur(8px);border-radius:var(--radius);padding:22px;border:1px solid var(--card-border);margin-bottom:36px;max-width:480px}
+.local-rates h3{color:#fff;font-size:.95rem;margin-bottom:10px}
+.local-rates table{background:transparent;border:none;margin:0}
+.local-rates td{border-color:var(--glass-border)}
+.local-rates .lr{text-align:right;font-weight:700;color:var(--teal)}
+
+/* Section images */
+.section-banner{height:160px;border-radius:var(--radius);overflow:hidden;margin-bottom:20px;position:relative}
+.section-banner img{width:100%;height:100%;object-fit:cover}
+.section-banner .ov{position:absolute;inset:0;background:linear-gradient(to right,rgba(10,22,40,.8),transparent 60%)}
+
+footer{background:var(--surface);color:var(--muted);text-align:center;padding:32px 24px;margin-top:48px;font-size:.82rem;line-height:1.8;border-top:1px solid var(--glass-border)}
+footer strong{color:#fff}
+footer a{color:var(--teal)}
+
+@media(max-width:640px){
+  .header-top{flex-direction:column;gap:10px;text-align:center}
+  .contact-bar{text-align:center}
+  .hero{padding:32px 20px}
+  .hero h2{font-size:1.5rem}
+  th,td{padding:7px 8px;font-size:.78rem}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <div class="logo-area">
+      <h1><a href="index.html">TechNexus</a></h1>
+      <div class="sub">Scripts — Language Services Division</div><div class="tagline">Translation &middot; Transcription &middot; Interpretation &middot; Training</div>
+    </div>
+    <div class="contact-bar">
+      <div class="ci"><a href="https://wa.me/265889941700" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366" width="18" height="18" style="vertical-align:middle"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a> <a href="tel:+265889941700">+265 889 941 700</a></div>
+      <div class="ci">📧 <a href="mailto:technexus_mw@proton.me">technexus_mw@proton.me</a></div>
+      <div class="ci">📍 Blantyre, Malawi</div>
+    </div>
+  </div>
+  <nav><a href="index.html">Home</a><a href="catalogue.html">IT Catalogue</a><a href="computer-assembly.html">PC Assembly</a><a href="language-services.html" class="nav-active">Language Services</a><a href="medical-supplies.html">Medical Supplies</a></nav>
+</header>
+<div class="hero">
+  <h2>🌍 Professional Language Services</h2>
+  <p>Bridging communication across Southern &amp; East Africa. Certified, confidential, HIPAA/GDPR-aware language solutions for government, diplomatic, legal, health, and NGO sectors.</p>
+  <div class="lang-pills">
+    <span>🇬🇧 English</span><span>🇵🇹 Portuguese</span><span>🇲🇼 Chichewa</span><span>🇹🇿 Swahili</span>
+  </div>
+  <div style="margin-top:20px">
+  <div class="search-wrap">
+    <span class="si">🔍</span>
+    <input type="text" id="searchInput" placeholder="Search services..." autocomplete="off">
+  </div>
+  <div class="search-count" id="searchCount"></div>
+</div>
+</div>
+<div class="content">
+  <div class="sh"><h2>Our Services</h2><p class="sd">End-to-end language solutions for organisations of all sizes.</p></div>
+  <div class="srv-grid">
+    <div class="srv"><div class="srv-img"><img src="products_services/translator_working.jpeg" alt="Translation" loading="lazy"><div class="ov"><span>📝 Translation</span></div></div><div class="srv-body"><p>Document translation across English, Portuguese, Chichewa, and Swahili. Legal, medical, technical, and general business documents. Certified translations available.</p><span class="srv-price">$0.09 – $0.13 / word</span></div></div>
+    <div class="srv"><div class="srv-img"><img src="products_services/person_headphones_laptop_1.jpeg" alt="Transcription" loading="lazy"><div class="ov"><span>🎧 Transcription</span></div></div><div class="srv-body"><p>Audio and video transcription including medical, legal/law enforcement, strict verbatim, and QA review. Multi-language capability.</p><span class="srv-price">$1.50 – $5.00 / audio min</span></div></div>
+    <div class="srv"><div class="srv-img"><img src="products_services/person_headphones_laptop_2.jpeg" alt="Subtitling" loading="lazy"><div class="ov"><span>🎬 Subtitling &amp; Dubbing</span></div></div><div class="srv-body"><p>Professional subtitling for video content and dubbing services. SRT/VTT formats. Training materials, documentaries, corporate communications.</p><span class="srv-price">$10.00 / video min</span></div></div>
+    <div class="srv"><div class="srv-img"><img src="products_services/conference_interpreter.jpg" alt="Interpretation" loading="lazy"><div class="ov"><span>🗣️ Interpretation</span></div></div><div class="srv-body"><p>On-site and remote interpretation for conferences, meetings, legal proceedings, medical consultations, and diplomatic engagements.</p><span class="srv-price">$45.00 / hour</span></div></div>
+    <div class="srv"><div class="srv-img"><img src="products_services/classroom_training_africa_1.jpeg" alt="Training" loading="lazy"><div class="ov"><span>📖 Language Training</span></div></div><div class="srv-body"><p>Structured language courses for individuals and corporate teams. Tailored to professional contexts.</p><span class="srv-price">$30.00 / hour</span></div></div>
+    <div class="srv"><div class="srv-img"><img src="products_services/person_typing_1.jpeg" alt="AI Review" loading="lazy"><div class="ov"><span>🤖 AI Content Review &amp; Editing</span></div></div><div class="srv-body"><p>Human review and editing of AI-generated content. QA for machine-translated text, AI transcriptions, and automated subtitles.</p><span class="srv-price">$0.08 / word</span></div></div>
+    <div class="srv"><div class="srv-img"><img src="products_services/business_meeting.jpeg" alt="Proofreading" loading="lazy"><div class="ov"><span>✏️ Proofreading</span></div></div><div class="srv-body"><p>Thorough review for grammar, style, consistency, and accuracy. All four supported languages.</p><span class="srv-price">$0.05 – $0.07 / word</span></div></div>
+    <div class="srv"><div class="srv-img"><img src="products_services/classroom_training_africa_2.jpeg" alt="Corporate" loading="lazy"><div class="ov"><span>🏢 Corporate Programmes</span></div></div><div class="srv-body"><p>Customised language programmes for organisations. Group sessions, workshops, and ongoing professional development.</p><span class="srv-price">Contact for quote</span></div></div>
+  </div>
+
+  <div class="sh"><h2>Detailed Rate Card</h2><p class="sd">All rates in USD. Billing also accepted in MWK, ZMW, and ZAR.</p></div>
+  <table>
+    <thead><tr><th>Service</th><th>Detail</th><th>Rate (USD)</th></tr></thead>
+    <tbody>
+      <tr><td class="sn">Translation</td><td>General / business</td><td class="rate">$0.09 / word</td></tr>
+      <tr><td class="sn">Translation</td><td>Technical / legal / medical</td><td class="rate">$0.13 / word</td></tr>
+      <tr><td class="sn">Proofreading</td><td>Standard review</td><td class="rate">$0.05 – $0.07 / word</td></tr>
+      <tr><td class="sn">Transcription</td><td>Standard audio</td><td class="rate">$1.50 / audio min</td></tr>
+      <tr><td class="sn">Transcription</td><td>Strict verbatim</td><td class="rate">$2.00 / audio min</td></tr>
+      <tr><td class="sn">Transcription</td><td>Legal / law enforcement</td><td class="rate">$4.00 / audio min</td></tr>
+      <tr><td class="sn">Transcription</td><td>Medical</td><td class="rate">$4.50 / audio min</td></tr>
+      <tr><td class="sn">Transcription QA</td><td>Quality assurance review</td><td class="rate">$25 – $35 / audio hr</td></tr>
+      <tr><td class="sn">Subtitling</td><td>All languages</td><td class="rate">$10.00 / video min</td></tr>
+      <tr><td class="sn">Interpretation</td><td>On-site or remote</td><td class="rate">$45.00 / hour</td></tr>
+      <tr><td class="sn">Language Training</td><td>Individual or group</td><td class="rate">$30.00 / hour</td></tr>
+      <tr><td class="sn">AI Content Review</td><td>Edit &amp; QA of AI output</td><td class="rate">$0.08 / word</td></tr>
+    </tbody>
+  </table>
+
+  <div class="local-rates">
+    <h3>🇲🇼 Personal / Local Rates (MWK)</h3>
+    <table><tbody>
+      <tr><td>EN ↔ PT translation</td><td class="lr">MK 7,000 / page</td></tr>
+      <tr><td>EN ↔ Chichewa translation</td><td class="lr">MK 6,000 / page</td></tr>
+      <tr><td>Minimum fee</td><td class="lr">MK 30,000</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="sh"><h2>Sectors We Serve</h2></div>
+  <div class="sectors">
+    <div class="sector"><div class="icon">🏛️</div><h4>Government</h4></div>
+    <div class="sector"><div class="icon">🤝</div><h4>Diplomatic</h4></div>
+    <div class="sector"><div class="icon">🌐</div><h4>NGOs</h4></div>
+    <div class="sector"><div class="icon">⚖️</div><h4>Legal</h4></div>
+    <div class="sector"><div class="icon">🏥</div><h4>Healthcare</h4></div>
+    <div class="sector"><div class="icon">🎓</div><h4>Education</h4></div>
+  </div>
+
+  <div class="compliance">
+    <h3>🔒 Compliance &amp; Confidentiality</h3>
+    <p>TechNexus Scripts operates with full awareness of HIPAA and GDPR requirements. All translators and transcribers sign non-disclosure agreements. Medical and legal transcriptions follow strict chain-of-custody protocols. Client data is encrypted in transit and at rest.</p>
+  </div>
+
+  <div class="sh"><h2>Coverage</h2></div>
+  <div class="sectors" style="max-width:650px">
+    <div class="sector"><div class="icon">🇲🇼</div><h4>Malawi</h4></div>
+    <div class="sector"><div class="icon">🇲🇿</div><h4>Mozambique</h4></div>
+    <div class="sector"><div class="icon">🇿🇲</div><h4>Zambia</h4></div>
+    <div class="sector"><div class="icon">🇿🇦</div><h4>South Africa</h4></div>
+    <div class="sector"><div class="icon">🇹🇿</div><h4>Tanzania</h4></div>
+  </div>
+</div>
+<footer>
+  <strong>TechNexus</strong> | Plot 484 Naperi Avenue, Blantyre, Malawi<br>
+  <a href="https://wa.me/265889941700" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366" width="18" height="18" style="vertical-align:middle"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a> <a href="tel:+265889941700">+265 889 941 700</a> &middot; 📧 <a href="mailto:technexus_mw@proton.me">technexus_mw@proton.me</a><br>
+  <div style="margin-top:12px;font-size:.72rem;opacity:.6">&copy; 2026 TechNexus. All rights reserved. Prices indicative and subject to change.</div>
+</footer>
+<script>
+(function(){
+  var input=document.getElementById('searchInput');
+  var countEl=document.getElementById('searchCount');
+  if(!input)return;
+  input.addEventListener('input',function(){
+    var q=this.value.toLowerCase().trim();
+    var rows=document.querySelectorAll('tbody tr, .card, .scard, .srv, .gcard');
+    var total=0,shown=0;
+    rows.forEach(function(r){
+      total++;
+      if(!q){r.classList.remove('no-match');shown++;return}
+      if(r.textContent.toLowerCase().indexOf(q)!==-1){r.classList.remove('no-match');shown++}
+      else{r.classList.add('no-match')}
+    });
+    countEl.textContent=q?(shown+' of '+total+' items match'):'';
+  });
+})();
+</script>
+</body>
+</html>
