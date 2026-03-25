@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TechNexus — ICT, Office & Infrastructure Hardware</title>
+<style>
+:root{
+  --bg:#12121f;--surface:#1a1a2e;--card-bg:rgba(255,255,255,.06);--card-border:rgba(255,255,255,.1);
+  --amber:#f0a030;--amber-dim:#c68520;--text:#e8e8f0;--muted:#8888a0;
+  --teal:#00897b;--radius:14px;
+  --glass:rgba(255,255,255,.05);--glass-border:rgba(255,255,255,.12);
+  --shadow:0 8px 32px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+a{color:var(--amber);text-decoration:none}
+
+header{background:var(--surface);border-bottom:1px solid var(--glass-border)}
+.header-top{display:flex;align-items:center;justify-content:space-between;padding:16px 40px}
+.logo-area h1{font-size:1.6rem;font-weight:800}
+.logo-area h1 a{color:#fff}
+.logo-area .tagline{font-size:.72rem;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-top:2px}
+.contact-bar{text-align:right;font-size:.82rem;color:var(--muted)}
+.contact-bar a{color:var(--amber)}
+.ci{display:flex;align-items:center;justify-content:flex-end;gap:6px;margin-bottom:3px}
+
+nav{background:rgba(240,160,48,.08);border-top:1px solid var(--glass-border);padding:8px 40px;display:flex;gap:10px;flex-wrap:wrap}
+nav a{color:var(--muted);font-size:.78rem;padding:4px 14px;border:1px solid var(--glass-border);border-radius:20px;transition:all .2s}
+nav a:hover,nav .nav-active{color:var(--amber);border-color:var(--amber);background:rgba(240,160,48,.1)}
+
+.hero{background:linear-gradient(135deg,var(--surface) 0%,#2a1a0a 100%);padding:48px 40px;text-align:center}
+.hero h2{font-size:2rem;font-weight:700;color:#fff;margin-bottom:8px}
+.hero p{color:var(--muted);font-size:.95rem;max-width:620px;margin:0 auto}
+.hero .pill{display:inline-block;background:var(--glass);border:1px solid var(--glass-border);border-radius:30px;padding:6px 20px;font-size:.82rem;color:var(--muted);margin-top:12px}
+
+.search-wrap{max-width:460px;margin:0 auto;position:relative}
+.search-wrap input{width:100%;padding:11px 18px 11px 40px;border:1px solid var(--glass-border);border-radius:24px;background:var(--glass);color:#fff;font-size:.9rem;outline:none;transition:border .2s;backdrop-filter:blur(8px)}
+.search-wrap input::placeholder{color:var(--muted)}
+.search-wrap input:focus{border-color:var(--amber)}
+.search-wrap .si{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:.95rem;opacity:.5}
+.search-count{text-align:center;font-size:.75rem;color:var(--muted);margin-top:6px;min-height:16px}
+.no-match{display:none!important}
+
+/* Glassmorphism cards */
+.gcard{background:var(--card-bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--card-border);border-radius:var(--radius);overflow:hidden;transition:transform .25s,border-color .25s;cursor:pointer}
+.gcard:hover{transform:translateY(-4px);border-color:var(--amber)}
+
+.content{max-width:1100px;margin:40px auto;padding:0 24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:1200px;margin:48px auto;padding:0 24px}
+.sh{border-left:4px solid var(--amber);padding-left:14px;margin:36px 0 18px}
+.sh h2{font-size:1.15rem;color:#fff;font-weight:700}
+.sd{color:var(--muted);font-size:.82rem;margin-top:3px}
+
+/* Glass tables */
+table{width:100%;border-collapse:collapse;background:var(--card-bg);backdrop-filter:blur(8px);border:1px solid var(--card-border);border-radius:var(--radius);overflow:hidden;margin-bottom:28px}
+thead{background:rgba(240,160,48,.12)}
+th{padding:11px 14px;text-align:left;font-size:.72rem;letter-spacing:.5px;text-transform:uppercase;font-weight:600;color:var(--amber)}
+td{padding:10px 14px;border-bottom:1px solid var(--glass-border);font-size:.84rem}
+tbody tr:hover{background:rgba(240,160,48,.06)}
+.pn{font-weight:600;color:#fff}
+.pr{font-weight:700;color:var(--amber);white-space:nowrap}
+.mk{font-size:.76rem;color:var(--muted);white-space:nowrap}
+
+/* Logo strip */
+.logo-strip{display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap;padding:20px 40px;background:rgba(255,255,255,.08);border-bottom:1px solid var(--glass-border)}
+.logo-strip img{height:28px;opacity:.8;filter:brightness(1.5) contrast(1.2);transition:opacity .2s}
+.logo-strip img:hover{opacity:1}
+
+footer{background:var(--surface);color:var(--muted);text-align:center;padding:32px 24px;margin-top:48px;font-size:.82rem;line-height:1.8;border-top:1px solid var(--glass-border)}
+footer strong{color:#fff}
+footer a{color:var(--amber)}
+
+@media(max-width:640px){
+  .header-top{flex-direction:column;gap:10px;text-align:center}
+  .contact-bar{text-align:center}
+  .hero{padding:32px 20px}
+  .hero h2{font-size:1.5rem}
+  .logo-strip{gap:16px}
+  .logo-strip img{height:18px}
+  th,td{padding:7px 8px;font-size:.78rem}
+}
+
+.product-section{max-width:1200px;margin:36px auto;padding:0 24px}
+.section-header{border-left:4px solid var(--amber);padding-left:14px;margin-bottom:20px}
+.section-header h2{font-size:1.15rem;color:#fff;font-weight:700}
+.section-desc{color:var(--muted);font-size:.82rem;margin-top:3px}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px;align-items:start}
+.card{background:var(--card-bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--card-border);border-radius:var(--radius);overflow:hidden;position:relative;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);border-color:var(--amber)}
+.card-img-wrap{height:150px;background:rgba(255,255,255,.03);display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid var(--glass-border)}
+.card-img-wrap img{max-height:140px;max-width:90%;object-fit:contain}
+.img-placeholder{display:none;width:100%;height:100%;align-items:center;justify-content:center;background:rgba(255,255,255,.03);color:var(--muted);font-size:.72rem;text-align:center;padding:10px}
+.featured-card{border:2px solid var(--amber);grid-column:span 2;display:flex;flex-direction:row;align-items:stretch}
+.featured-card .card-img-wrap{width:220px;height:auto;min-height:200px;flex-shrink:0;border-bottom:none;border-right:1px solid var(--glass-border)}
+.featured-card .card-body{flex:1;padding:22px}
+.featured-card .card-title{font-size:1.1rem}
+.featured-card .price-mwk{font-size:1.4rem}
+.badge{position:absolute;top:10px;left:10px;background:var(--amber);color:#000;font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:16px;text-transform:uppercase;letter-spacing:.5px;z-index:2}
+.card-body{padding:14px}
+.sku{font-size:.65rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;font-weight:600}
+.card-title{font-size:.9rem;font-weight:700;margin:4px 0 5px;color:#fff;line-height:1.3}
+.specs{font-size:.73rem;color:var(--muted);line-height:1.5;margin-bottom:10px;border-top:1px solid var(--glass-border);padding-top:8px}
+.price-mwk{display:block;font-size:1.1rem;font-weight:800;color:var(--amber)}
+.price-usd{display:block;font-size:.76rem;color:var(--muted);margin-top:2px}
+.value-metric{font-size:.7rem;color:var(--amber);font-weight:600;margin-top:5px;padding:3px 7px;background:rgba(240,160,48,.1);border-radius:6px;display:inline-block;border:1px solid rgba(240,160,48,.15)}
+@media(max-width:900px){
+  .featured-card{flex-direction:column;grid-column:span 1}
+  .featured-card .card-img-wrap{width:100%;min-height:150px;border-right:none;border-bottom:1px solid var(--glass-border)}
+  .card-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px}
+}
+@media(max-width:640px){
+  .card-grid{grid-template-columns:1fr 1fr;gap:10px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <div class="logo-area">
+      <h1><a href="index.html">TechNexus</a></h1>
+      <div class="tagline">ICT, Office &amp; Infrastructure Hardware</div>
+    </div>
+    <div class="contact-bar">
+      <div class="ci"><a href="https://wa.me/265889941700" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366" width="18" height="18" style="vertical-align:middle"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a> <a href="tel:+265889941700">+265 889 941 700</a></div>
+      <div class="ci">📧 <a href="mailto:technexus_mw@proton.me">technexus_mw@proton.me</a></div>
+      <div class="ci">📍 Blantyre, Malawi</div>
+    </div>
+  </div>
+  <nav><a href="index.html">Home</a><a href="catalogue.html" class="nav-active">IT Catalogue</a><a href="computer-assembly.html">PC Assembly</a><a href="language-services.html">Language Services</a><a href="medical-supplies.html">Medical Supplies</a><a href="software-development.html">Software Dev</a><a href="credentials.html">Credentials</a></nav>
+</header>
+<div class="logo-strip">
+  <img src="products_logos/tmp/hp.png" alt="HP">
+  <img src="products_logos/tmp/dell.png" alt="Dell">
+  <img src="products_logos/tmp/lenovo.png" alt="Lenovo">
+  <img src="products_logos/tmp/samsung.png" alt="Samsung">
+  <img src="products_logos/tmp/synology.png" alt="Synology">
+  <img src="products_logos/tmp/apc.png" alt="APC">
+  <img src="products_logos/tmp/canon.png" alt="Canon">
+  <img src="products_logos/tmp/asus.png" alt="ASUS">
+</div>
+<div class="hero">
+  <h2>ICT, Office &amp; Infrastructure Hardware</h2>
+  <p>Empowering Progress. Elevating Business. Securing the Future.</p>
+  <div class="pill">Rate: 1 USD = MWK 1,734 &middot; March 2026 &middot; Verified suppliers across Malawi, Mozambique, South Africa, UAE &amp; China</div>
+  <div style="margin-top:20px">
+  <div class="search-wrap">
+    <span class="si">🔍</span>
+    <input type="text" id="searchInput" placeholder="Search products..." autocomplete="off">
+  </div>
+  <div class="search-count" id="searchCount"></div>
+</div>
+</div>
+<section class="product-section">
+      <div class="section-header">
+        <h2>💼 Business Laptops</h2>
+        <p class="section-desc">Certified HP, Dell, Samsung & Lenovo business laptops — from entry Chrome OS to ultra-premium AI PCs.</p>
+      </div>
+      <div class="card-grid">
+    <div class="card featured-card">
+      <span class="badge">⭐ Best Value</span>
+      <div class="card-img-wrap">
+        <img src="products/hp-probook-460-g11.png" alt="HP ProBook 460 G11 (Entry)" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">HP ProBook 460 G11</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">LT-PB01</span>
+        <h3 class="card-title">HP ProBook 460 G11 (Entry)</h3>
+        <p class="specs">Core Ultra 5 125U | 8GB DDR5 | 512GB SSD | 16" FHD | DOS</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 1,170,000</span>
+          <span class="price-usd">USD 674</span>
+        </div>
+        <div class="value-metric">≈ USD 1.6 per GHz (Core Ultra)</div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/samsung-chromebook-go.png" alt="Samsung Chromebook Go" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">Samsung Chromebook</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">LT-CG01</span>
+        <h3 class="card-title">Samsung Chromebook Go</h3>
+        <p class="specs">Intel Celeron N4500 | 4GB | 128GB | 14" HD | Chrome OS</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 420,000</span>
+          <span class="price-usd">USD 242</span>
+        </div>
+        <div class="value-metric">≈ USD 0.6 per GHz (Core Ultra)</div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/hp-probook-460-g11.png" alt="HP ProBook 460 G11 (Performance)" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">HP ProBook 460 G11</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">LT-PB02</span>
+        <h3 class="card-title">HP ProBook 460 G11 (Performance)</h3>
+        <p class="specs">Core Ultra 7 165H | 16GB DDR5 | 512GB SSD | 16" WUXGA | Win 11 Pro</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 1,410,000</span>
+          <span class="price-usd">USD 813</span>
+        </div>
+        <div class="value-metric">≈ USD 1.9 per GHz (Core Ultra)</div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/hp-elitebook-630-g9.png" alt="HP EliteBook 630/860 G9" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">HP EliteBook 630/8</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">LT-EB01</span>
+        <h3 class="card-title">HP EliteBook 630/860 G9</h3>
+        <p class="specs">i5-1235U 12th Gen | 16GB | 512GB SSD | FHD/WUXGA | Fingerprint | Win Pro</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 1,950,000</span>
+          <span class="price-usd">USD 1,124</span>
+        </div>
+        <div class="value-metric">≈ USD 2.7 per GHz (Core Ultra)</div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/hp-elitebook-1040-x360.png" alt="HP EliteBook 1040 x360 G11" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">HP EliteBook 1040 </div>
+      </div>
+      <div class="card-body">
+        <span class="sku">LT-EX01</span>
+        <h3 class="card-title">HP EliteBook 1040 x360 G11</h3>
+        <p class="specs">Intel Ultra 7-155H vPro | 32GB DDR5 | 1TB SSD | 14" FHD Touch | Intel Arc | Win 11 Pro</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 4,040,000</span>
+          <span class="price-usd">USD 2,329</span>
+        </div>
+        <div class="value-metric">≈ USD 5.5 per GHz (Core Ultra)</div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/dell-xps-13-9350.png" alt="Dell XPS 13 9350" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">Dell XPS 13 9350</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">LT-XP01</span>
+        <h3 class="card-title">Dell XPS 13 9350</h3>
+        <p class="specs">Intel Ultra 9-288V | 32GB | 2TB SSD | 13.4" 3K OLED Touch | Win 11 Pro</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 5,980,000</span>
+          <span class="price-usd">USD 3,447</span>
+        </div>
+        <div class="value-metric">≈ USD 8.2 per GHz (Core Ultra)</div>
+      </div>
+    </div></div>
+    </section>
+    <section class="product-section">
+      <div class="section-header">
+        <h2>🖥️ All-in-One Desktops</h2>
+        <p class="section-desc">Compact HP AIO desktops for clinics, labs, reception counters and office environments.</p>
+      </div>
+      <div class="card-grid">
+    <div class="card featured-card">
+      <span class="badge">⭐ Best Value</span>
+      <div class="card-img-wrap">
+        <img src="products/hp-aio-24.png" alt="HP AIO 24-CR2026nh (White)" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">HP AIO 24-CR2026nh</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">AIO-24W</span>
+        <h3 class="card-title">HP AIO 24-CR2026nh (White)</h3>
+        <p class="specs">U7-255U | 8GB | 512GB SSD | 23.8" FHD Touch | DOS</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 1,570,000</span>
+          <span class="price-usd">USD 905</span>
+        </div>
+        <div class="value-metric">≈ USD 905 all-in-one (display + PC)</div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/hp-aio-24.png" alt="HP AIO 24-CR2027nh (Black)" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">HP AIO 24-CR2027nh</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">AIO-24B</span>
+        <h3 class="card-title">HP AIO 24-CR2027nh (Black)</h3>
+        <p class="specs">U7-255U | 8GB | 512GB SSD | 23.8" FHD Touch | DOS</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 1,570,000</span>
+          <span class="price-usd">USD 905</span>
+        </div>
+        <div class="value-metric">≈ USD 905 all-in-one (display + PC)</div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/hp-aio-27.png" alt="HP AIO 27-CR2041nh (White)" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">HP AIO 27-CR2041nh</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">AIO-27W</span>
+        <h3 class="card-title">HP AIO 27-CR2041nh (White)</h3>
+        <p class="specs">U7-255U | 8GB | 512GB SSD | 27" FHD Non-Touch | DOS</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 1,800,000</span>
+          <span class="price-usd">USD 1,038</span>
+        </div>
+        <div class="value-metric">≈ USD 1038 all-in-one (display + PC)</div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/hp-aio-27.png" alt="HP AIO 27-CR2042nh (Black)" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">HP AIO 27-CR2042nh</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">AIO-27B</span>
+        <h3 class="card-title">HP AIO 27-CR2042nh (Black)</h3>
+        <p class="specs">U7-255U | 8GB | 512GB SSD | 27" FHD Non-Touch | DOS</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 1,800,000</span>
+          <span class="price-usd">USD 1,038</span>
+        </div>
+        <div class="value-metric">≈ USD 1038 all-in-one (display + PC)</div>
+      </div>
+    </div></div>
+    </section>
+    <section class="product-section">
+      <div class="section-header">
+        <h2>🗄️ Network Storage (Synology)</h2>
+        <p class="section-desc">Desktop NAS to enterprise rackmount — data backup, surveillance & private cloud for business.</p>
+      </div>
+      <div class="card-grid">
+    <div class="card featured-card">
+      <span class="badge">⭐ Best Value</span>
+      <div class="card-img-wrap">
+        <img src="products/synology-ds423.png" alt="Synology DS423 (4-bay)" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">Synology DS423 (4-</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">NAS-D4</span>
+        <h3 class="card-title">Synology DS423 (4-bay)</h3>
+        <p class="specs">4-Bay | Realtek RTD1619B | 2GB RAM | RAID 5/6 | 72TB raw</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 910,000</span>
+          <span class="price-usd">USD 525</span>
+        </div>
+        
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/synology-ds124.png" alt="Synology DS124 (1-bay)" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">Synology DS124 (1-</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">NAS-D1</span>
+        <h3 class="card-title">Synology DS124 (1-bay)</h3>
+        <p class="specs">1-Bay Desktop NAS | Realtek RTD1619B | 1GB RAM | DSM</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 350,000</span>
+          <span class="price-usd">USD 202</span>
+        </div>
+        
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/synology-ds223.png" alt="Synology DS223" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">Synology DS223</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">NAS-D2</span>
+        <h3 class="card-title">Synology DS223</h3>
+        <p class="specs">2-Bay | Realtek RTD1619B | 2GB RAM | RAID 1</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 550,000</span>
+          <span class="price-usd">USD 317</span>
+        </div>
+        
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/synology-ds1525.png" alt="Synology DS1525+ (5-bay)" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">Synology DS1525+ (</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">NAS-D5</span>
+        <h3 class="card-title">Synology DS1525+ (5-bay)</h3>
+        <p class="specs">5-Bay | Ryzen R1600 | 8GB ECC | M.2 NVMe | expandable to 15 bays</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 1,410,000</span>
+          <span class="price-usd">USD 813</span>
+        </div>
+        
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/synology-ds1825.png" alt="Synology DS1825+" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">Synology DS1825+</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">NAS-D8</span>
+        <h3 class="card-title">Synology DS1825+</h3>
+        <p class="specs">8-Bay | AMD Ryzen V1500B | 8GB DDR4 ECC | 2×2.5GbE | 18-bay max</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 2,440,000</span>
+          <span class="price-usd">USD 1,407</span>
+        </div>
+        
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/synology-rs4021xs.png" alt="Synology RS4021xs+" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">Synology RS4021xs+</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">NAS-R4</span>
+        <h3 class="card-title">Synology RS4021xs+</h3>
+        <p class="specs">16-Bay Rackmount | Xeon D-1541 | 16GB ECC | Dual 10GbE | 400TB+</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 8,290,000</span>
+          <span class="price-usd">USD 4,779</span>
+        </div>
+        
+      </div>
+    </div></div>
+    </section>
+    <section class="product-section">
+      <div class="section-header">
+        <h2>⚡ Power Protection (APC)</h2>
+        <p class="section-desc">APC UPS systems from entry-level desktop to server-room — essential for Malawi's power environment.</p>
+      </div>
+      <div class="card-grid">
+    <div class="card featured-card">
+      <span class="badge">⭐ Best Value</span>
+      <div class="card-img-wrap">
+        <img src="products/apc-bx750mi.png" alt="APC Back-UPS 750VA (BX750MI)" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">APC Back-UPS 750VA</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">UPS-750</span>
+        <h3 class="card-title">APC Back-UPS 750VA (BX750MI)</h3>
+        <p class="specs">750VA/415W | AVR | PCs & POS terminals</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 330,000</span>
+          <span class="price-usd">USD 190</span>
+        </div>
+        
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/apc-bv650i.png" alt="APC Easy UPS 650VA (BV650I-MSX)" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">APC Easy UPS 650VA</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">UPS-650</span>
+        <h3 class="card-title">APC Easy UPS 650VA (BV650I-MSX)</h3>
+        <p class="specs">650VA/360W | Entry-level | Single workstations & routers</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 230,000</span>
+          <span class="price-usd">USD 133</span>
+        </div>
+        
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/apc-smc1000ic.png" alt="APC Smart-UPS 1000VA (SMC1000IC)" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">APC Smart-UPS 1000</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">UPS-1K</span>
+        <h3 class="card-title">APC Smart-UPS 1000VA (SMC1000IC)</h3>
+        <p class="specs">1000VA/600W | LCD | SmartConnect | Line-interactive | Servers & network racks</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 830,000</span>
+          <span class="price-usd">USD 478</span>
+        </div>
+        
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/apc-smt1500ic.png" alt="APC Smart-UPS 1500VA (SMT1500IC)" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">APC Smart-UPS 1500</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">UPS-1500</span>
+        <h3 class="card-title">APC Smart-UPS 1500VA (SMT1500IC)</h3>
+        <p class="specs">1500VA/1000W | LCD | SmartConnect | Edge servers & core switches</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 1,190,000</span>
+          <span class="price-usd">USD 686</span>
+        </div>
+        
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/apc-smc3000i.png" alt="APC Smart-UPS C 3000VA (SMC3000I)" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">APC Smart-UPS C 30</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">UPS-3K</span>
+        <h3 class="card-title">APC Smart-UPS C 3000VA (SMC3000I)</h3>
+        <p class="specs">3000VA/2100W | Server rooms & multi-server racks</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 2,470,000</span>
+          <span class="price-usd">USD 1,424</span>
+        </div>
+        
+      </div>
+    </div></div>
+    </section>
+    <section class="product-section">
+      <div class="section-header">
+        <h2>🖨️ Imaging & Document (Canon)</h2>
+        <p class="section-desc">Canon B&W and colour MFPs, large-format plotters and professional document scanners.</p>
+      </div>
+      <div class="card-grid">
+    <div class="card featured-card">
+      <span class="badge">⭐ Best Value</span>
+      <div class="card-img-wrap">
+        <img src="products/canon-tm255.png" alt="Canon imagePROGRAF TM-255 EURO" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">Canon imagePROGRAF</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">LFP-255</span>
+        <h3 class="card-title">Canon imagePROGRAF TM-255 EURO</h3>
+        <p class="specs">24" Large Format | 5-colour LUCIA TD | USB/Ethernet/WiFi | Built-in stacker</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 4,740,000</span>
+          <span class="price-usd">USD 2,733</span>
+        </div>
+        <div class="value-metric">Print resolution: up to 2400×1200 dpi</div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/canon-ir2930i.png" alt="Canon imageRUNNER 2930i (B&W MFP)" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">Canon imageRUNNER </div>
+      </div>
+      <div class="card-body">
+        <span class="sku">MFP-BW</span>
+        <h3 class="card-title">Canon imageRUNNER 2930i (B&W MFP)</h3>
+        <p class="specs">Office B&W MFP | 30ppm | Copy/Print/Scan | A3</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 2,300,000</span>
+          <span class="price-usd">USD 1,326</span>
+        </div>
+        <div class="value-metric">Print resolution: up to 2400×1200 dpi</div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/canon-c3930i.png" alt="Canon imageRUNNER C3930i (Colour MFP)" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">Canon imageRUNNER </div>
+      </div>
+      <div class="card-body">
+        <span class="sku">MFP-COL</span>
+        <h3 class="card-title">Canon imageRUNNER C3930i (Colour MFP)</h3>
+        <p class="specs">Office Colour MFP | 30ppm | Copy/Print/Scan/Fax | A3</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 4,590,000</span>
+          <span class="price-usd">USD 2,646</span>
+        </div>
+        <div class="value-metric">Print resolution: up to 2400×1200 dpi</div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/canon-tx3200.png" alt="Canon imagePROGRAF TX-3200" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">Canon imagePROGRAF</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">LFP-TX</span>
+        <h3 class="card-title">Canon imagePROGRAF TX-3200</h3>
+        <p class="specs">36" Large Format MFP | Scan/Copy/Print | 6-colour | 100GB HDD | High-speed Ethernet</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 9,780,000</span>
+          <span class="price-usd">USD 5,638</span>
+        </div>
+        <div class="value-metric">Print resolution: up to 2400×1200 dpi</div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/irisscan-desk6.png" alt="IRIScan Desk 6 Pro" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">IRIScan Desk 6 Pro</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">SCN-01</span>
+        <h3 class="card-title">IRIScan Desk 6 Pro</h3>
+        <p class="specs">Document Scanner | A3 flatbed | USB | OCR software</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 1,070,000</span>
+          <span class="price-usd">USD 617</span>
+        </div>
+        <div class="value-metric">Print resolution: up to 2400×1200 dpi</div>
+      </div>
+    </div></div>
+    </section>
+    <section class="product-section">
+      <div class="section-header">
+        <h2>🔩 Desktop PC Components</h2>
+        <p class="section-desc">Intel 12th/13th Gen platform components for office & educational PC builds.</p>
+      </div>
+      <div class="card-grid">
+    <div class="card featured-card">
+      <span class="badge">⭐ Best Value</span>
+      <div class="card-img-wrap">
+        <img src="products/intel-i5-12400.png" alt="Intel Core i5-12400 / i5-13400" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">Intel Core i5-1240</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">TNX-CPU01</span>
+        <h3 class="card-title">Intel Core i5-12400 / i5-13400</h3>
+        <p class="specs">6 Cores/12 Threads | LGA1700 | 4.4GHz Boost</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 340,000</span>
+          <span class="price-usd">USD 196</span>
+        </div>
+        
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/mobo-h610.png" alt="Motherboard — Intel H610/B660" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">Motherboard — Inte</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">TNX-MB01</span>
+        <h3 class="card-title">Motherboard — Intel H610/B660</h3>
+        <p class="specs">LGA1700 | DDR4 | M.2 NVMe | mATX</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 120,000</span>
+          <span class="price-usd">USD 69</span>
+        </div>
+        
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/ddr4-8gb.png" alt="DDR4 RAM Module — 8GB" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">DDR4 RAM Module — </div>
+      </div>
+      <div class="card-body">
+        <span class="sku">TNX-RAM01</span>
+        <h3 class="card-title">DDR4 RAM Module — 8GB</h3>
+        <p class="specs">DDR4-3200MHz | Single DIMM | Expandable to 16GB</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 40,000</span>
+          <span class="price-usd">USD 23</span>
+        </div>
+        
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/nvme-256gb.png" alt="NVMe M.2 SSD — 256GB" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">NVMe M.2 SSD — 256</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">TNX-SSD01</span>
+        <h3 class="card-title">NVMe M.2 SSD — 256GB</h3>
+        <p class="specs">PCIe 3.0 | M.2 2280 | 512GB option available</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 40,000</span>
+          <span class="price-usd">USD 23</span>
+        </div>
+        
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/psu-450w.png" alt="ATX Power Supply — 450W" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">ATX Power Supply —</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">TNX-PSU01</span>
+        <h3 class="card-title">ATX Power Supply — 450W</h3>
+        <p class="specs">80+ Efficiency | ATX | Office-grade reliability</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 50,000</span>
+          <span class="price-usd">USD 29</span>
+        </div>
+        
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/case-matx.png" alt="PC Tower Case — mATX" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">PC Tower Case — mA</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">TNX-CAS01</span>
+        <h3 class="card-title">PC Tower Case — mATX</h3>
+        <p class="specs">mATX Chassis | Front USB | Mesh ventilation panel</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 60,000</span>
+          <span class="price-usd">USD 35</span>
+        </div>
+        
+      </div>
+    </div></div>
+    </section>
+    <section class="product-section">
+      <div class="section-header">
+        <h2>🖱️ Peripherals & Accessories</h2>
+        <p class="section-desc">Essential peripherals for desktop deployments — bulk pricing available on 100+ units.</p>
+      </div>
+      <div class="card-grid">
+    <div class="card featured-card">
+      <span class="badge">⭐ Best Value</span>
+      <div class="card-img-wrap">
+        <img src="products/monitor-215.png" alt="FHD LED Monitor — 21.5"" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">FHD LED Monitor — </div>
+      </div>
+      <div class="card-body">
+        <span class="sku">TNX-MON01</span>
+        <h3 class="card-title">FHD LED Monitor — 21.5"</h3>
+        <p class="specs">1920×1080 IPS | VGA + HDMI</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 170,000</span>
+          <span class="price-usd">USD 98</span>
+        </div>
+        
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/keyboard.png" alt="USB Wired Keyboard" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">USB Wired Keyboard</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">TNX-KB01</span>
+        <h3 class="card-title">USB Wired Keyboard</h3>
+        <p class="specs">Full-size | EN keys | USB 2.0</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 10,000</span>
+          <span class="price-usd">USD 6</span>
+        </div>
+        
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/mouse-wired.png" alt="USB Optical Mouse" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">USB Optical Mouse</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">TNX-MS01</span>
+        <h3 class="card-title">USB Optical Mouse</h3>
+        <p class="specs">Wired | 1000 DPI | Plug & Play</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 10,000</span>
+          <span class="price-usd">USD 6</span>
+        </div>
+        
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/cable-cat6.png" alt="Cat6 Ethernet Cable — 2m" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">Cat6 Ethernet Cabl</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">TNX-ETH01</span>
+        <h3 class="card-title">Cat6 Ethernet Cable — 2m</h3>
+        <p class="specs">RJ45 | Patch cable | Cat6 standard</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 1,000</span>
+          <span class="price-usd">USD 1</span>
+        </div>
+        
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/surge.png" alt="Surge Protector — 4-Way" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">Surge Protector — </div>
+      </div>
+      <div class="card-body">
+        <span class="sku">TNX-SRG01</span>
+        <h3 class="card-title">Surge Protector — 4-Way</h3>
+        <p class="specs">4-Way power strip | Surge protection | 3-pin (SA/MW)</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 10,000</span>
+          <span class="price-usd">USD 6</span>
+        </div>
+        
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/thermal-paste.png" alt="Thermal Paste" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">Thermal Paste</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">TNX-THP01</span>
+        <h3 class="card-title">Thermal Paste</h3>
+        <p class="specs">CPU thermal compound | High conductivity | Per-application dose</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 1,000</span>
+          <span class="price-usd">USD 1</span>
+        </div>
+        
+      </div>
+    </div></div>
+    </section>
+    <section class="product-section">
+      <div class="section-header">
+        <h2>💿 Software & Services</h2>
+        <p class="section-desc">Volume OEM software, storage media, and complete PC assembly & QA service.</p>
+      </div>
+      <div class="card-grid">
+    <div class="card featured-card">
+      <span class="badge">⭐ Best Value</span>
+      <div class="card-img-wrap">
+        <img src="products/windows11.png" alt="Windows 11 Pro OEM" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">Windows 11 Pro OEM</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">TNX-WIN01</span>
+        <h3 class="card-title">Windows 11 Pro OEM</h3>
+        <p class="specs">Volume OEM | Pre-installation available | Linux alternative free</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 70,000</span>
+          <span class="price-usd">USD 40</span>
+        </div>
+        
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/usb-flash.png" alt="USB Flash Drive — 32GB" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">USB Flash Drive — </div>
+      </div>
+      <div class="card-body">
+        <span class="sku">TNX-USB01</span>
+        <h3 class="card-title">USB Flash Drive — 32GB</h3>
+        <p class="specs">USB 3.0 | 32GB | OS deploy / backup</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 10,000</span>
+          <span class="price-usd">USD 6</span>
+        </div>
+        
+      </div>
+    </div></div>
+    </section>
+    <section class="product-section">
+      <div class="section-header">
+        <h2>💻 Laptops (OEM & Branded)</h2>
+        <p class="section-desc">Budget OEM to premium branded laptops including HP, Lenovo & ThinkPad.</p>
+      </div>
+      <div class="card-grid">
+    <div class="card featured-card">
+      <span class="badge">⭐ Best Value</span>
+      <div class="card-img-wrap">
+        <img src="products/lenovo-thinkpad-e14-gen5.png" alt="Lenovo ThinkPad E14 Gen 5" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">Lenovo ThinkPad E1</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">TNX-LT05</span>
+        <h3 class="card-title">Lenovo ThinkPad E14 Gen 5</h3>
+        <p class="specs">i5-1335U | 8GB | 256GB SSD | 14" FHD IPS | DOS | Premium build</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 1,110,000</span>
+          <span class="price-usd">USD 640</span>
+        </div>
+        <div class="value-metric">≈ USD 1.5 per GHz (Core Ultra)</div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/oem-budget.png" alt="Budget Laptop — OEM (14")" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">Budget Laptop — OE</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">TNX-LT01</span>
+        <h3 class="card-title">Budget Laptop — OEM (14")</h3>
+        <p class="specs">Intel N4500 | 8GB DDR4 | 128GB SSD | 14" HD | DOS</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 390,000</span>
+          <span class="price-usd">USD 225</span>
+        </div>
+        <div class="value-metric">≈ USD 0.5 per GHz (Core Ultra)</div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/oem-mid.png" alt="Mid-Range Laptop — OEM (15.6")" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">Mid-Range Laptop —</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">TNX-LT02</span>
+        <h3 class="card-title">Mid-Range Laptop — OEM (15.6")</h3>
+        <p class="specs">Intel N5095 / i3-1215U | 8GB | 256GB SSD | 15.6" FHD | DOS</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 590,000</span>
+          <span class="price-usd">USD 340</span>
+        </div>
+        <div class="value-metric">≈ USD 0.8 per GHz (Core Ultra)</div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/oem-mid.png" alt="Standard Laptop — Branded (15.6")" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">Standard Laptop — </div>
+      </div>
+      <div class="card-body">
+        <span class="sku">TNX-LT03</span>
+        <h3 class="card-title">Standard Laptop — Branded (15.6")</h3>
+        <p class="specs">Intel i5-1235U | 8GB | 256GB SSD | 15.6" FHD | DOS</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 890,000</span>
+          <span class="price-usd">USD 513</span>
+        </div>
+        <div class="value-metric">≈ USD 1.2 per GHz (Core Ultra)</div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/hp-250-g9.png" alt="HP 250 G9" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">HP 250 G9</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">TNX-LT04A</span>
+        <h3 class="card-title">HP 250 G9</h3>
+        <p class="specs">i5-1235U | 8GB | 512GB SSD | 15.6" FHD | DOS | Warranty</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 870,000</span>
+          <span class="price-usd">USD 502</span>
+        </div>
+        <div class="value-metric">≈ USD 1.2 per GHz (Core Ultra)</div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/lenovo-thinkpad-e14-gen5.png" alt="Lenovo V15 Gen 3" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">Lenovo V15 Gen 3</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">TNX-LT04B</span>
+        <h3 class="card-title">Lenovo V15 Gen 3</h3>
+        <p class="specs">i5-1235U | 8GB | 512GB SSD | 15.6" FHD | DOS | Warranty</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 870,000</span>
+          <span class="price-usd">USD 502</span>
+        </div>
+        <div class="value-metric">≈ USD 1.2 per GHz (Core Ultra)</div>
+      </div>
+    </div></div>
+    </section>
+    <section class="product-section">
+      <div class="section-header">
+        <h2>📱 Tablets & Accessories</h2>
+        <p class="section-desc">Android tablets from budget classroom devices to Lenovo branded — WiFi & 4G options.</p>
+      </div>
+      <div class="card-grid">
+    <div class="card featured-card">
+      <span class="badge">⭐ Best Value</span>
+      <div class="card-img-wrap">
+        <img src="products/lenovo-tab-m10-plus.png" alt="Lenovo Tab M10 Plus" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">Lenovo Tab M10 Plu</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">TNX-TB03</span>
+        <h3 class="card-title">Lenovo Tab M10 Plus</h3>
+        <p class="specs">Helio G80 | 4GB RAM | 128GB | 10.6" 2K | Branded</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 330,000</span>
+          <span class="price-usd">USD 190</span>
+        </div>
+        
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/tablet-budget.png" alt="Budget Android Tablet (10.1")" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">Budget Android Tab</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">TNX-TB01</span>
+        <h3 class="card-title">Budget Android Tablet (10.1")</h3>
+        <p class="specs">Quad-Core | 4GB RAM | 64GB | WiFi</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 130,000</span>
+          <span class="price-usd">USD 75</span>
+        </div>
+        
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/oem-mid.png" alt="Mid-Range Android Tablet (10.1")" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">Mid-Range Android </div>
+      </div>
+      <div class="card-body">
+        <span class="sku">TNX-TB02</span>
+        <h3 class="card-title">Mid-Range Android Tablet (10.1")</h3>
+        <p class="specs">Octa-Core | 6GB RAM | 128GB | WiFi+4G | Stylus</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 220,000</span>
+          <span class="price-usd">USD 127</span>
+        </div>
+        
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/laptop-bag.png" alt="Laptop Bag — 15.6"" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">Laptop Bag — 15.6"</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">TNX-BG01</span>
+        <h3 class="card-title">Laptop Bag — 15.6"</h3>
+        <p class="specs">Padded shoulder bag | Fits 15.6" laptops</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 20,000</span>
+          <span class="price-usd">USD 12</span>
+        </div>
+        <div class="value-metric">≈ USD 0.0 per GHz (Core Ultra)</div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-img-wrap">
+        <img src="products/wireless-mouse.png" alt="Wireless Mouse" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'">
+        <div class="img-placeholder">Wireless Mouse</div>
+      </div>
+      <div class="card-body">
+        <span class="sku">TNX-WM01</span>
+        <h3 class="card-title">Wireless Mouse</h3>
+        <p class="specs">2.4GHz USB receiver | Optical | For laptop use</p>
+        <div class="price-block">
+          <span class="price-mwk">MWK 10,000</span>
+          <span class="price-usd">USD 6</span>
+        </div>
+        
+      </div>
+    </div></div>
+    </section>
+<footer>
+  <strong>TechNexus</strong> | Plot 484 Naperi Avenue, Blantyre, Malawi<br>
+  <a href="https://wa.me/265889941700" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366" width="18" height="18" style="vertical-align:middle"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a> <a href="tel:+265889941700">+265 889 941 700</a> &middot; 📧 <a href="mailto:technexus_mw@proton.me">technexus_mw@proton.me</a><br>
+  <div style="margin-top:12px;font-size:.72rem;opacity:.6">&copy; 2026 TechNexus. All rights reserved. Prices indicative and subject to change.</div>
+</footer>
+<script>
+(function(){
+  var input=document.getElementById('searchInput');
+  var countEl=document.getElementById('searchCount');
+  if(!input)return;
+  input.addEventListener('input',function(){
+    var q=this.value.toLowerCase().trim();
+    var rows=document.querySelectorAll('tbody tr, .card, .scard, .srv, .gcard');
+    var total=0,shown=0;
+    rows.forEach(function(r){
+      total++;
+      if(!q){r.classList.remove('no-match');shown++;return}
+      if(r.textContent.toLowerCase().indexOf(q)!==-1){r.classList.remove('no-match');shown++}
+      else{r.classList.add('no-match')}
+    });
+    countEl.textContent=q?(shown+' of '+total+' items match'):'';
+  });
+})();
+</script>
+</body>
+</html>
