@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edg">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes"/>
+    <title>Chuwi Hi-tech | Tablets, Laptops, Mini PCs, Accessories</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/tpl/pc/images/favicon.ico">
+    <meta name="facebook-domain-verification" content="ojx58d2of8pq9x4znv11myxf9jckwr" />
+    <meta property="og:locale" content="">
+    <meta property="og:image" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:site_name" content="CHUWI">
+    <meta name="twitter:site" content="@chuwidotcom">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chuwi Hi-tech | Tablets, Laptops, Mini PCs, Accessories">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:description" content="Check out the official Chuwi store to purchase premium tablets, laptops, and mini PCs. Find affordable technology for work, play, and mobile lifestyles. Shop Now!">
+    <meta name="keywords" content="Check out the official Chuwi store to purchase premium tablets, laptops, and mini PCs. Find affordable technology for work, play, and mobile lifestyles. Shop Now!">
+    <meta name="description" content="Check out the official Chuwi store to purchase premium tablets, laptops, and mini PCs. Find affordable technology for work, play, and mobile lifestyles. Shop Now!">
+    <link rel="stylesheet" href="/tpl/pc/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/tpl/pc/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="/tpl/pc/lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="/tpl/pc/lib/animate/css/animate.min.css">
+    <link rel="stylesheet" href="/tpl/pc/lib/animate/css/mobile_animate.css">
+    <!--<link rel="stylesheet" href="/tpl/pc/lib/chuwei/css/iconfont.css">-->
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_994722_9z3tf3rak7.css">
+    <link rel="stylesheet" href="/tpl/pc/css/app.css?v=75">
+    <link rel="stylesheet" href="/public/plugs/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/public/index/libs/iconfont/iconfont.css?3">
+
+    
+<style>
+    /*header.active .navbar .navbar-nav .nav-item .nav-link{color: #ffffff;}*/
+    header.active .navbar .navbar-nav .nav-item .nav-link{color: #000 !important;}
+    header:hover .navbar .navbar-nav .nav-item .nav-link{color: #000!important;}
+    header:hover .navbar .selectLangBox .nav-link{color: #000!important}
+    header.active .navbar .select_region_s{color:#000 !important;}
+
+    /*end*/
+    .img-cover{object-fit: cover}
+    .support-box{padding-bottom: 24%;margin-top:20px;}
+
+</style>
+
+
+    <script src="/tpl/pc/lib/jquery/jquery.min.js"></script>
+    <script src="/tpl/pc/js/setrem.js"></script>
+    <!-- Hotjar Tracking Code for www.chuwi.com -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:2423608,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"CHUWI","url":"https://www.chuwi.com/us"}</script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N9Z9K3L');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/40109958.js"></script>
+    <!-- End of HubSpot Embed Code -->
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N9Z9K3L"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header style=""  class="container-fluid active">
+    <nav class="navbar navbar-expand-md flex-md-row  navbar-light bg-light container">
+        <a class="navbar-brand" href="/us" id="logo_1">
+            <!--<i class="icon iconfont icon-CHUWI d-inline-block align-top"></i>-->
+            <i class="icon iconfont icon-logo d-inline-block align-top"></i>
+            <!-- <img src="/public/upload/image/20201117/d0f2c198f9a0935a8d6fc23416b971cd.png" class="d-inline-block align-top" alt="" loading="lazy"> -->
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="/us" id="logo_2">
+            <i class="icon iconfont icon-CHUWI d-inline-block align-top"></i>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto">
+               <!-- <li class="nav-item">
+                    <a class="nav-link nav-b" href="https://store.chuwi.com">Store</a>
+                </li>-->
+
+                                <li class="nav-item">
+                                        <a class="nav-link site-nav__link--underline" href="/us/pc.html">Laptop</a>
+                                        <div class="sub-nav__wrap">
+                        <div class="nav-children container">
+                                                        <a target="_blank" href="/product/items/chuwi-corebook-air.html">
+                                                                <img class="new-icon" src="/public/index/images/icon/new.png" alt="">
+                                                                <div class="img-box"><img src="https://www.chuwi.com/public/upload/image/20251212/a51cc36ae1fdaf5634c8b2cd04b3eb0c.png" alt="CoreBook Air" /></div>
+                                <p class="nchild_p2">CoreBook Air</p>
+                                <p class="nchild_p3">14" 1KG Laptop, AMD Ryzen 5, 16GB+512GB</p>
+                            </a>
+
+                                                        <a target="_blank" href="/product/items/chuwi-corebook-air-plus.html">
+                                                                <img class="new-icon" src="/public/index/images/icon/new.png" alt="">
+                                                                <div class="img-box"><img src="https://www.chuwi.com/public/upload/image/20251217/5e3624e9875d262cdcab6cecceff0b41.png" alt="CoreBook Air Plus" /></div>
+                                <p class="nchild_p2">CoreBook Air Plus</p>
+                                <p class="nchild_p3">16" 1.3KG Laptop, AMD Ryzen 5, 16GB+512GB</p>
+                            </a>
+
+                                                        <a target="_blank" href="/product/items/chuwi-corebook-plus.html">
+                                                                <img class="new-icon" src="/public/index/images/icon/new.png" alt="">
+                                                                <div class="img-box"><img src="https://www.chuwi.com/public/upload/image/20250722/6f870eaf17ad567ca7e4d73ea5e2f56e.jpg" alt="corebook_plus" /></div>
+                                <p class="nchild_p2">CoreBook Plus</p>
+                                <p class="nchild_p3">16" 74.1Wh Laptop, AMD Ryzen 5, 16GB+512GB</p>
+                            </a>
+
+                                                        <a target="_blank" href="/product/items/chuwi-corebook-x-r5.html">
+                                                                <img class="new-icon" src="/public/index/images/icon/new.png" alt="">
+                                                                <div class="img-box"><img src="https://www.chuwi.com/public/upload/image/20241031/20ee74ad1135981ea95adcfc1ceaebf3.jpg" alt="CoreBook X Ryzen 5" /></div>
+                                <p class="nchild_p2">CoreBook X Ryzen 5</p>
+                                <p class="nchild_p3">14" 2K Laptop, AMD Ryzen 5, 16GB+512GB</p>
+                            </a>
+
+                                                        <a target="_blank" href="/product/items/Chuwi-freebook-n150.html">
+                                                                <img class="new-icon" src="/public/index/images/icon/new.png" alt="">
+                                                                <div class="img-box"><img src="https://www.chuwi.com/public/upload/image/20211214/46996b5570937239d152e6862cfd71ea.png" alt="FreeBook N150" /></div>
+                                <p class="nchild_p2">FreeBook N150</p>
+                                <p class="nchild_p3">13.4" 2.5K 2-in-1 360° Touchscreen Laptop, Intel N150</p>
+                            </a>
+
+                                                        <a target="_blank" href="/pc.html">
+                                <div class="img-box"><img src="/public/upload/image/20201123/d60888dafb7467cb04b76d076f4a8634.png" class="arrow-box"></div>
+                                <p class="nchild_p2">More</p>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                                <li class="nav-item">
+                                        <a class="nav-link site-nav__link--underline" href="/us/tablet.html">Tablet PC</a>
+                                        <div class="sub-nav__wrap">
+                        <div class="nav-children container">
+                                                        <a target="_blank" href="/product/items/chuwi-hi10-max-n150.html">
+                                                                <img class="new-icon" src="/public/index/images/icon/new.png" alt="">
+                                                                <div class="img-box"><img src="https://www.chuwi.com/public/upload/image/20240613/5a8008dde269fa0cd27c1d12536864fe.jpg" alt="hi10 max" /></div>
+                                <p class="nchild_p2">Hi10 Max N150</p>
+                                <p class="nchild_p3">12.96" 3K 2-in-1 Windows Tablet, Intel N150</p>
+                            </a>
+
+                                                        <a target="_blank" href="/product/items/chuwi-hi10-xpro-2025.html">
+                                                                <img class="new-icon" src="/public/index/images/icon/new.png" alt="">
+                                                                <div class="img-box"><img src="https://www.chuwi.com/public/upload/image/20230606/4176ca4399b6ae6c0caebfcaec29e60b.jpg" alt="Hi10 XPro_1" /></div>
+                                <p class="nchild_p2">Hi10 XPro</p>
+                                <p class="nchild_p3">10.1" 4G LTE & Wi-Fi Android 15 Tablet</p>
+                            </a>
+
+                                                        <a target="_blank" href="/product/items/chuwi-hi10-x1-n150.html">
+                                                                <img class="new-icon" src="/public/index/images/icon/new.png" alt="">
+                                                                <div class="img-box"><img src="https://www.chuwi.com/public/upload/image/20250103/b2c63192ff29ea26837fab6f14e883b1.png" alt="Hi10 X1 N150" /></div>
+                                <p class="nchild_p2">Hi10 X1 N150</p>
+                                <p class="nchild_p3">10.1" 2-in-1 Windows Tablet, Intel N150</p>
+                            </a>
+
+                                                        <a target="_blank" href="/product/items/Chuwi-hi10-x2.html">
+                                                                <img class="new-icon" src="/public/index/images/icon/new.png" alt="">
+                                                                <div class="img-box"><img src="https://www.chuwi.com/public/upload/image/20251014/1754d6ba19b6369a0a41dd3e1cabf29f.png" alt="1" /></div>
+                                <p class="nchild_p2">Hi10 X2</p>
+                                <p class="nchild_p3">10.1" 2-in-1 Windows Tablet, Intel Core i3</p>
+                            </a>
+
+                                                        <a target="_blank" href="/product/items/chuwi-hi10-x1.html">
+                                                                <div class="img-box"><img src="https://www.chuwi.com/public/upload/image/20250103/b2c63192ff29ea26837fab6f14e883b1.png" alt="1" /></div>
+                                <p class="nchild_p2">Hi10 X1</p>
+                                <p class="nchild_p3">10.1" 2-in-1 Windows Tablet, Intel N100</p>
+                            </a>
+
+                                                        <a target="_blank" href="/tablet.html">
+                                <div class="img-box"><img src="/public/upload/image/20201123/a1d7c88f183f1db6a5756f82eb4545fa.png" class="arrow-box"></div>
+                                <p class="nchild_p2">More</p>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                                <li class="nav-item">
+                                        <a class="nav-link site-nav__link--underline" href="/us/minipc.html">Mini PC</a>
+                                        <div class="sub-nav__wrap">
+                        <div class="nav-children container">
+                                                        <a target="_blank" href="/product/items/chuwi-aubox-8745.html">
+                                                                <img class="new-icon" src="/public/index/images/icon/new.png" alt="">
+                                                                <div class="img-box"><img src="https://www.chuwi.com/public/upload/image/20250217/1eea1ab6b8355ee035216d4337bf4305.jpg" alt="aubox" /></div>
+                                <p class="nchild_p2">AuBox 8745</p>
+                                <p class="nchild_p3">AMD Ryzen 7 8745HS 4K Mini PC</p>
+                            </a>
+
+                                                        <a target="_blank" href="/product/items/chuwi-larkbox-x-i3-1220p.html">
+                                                                <img class="new-icon" src="/public/index/images/icon/new.png" alt="">
+                                                                <div class="img-box"><img src="https://www.chuwi.com/public/upload/image/20220211/d7ae53b29ea8aba55f04cbe1890423db.png" alt="1 (1)" /></div>
+                                <p class="nchild_p2">LarkBox X i3</p>
+                                <p class="nchild_p3">Intel Core i3 4K Mini PC</p>
+                            </a>
+
+                                                        <a target="_blank" href="/product/items/chuwi-aubox-ai365.html">
+                                                                <img class="new-icon" src="/public/index/images/icon/new.png" alt="">
+                                                                <div class="img-box"><img src="https://www.chuwi.com/public/upload/image/20251010/763f6201a95182b68f91cbd3416cc9d1.png" alt="1" /></div>
+                                <p class="nchild_p2">AuBox Ai365</p>
+                                <p class="nchild_p3">AMD Ryzen AI 9 365 Mini 8K AI PC</p>
+                            </a>
+
+                                                        <a target="_blank" href="/product/items/chuwi-corebox-i7-13620H.html">
+                                                                <img class="new-icon" src="/public/index/images/icon/new.png" alt="">
+                                                                <div class="img-box"><img src="https://www.chuwi.com/public/upload/image/20240902/3e57c2dd633925cfba7dbb75c71af0cc.png" alt="CoreBox i5-12450H" /></div>
+                                <p class="nchild_p2">CoreBox i7-13620H</p>
+                                <p class="nchild_p3">Intel Core i7-13620H 4K Mini PC</p>
+                            </a>
+
+                                                        <a target="_blank" href="/product/items/chuwi-larkbox-x-n150.html">
+                                                                <img class="new-icon" src="/public/index/images/icon/new.png" alt="">
+                                                                <div class="img-box"><img src="https://www.chuwi.com/public/upload/image/20220211/d7ae53b29ea8aba55f04cbe1890423db.png" alt="LarkBox X N150" /></div>
+                                <p class="nchild_p2">LarkBox X N150</p>
+                                <p class="nchild_p3"> Intel N150 4K Mini PC</p>
+                            </a>
+
+                                                        <a target="_blank" href="/minipc.html">
+                                <div class="img-box"><img src="/public/upload/image/20201123/b57c88492d56db6dbcba7f4a2c3d32b0.png" class="arrow-box"></div>
+                                <p class="nchild_p2">More</p>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                                <li class="nav-item">
+                                        <a class="nav-link site-nav__link--underline" href="/us/aio.html">AIO</a>
+                                        <div class="sub-nav__wrap">
+                        <div class="nav-children container">
+                                                        <a target="_blank" href="/product/items/Chuwi-unitech-24-i3.html">
+                                                                <img class="new-icon" src="/public/index/images/icon/new.png" alt="">
+                                                                <div class="img-box"><img src="https://www.chuwi.com/public/upload/image/20250814/85eba8fd8bb5f1ff8d2658bbecf2665d.png" alt="Unitech24" /></div>
+                                <p class="nchild_p2">Unitech 24 i3</p>
+                                <p class="nchild_p3">23.8" FHD 120Hz Intel Core i3 All-in-One, 16GB+512GB</p>
+                            </a>
+
+                                                        <a target="_blank" href="/product/items/chuwi-unitech-27.html">
+                                                                <img class="new-icon" src="/public/index/images/icon/new.png" alt="">
+                                                                <div class="img-box"><img src="https://www.chuwi.com/public/upload/image/20250912/46ba65b8fac7c549d37e9e89d732b9bc.png" alt="HPS27-2" /></div>
+                                <p class="nchild_p2">Unitech 27</p>
+                                <p class="nchild_p3">27" QHD (2K) 180Hz All-in-One, 32GB+1TB</p>
+                            </a>
+
+                                                        <a target="_blank" href="/product/items/chuwi-unitech-24.html">
+                                                                <img class="new-icon" src="/public/index/images/icon/new.png" alt="">
+                                                                <div class="img-box"><img src="https://www.chuwi.com/public/upload/image/20250814/85eba8fd8bb5f1ff8d2658bbecf2665d.png" alt="Unitech 24" /></div>
+                                <p class="nchild_p2">Unitech 24</p>
+                                <p class="nchild_p3">23.8" FHD 120Hz AMD Ryzen 5 All-in-One, 16GB+512GB</p>
+                            </a>
+
+                                                        <a target="_blank" href="/aio.html">
+                                <div class="img-box"><img src="/public/upload/image/20250814/761709501dd52592da44bc3436eccd48.png" class="arrow-box"></div>
+                                <p class="nchild_p2">More</p>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                                <li class="nav-item">
+                                        <a class="nav-link site-nav__link--underline" href="/us/accessory.html">Accessories</a>
+                                    <li class="nav-item">
+                                        <a class="nav-link site-nav__link--underline" href="/us/e10.html">
+                        <img src="/public/upload/image/20240604/5c94559eb428f523865e1a83ede2d9da.png" alt="" style="width: 26px; margin-top:-8px;">
+                    </a>
+                                        <div class="sub-nav__wrap">
+                        <div class="nav-children container">
+                                                        <a target="_blank" href="/product/items/chuwi-etbox-i7-13620h.html">
+                                                                <img class="new-icon" src="/public/index/images/icon/new.png" alt="">
+                                                                <div class="img-box"><img src="https://www.chuwi.com/public/upload/image/20240723/06ab7b6c6ef00dd57ca37be1db95d26a.png" alt="etbok1000" /></div>
+                                <p class="nchild_p2">ETBox i7-13620H</p>
+                                <p class="nchild_p3">ETBox i7-13620H</p>
+                            </a>
+
+                                                        <a target="_blank" href="/product/items/chuwi-etbox-x.html">
+                                                                <img class="new-icon" src="/public/index/images/icon/new.png" alt="">
+                                                                <div class="img-box"><img src="https://www.chuwi.com/public/upload/image/20240918/eceae50bd9922a2ccdd5b751d2e4ff72.png" alt="LarkBox" /></div>
+                                <p class="nchild_p2">ETBox X</p>
+                                <p class="nchild_p3">ETBox X</p>
+                            </a>
+
+                                                        <a target="_blank" href="/product/items/chuwi-etpad-max.html">
+                                                                <img class="new-icon" src="/public/index/images/icon/new.png" alt="">
+                                                                <div class="img-box"><img src="https://www.chuwi.com/public/upload/image/20241022/13c2f02c4cd80ca98b0496e6d63f7e34.png" alt="Hi10 Max 3" /></div>
+                                <p class="nchild_p2">ETPad Max</p>
+                                <p class="nchild_p3">ETPad Max</p>
+                            </a>
+
+                                                        <a target="_blank" href="/product/items/chuwi-etbook-se.html">
+                                                                <img class="new-icon" src="/public/index/images/icon/new.png" alt="">
+                                                                <div class="img-box"><img src="https://www.chuwi.com/public/upload/image/20240723/3d33f96d3e289ce842bbfbfbbe0267f2.jpg" alt="ETBook-SE-1" /></div>
+                                <p class="nchild_p2">ETBook SE</p>
+                                <p class="nchild_p3">ETBook SE</p>
+                            </a>
+
+                                                        <a target="_blank" href="/product/items/chuwi-etbook-plus.html">
+                                                                <img class="new-icon" src="/public/index/images/icon/new.png" alt="">
+                                                                <div class="img-box"><img src="https://www.chuwi.com/public/upload/image/20240709/d2d6558bc8e118a18f7d27cccfbdb762.png" alt="ETBook Plus" /></div>
+                                <p class="nchild_p2">ETBook Plus</p>
+                                <p class="nchild_p3">ETBook Plus</p>
+                            </a>
+
+                                                        <a target="_blank" href="/e10.html">
+                                <div class="img-box"><img src="/public/upload/image/20240328/b004cf604ff98f4c65624e9994e23afb.png" class="arrow-box"></div>
+                                <p class="nchild_p2">More</p>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                               <!-- -->
+
+                <li class="nav-item other-nav-item">
+                    <a class="nav-link site-nav__link--underline" href="javascript:void(0)">Business</a>
+                    <ul class="site-nav__dropdown">
+                                                <li><a href="/beagent.html">Become a Dealer</a></li>
+                                                <li><a href="/oem-odm-tablets-laptops.html">OEM/ODM</a></li>
+                                            </ul>
+                </li>
+
+                <!--<li class="nav-item">
+                    <a class="nav-link" href="https://forum.chuwi.com">Forum</a>
+                </li>-->
+                <li class="nav-item other-nav-item">
+                    <a class="nav-link site-nav__link--underline" href="javascript:void(0)">Explore</a>
+                    <ul class="site-nav__dropdown">
+                       <li><a href="/us/about.html">About CHUWI</a></li>
+                       <li><a href="/us/contact.html">Contact Us</a></li>
+                        <li><a href="https://blog.chuwi.com">Blogs</a></li>
+                       <li><a href="/us/news.html">Company News</a></li>
+                       <li><a href="/support/video-center">Video Center</a></li>
+                       <li><a href="https://forum.chuwi.com">Forum</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item other-nav-item">
+                    <a class="nav-link site-nav__link--underline" href="/support-center">Support</a>
+                    <ul class="site-nav__dropdown">
+                        <li><a href="/support-faqs">FAQs</a></li>
+                        <li><a href="/support-center">Support Center</a></li>
+                        <li><a href="/support-user-guide">User Manual</a></li>
+                                                <li><a href="/support/shipping-delivery">Shipping & Delivery</a></li>
+                                                <li><a href="/support/warranty-policy">Warranty Policy</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="form-inline my-2 my-lg-0 d-flex flex-nowrap flex-row-reverse flex-md-row selectLangBox">
+            <span class="icon iconfont icon-search" id="open_search"></span>
+            <button class="btn go_store_btn"><a href="https://us.chuwi.com">Store</a></button>
+
+            <div style="padding:0;margin-left:15px;cursor: pointer;" class="select_region_s">
+                <span class="iconfont icon-diqiu"></span>
+                United States            </div>
+        </div>
+    </nav>
+
+    <div class="cover" id="search_box">
+        <div class="d-flex justify-content-center align-items-center h-100 w-100 background-white" style="height:var(--pc-header-height) !important;">
+            <div class="search-box">
+                <div><i class="icon iconfont icon-logo"></i></div>
+                <div class="input-box">
+                    <i class="icon iconfont icon-search"></i>
+                    <input type="text" autocomplete="off" placeholder="Search chuwi.com" id="search" onkeydown="onSearch(this)"
+                           data-url="/us/search"></div>
+                <div><i class="layui-icon layui-icon-close close_search" id="close_search"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wep_searchBox">
+        <div class="wep_search">
+            <div class="wep_left">
+                <img src="/tpl/pc/images/search-hover.png" alt="">
+                <input type="text" placeholder="search Chuwi.com" onkeydown="onSearch(this)"
+                    data-url="/search.html">
+            </div>
+            <img src="/tpl/pc/images/close.png" alt="" id="wep_closeSearch">
+        </div>
+    </div>
+</header>
+<section class="header_line"></section>
+
+<!--区域国家选择弹窗-->
+<div class="region_select_mask"></div><!--遮罩-->
+<div class="select_region_box layui-anim layui-anim-down">
+    <div class="header">
+        <p>Select Your Country/Region</p>
+        <i class="layui-icon layui-icon-close close"></i>
+    </div>
+    <div class="content">
+        <div class="layui-row layui-col-space10">
+            <div class="layui-col-md4 layui-col-xs12">
+                <div class="region_item" data-region="us">United States <span class="region_lang">English</span></div>
+            </div>
+
+                        <div class="layui-col-md4 layui-col-xs12">
+                <div class="region_item" data-region="cn">中国（大陆） <span class="region_lang">简体中文</span></div>
+            </div>
+                        <div class="layui-col-md4 layui-col-xs12">
+                <div class="region_item" data-region="es">España <span class="region_lang">Español</span></div>
+            </div>
+                        <div class="layui-col-md4 layui-col-xs12">
+                <div class="region_item" data-region="jp">日本 <span class="region_lang">日本語</span></div>
+            </div>
+                        <div class="layui-col-md4 layui-col-xs12">
+                <div class="region_item" data-region="de">Deutschland <span class="region_lang">Deutsch</span></div>
+            </div>
+                        <div class="layui-col-md4 layui-col-xs12">
+                <div class="region_item" data-region="it">Italia <span class="region_lang">Italian</span></div>
+            </div>
+                        <div class="layui-col-md4 layui-col-xs12">
+                <div class="region_item" data-region="pt">Portugal <span class="region_lang">Português</span></div>
+            </div>
+                        <div class="layui-col-md4 layui-col-xs12">
+                <div class="region_item" data-region="ph">Philippines <span class="region_lang">Philippines</span></div>
+            </div>
+                        <!--
+            <div class="layui-col-md4 layui-col-xs12">
+                <div class="region_item" data-region="cn">中国（大陆） <span class="region_lang">简体中文</span></div>
+            </div>
+            <div class="layui-col-md4 layui-col-xs12">
+                <div class="region_item" data-region="jp">日本 <span class="region_lang">日本語</span></div>
+            </div>
+            <div class="layui-col-md4 layui-col-xs12">
+                <div class="region_item" data-region="es">España <span class="region_lang">Español</span></div>
+            </div>
+            <div class="layui-col-md4 layui-col-xs12">
+                <div class="region_item" data-region="ru">CIS <span class="region_lang">Русский</span></div>
+            </div>
+            <div class="layui-col-md4 layui-col-xs12">
+                <div class="region_item" data-region="de">Deutschland <span class="region_lang">Deutsch</span></div>
+            </div>
+            <div class="layui-col-md4 layui-col-xs12">
+                <div class="region_item" data-region="it">Italia <span class="region_lang">Italian</span></div>
+            </div>
+            <div class="layui-col-md4 layui-col-xs12">
+                <div class="region_item" data-region="pt">Portugal <span class="region_lang">Português</span></div>
+            </div>-->
+            <div class="layui-col-md4 layui-col-xs12">
+                <div class="region_item" data-region="eu">Europe <span class="region_lang">English</span></div>
+            </div>
+            <div class="layui-col-md4 layui-col-xs12">
+                <div class="region_item" data-region="/">Global <span style="color: #999;font-size: 14px;">(Other country or region)</span> <span class="region_lang">English</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--语言国家提示-->
+<!--VK49865-->
+
+
+<div class="fixed-background-image">
+    <img src="/public/index/images/body-background-02.png?1" alt="">
+</div>
+
+<aside class="banner-box">
+    <div style="height: var(--pc-header-height)"></div>
+    <div class="swiper-container" id="index-banner">
+        <div class="swiper-wrapper">
+                            <div class="swiper-slide " style="background-image: url(/public/upload/image/20260228/084bcbfccc0d87e0a5342ece11ce12f6.jpg);" data-color="#ffffff">
+            		<a href="https://us.chuwi.com/pages/aubox-x1" target="_self" class="banner-link"></a>
+                    <div class="banner-intro ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.6s" swiper-animate-delay="0.2s"></div>
+                                        </div>
+                            <div class="swiper-slide " style="background-image: url(/public/upload/image/20251218/0520c826601e81153816fc751c4b9edc.jpg);" data-color="#ffffff">
+            		<a href="https://www.chuwi.com/product/items/chuwi-corebook-air.html" target="_blank" class="banner-link"></a>
+                    <div class="banner-intro ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.6s" swiper-animate-delay="0.2s"></div>
+                                        </div>
+                            <div class="swiper-slide " style="background-image: url(/public/upload/image/20250214/34f37a046777d70753c45b0a46322d5b.jpg);" data-color="#ffffff">
+            		<a href="https://www.chuwi.com/product/items/chuwi-corebook-x-i5-12450h.html" target="_blank" class="banner-link"></a>
+                    <div class="banner-intro ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.6s" swiper-animate-delay="0.2s"></div>
+                                        </div>
+                            <div class="swiper-slide " style="background-image: url(/public/upload/image/20251218/6ead75e33f8450f99fc0c0ce516e8e92.jpg);" data-color="#ffffff">
+            		<a href="https://www.chuwi.com/product/items/chuwi-corebook-air-plus.html" target="_blank" class="banner-link"></a>
+                    <div class="banner-intro ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.6s" swiper-animate-delay="0.2s"></div>
+                                        </div>
+                            <div class="swiper-slide " style="background-image: url(/public/upload/image/20251010/b89b7cfc4e579a5cbbd42a6864f1f762.jpg);" data-color="#ffffff">
+            		<a href="https://www.chuwi.com/product/items/chuwi-aubox-ai365.html" target="_blank" class="banner-link"></a>
+                    <div class="banner-intro ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.6s" swiper-animate-delay="0.2s"></div>
+                                        </div>
+                            <div class="swiper-slide " style="background-image: url(/public/upload/image/20250508/2e4176bbfa6f5245913bcc8ba142a9d3.jpg);" data-color="#ffffff">
+            		<a href="https://www.chuwi.com/product/items/Chuwi-gamebook-9955hx.html" target="_blank" class="banner-link"></a>
+                    <div class="banner-intro ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.6s" swiper-animate-delay="0.2s"></div>
+                                        </div>
+                    </div>
+        <!-- 如果需要导航按钮 -->
+        <div class="swiper-button-prev direction-icon"><i class="layui-icon layui-icon-left"></i></div>
+        <div class="swiper-button-next direction-icon"><i class="layui-icon layui-icon-right"></i></div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination index-pagination d-flex justify-content-between"></div>
+    </div>
+</aside>
+
+<section class="wow relative home_products_sift">
+    <div class="title">Products</div>
+    <div class="container-1480">
+        <div class="all_in_one_img wow fadeInUp">
+                        <a href="javascript:void(0)" target=""><img src="/public/upload/image/20250821/f58580006227fd1fea7bf0c0c8bd3580.png" alt=""></a>
+                    </div>
+        <div class="products_list">
+                        <div class="product-item wow fadeInUp">
+                <div class="item-text">
+                    <h3 class="item-title">CoreBook Air</h3>
+                    <div class="item-desc">14" 1KG Laptop, AMD Ryzen 5, 16GB+512GB</div>
+                    <div class="link-box">
+                        <a class="link-item" href="/product/items/chuwi-corebook-air.html" target="_blank">Learn More <i class="layui-icon layui-icon-right"></i></a>
+                                                <a class="link-item" target="_blank" href="https://us.chuwi.com/products/corebook-air">Buy Now <i class="layui-icon layui-icon-right"></i></a>
+                                            </div>
+                </div>
+                <div class="img-box">
+                    <img class="lazy" src="https://www.chuwi.com/public/upload/image/20251212/a51cc36ae1fdaf5634c8b2cd04b3eb0c.png" alt="">
+                </div>
+            </div>
+                        <div class="product-item wow fadeInUp">
+                <div class="item-text">
+                    <h3 class="item-title">Hi10 Max N150</h3>
+                    <div class="item-desc">12.96" 3K 2-in-1 Windows Tablet, Intel N150</div>
+                    <div class="link-box">
+                        <a class="link-item" href="/product/items/chuwi-hi10-max-n150.html" target="_blank">Learn More <i class="layui-icon layui-icon-right"></i></a>
+                                                <a class="link-item" target="_blank" href="https://us.chuwi.com/products/hi10-max">Buy Now <i class="layui-icon layui-icon-right"></i></a>
+                                            </div>
+                </div>
+                <div class="img-box">
+                    <img class="lazy" src="https://www.chuwi.com/public/upload/image/20240613/5a8008dde269fa0cd27c1d12536864fe.jpg" alt="">
+                </div>
+            </div>
+                        <div class="product-item wow fadeInUp">
+                <div class="item-text">
+                    <h3 class="item-title">AuBox 8745</h3>
+                    <div class="item-desc">AMD Ryzen 7 8745HS 4K Mini PC</div>
+                    <div class="link-box">
+                        <a class="link-item" href="/product/items/chuwi-aubox-8745.html" target="_blank">Learn More <i class="layui-icon layui-icon-right"></i></a>
+                                                <a class="link-item" target="_blank" href="https://store.chuwi.com/products/aubox-8745hs">Buy Now <i class="layui-icon layui-icon-right"></i></a>
+                                            </div>
+                </div>
+                <div class="img-box">
+                    <img class="lazy" src="https://www.chuwi.com/public/upload/image/20250217/1eea1ab6b8355ee035216d4337bf4305.jpg" alt="">
+                </div>
+            </div>
+                    </div>
+    </div>
+
+</section>
+
+<!--product swiper-->
+<section class="wow relative home_our_products fadeInUp">
+    <div class="postTitle anim fadeInUp">
+        <h3 class="title">Discover What's Popular</h3>
+    </div>
+    <div class="PostShow anim fadeInUp relative container-1480">
+        <div class="swiper productSwiper">
+            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                    <div class="thumbnail">
+                        <div class="slide-item">
+                            <div class="img">
+                                <img class="b-lazy lazy" src="https://www.chuwi.com/public/upload/image/20251217/5e3624e9875d262cdcab6cecceff0b41.png" data-src="" alt="CoreBook Air Plus" />
+                            </div>
+                            <div class="text-box">
+                                <h4 class="h3 title">CoreBook Air Plus</h4>
+                                <p class="h4 desc">16" 1.3KG Laptop, AMD Ryzen 5, 16GB+512GB</p>
+                                <div class="learn"><a href="/product/items/chuwi-corebook-air-plus.html" target="_blank">Learn More<i class="layui-icon layui-icon-right"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                <div class="swiper-slide">
+                    <div class="thumbnail">
+                        <div class="slide-item">
+                            <div class="img">
+                                <img class="b-lazy lazy" src="https://www.chuwi.com/public/upload/image/20251014/1754d6ba19b6369a0a41dd3e1cabf29f.png" data-src="" alt="Hi10 X2" />
+                            </div>
+                            <div class="text-box">
+                                <h4 class="h3 title">Hi10 X2</h4>
+                                <p class="h4 desc">10.1" 2-in-1 Windows Tablet, Intel Core i3</p>
+                                <div class="learn"><a href="/product/items/Chuwi-hi10-x2.html" target="_blank">Learn More<i class="layui-icon layui-icon-right"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                <div class="swiper-slide">
+                    <div class="thumbnail">
+                        <div class="slide-item">
+                            <div class="img">
+                                <img class="b-lazy lazy" src="https://www.chuwi.com/public/upload/image/20251010/763f6201a95182b68f91cbd3416cc9d1.png" data-src="" alt="AuBox Ai365" />
+                            </div>
+                            <div class="text-box">
+                                <h4 class="h3 title">AuBox Ai365</h4>
+                                <p class="h4 desc">AMD Ryzen AI 9 365 Mini 8K AI PC</p>
+                                <div class="learn"><a href="/product/items/chuwi-aubox-ai365.html" target="_blank">Learn More<i class="layui-icon layui-icon-right"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="product-swiper-pagination"></div>
+        <div class="product-swiper-button-prev direction-icon"><i class="layui-icon layui-icon-left"></i>  </div>
+        <div class="product-swiper-button-next direction-icon"><i class="layui-icon layui-icon-right"></i>  </div>
+    </div>
+</section>
+
+<!--Seen On-->
+<section class="container-lg two_attract4 wow others-say fadeInUp">
+    <div class="title">As Seen On</div>
+    <div class=" relative">
+        <div class="swiper-container container-1480 seen-on-swiper">
+            <div class="others-say-content swiper-wrapper">
+                                <div class="item-box swiper-slide soon-play" data-video="https://www.youtube.com/embed/Rr27IcH6UXo?si=TLpmOCf42bdxi1Oy">
+                    <div class="img-box relative">
+                        <img src="/public/upload/youtube/20250821/Rr27IcH6UXo.jpg" alt="">
+                        <div class="font16 soon-play-icon"><i class="icon iconfont-chuwi icon-play_c"></i></div>
+                    </div>
+                    <div>
+                        <h3 class="desc">Nuevo MiniPC Chuwi AUBOX - POTENCIA inesperada! y el precio es RIDICULO para su POTENCIA!</h3>
+                    </div>
+                </div>
+                                <div class="item-box swiper-slide soon-play" data-video="https://www.youtube.com/embed/P-uEJDSNJdU?si=mSXYmRnwT5I7DBvM">
+                    <div class="img-box relative">
+                        <img src="/public/upload/youtube/20250821/P-uEJDSNJdU.jpg" alt="">
+                        <div class="font16 soon-play-icon"><i class="icon iconfont-chuwi icon-play_c"></i></div>
+                    </div>
+                    <div>
+                        <h3 class="desc">NO CREERÁS lo que hace este Mini PC TAN PEQUEÑO 🤯 Ubox</h3>
+                    </div>
+                </div>
+                                <div class="item-box swiper-slide soon-play" data-video="https://www.youtube.com/embed/7kivrr2gy2k?si=xi-kWB_O26yQlFSJ">
+                    <div class="img-box relative">
+                        <img src="/public/upload/youtube/20250821/7kivrr2gy2k.jpg" alt="">
+                        <div class="font16 soon-play-icon"><i class="icon iconfont-chuwi icon-play_c"></i></div>
+                    </div>
+                    <div>
+                        <h3 class="desc">CHUWI AuBox - INIWAN KO APPLE MAC MINI KO DAHIL DITO...</h3>
+                    </div>
+                </div>
+                                <div class="item-box swiper-slide soon-play" data-video="https://www.youtube.com/embed/OJVP8DU-uGM?si=VpRwMWehu8Pq23GO">
+                    <div class="img-box relative">
+                        <img src="/public/upload/youtube/20250821/OJVP8DU-uGM.jpg" alt="">
+                        <div class="font16 soon-play-icon"><i class="icon iconfont-chuwi icon-play_c"></i></div>
+                    </div>
+                    <div>
+                        <h3 class="desc">🎮 CHUWI GAMEBOOK Review (Ryzen 9 & RTX 5070 Ti) | Gaming trifft Eleganz! 💻🔥 Review (2025)</h3>
+                    </div>
+                </div>
+                                <div class="item-box swiper-slide soon-play" data-video="https://www.youtube.com/embed/wJ_rTR7Dbkk?si=L-JFrAHYyXe8xj2A">
+                    <div class="img-box relative">
+                        <img src="/public/upload/youtube/20250821/wJ_rTR7Dbkk.jpg" alt="">
+                        <div class="font16 soon-play-icon"><i class="icon iconfont-chuwi icon-play_c"></i></div>
+                    </div>
+                    <div>
+                        <h3 class="desc">Chuwi Gamebook Review - Ryzen 9 9955HX + RTX 5070 Ti Gaming Laptop!</h3>
+                    </div>
+                </div>
+                                <div class="item-box swiper-slide soon-play" data-video="https://www.youtube.com/embed/v5EWsz4RuRQ?si=sB_TLcxR1xdAjnGn">
+                    <div class="img-box relative">
+                        <img src="/public/upload/youtube/v5EWsz4RuRQ.jpg?1" alt="">
+                        <div class="font16 soon-play-icon"><i class="icon iconfont-chuwi icon-play_c"></i></div>
+                    </div>
+                    <div>
+                        <h3 class="desc">Esta laptop 2 en 1 es perfecta para la universidad ó trabajo</h3>
+                    </div>
+                </div>
+                            </div>
+        </div>
+
+                <div class="view-all">
+            <a href="/us/reviews-videos.html" class="layui-btn layui-btn-warm"><span>View All</span></a>
+        </div>
+        
+        <!-- 分页器 -->
+        <div class="seen-swiper-button-next direction-icon"><i class="layui-icon layui-icon-right"></i></div>
+        <div class="seen-swiper-button-prev direction-icon"><i class="layui-icon layui-icon-left"></i></div>
+    </div>
+</section>
+
+<!--video-->
+<!--<section class="wow relative homeVideoPlay">
+    <video id="homeVideo" autoplay preload playsinline loop muted src="/tpl/pc/images/video/Hi10max.mp4" data-play="https://www.youtube.com/embed/XuqMRh4Tz4I">
+    </video>
+    <div class="text-box">
+        <h3 class="anim fadeInUp">Live Charged</h3>
+        <div class="anim fadeInUp"><button class="cw-btn home-video-play-btn"><span>Watch Full Video <i class="fa fa-caret-right icon"></i></span></button></div>
+    </div>
+</section>-->
+<section class="wow relative homeVideoPlay3 fadeInUp">
+    <div class="title">Product Video</div>
+    <div class="swiper-container-video">
+        <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                <a href="javascript:void(0)" target="">
+                    <video muted class="home-video" loop>
+                        <source src="/public/upload/video/20240523/ee347e44edc6ded4246d4e10a6253615.mp4" type="video/mp4">
+                    </video>
+                </a>
+            </div>
+                        <div class="swiper-slide">
+                <a href="javascript:void(0)" target="">
+                    <video muted class="home-video" loop>
+                        <source src="/public/upload/video/20251216/8e9bbd2ed4ea3c3246365b236efe961c.mp4" type="video/mp4">
+                    </video>
+                </a>
+            </div>
+                        <div class="swiper-slide">
+                <a href="javascript:void(0)" target="">
+                    <video muted class="home-video" loop>
+                        <source src="/public/upload/video/20240523/c0cfd5e5a03671ae660edccad1ac04dc.mp4?1" type="video/mp4">
+                    </video>
+                </a>
+            </div>
+                    </div>
+        <div class="swiper-prev-area"></div>
+        <div class="swiper-next-area"></div>
+    </div>
+    <div class="home-video-swiper-pagination"></div>
+    <div class="home-video-swiper-button-prev direction-icon"><i class="layui-icon layui-icon-left"></i></div>
+    <div class="home-video-swiper-button-next direction-icon"><i class="layui-icon layui-icon-right"></i></div>
+</section>
+
+<section class="container-lg two_attract4 wow swiper-news fadeInUp">
+        <div class="list-title">Blogs and News</div>
+        <div class="swiper-container news-swiper container-1480" id="newsSwiper">
+                <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                <a href="https://blog.chuwi.com/?p=2083" target="_blank">
+                    <div class="swiper-news-item">
+                        <div class="news-item">
+                            <img src="https://blog.chuwi.com/wp-content/uploads/2026/03/英文.jpg" alt="Statement Regarding CoreBook X and CoreBook Plus" class="news-img lazy" data-src="https://blog.chuwi.com/wp-content/uploads/2026/03/英文.jpg">
+                        </div>
+                        <div class="data-box">
+                            <h2 class="data-title">Statement Regarding CoreBook X and CoreBook Plus</h2>
+                            <div class="date">On Mar 23, 2026 &nbsp;| &nbsp;2 days ago</div>
+                            <!--<div class="data-desc"></div>-->
+                            <div class="read-more">Read more</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+                        <div class="swiper-slide">
+                <a href="https://blog.chuwi.com/?p=2070" target="_blank">
+                    <div class="swiper-news-item">
+                        <div class="news-item">
+                            <img src="https://blog.chuwi.com/wp-content/uploads/2026/03/1263_600-1.jpg" alt="Best AI-Ready Lightweight Laptops of 2026: CHUWI CoreBook Air Series" class="news-img lazy" data-src="https://blog.chuwi.com/wp-content/uploads/2026/03/1263_600-1.jpg">
+                        </div>
+                        <div class="data-box">
+                            <h2 class="data-title">Best AI-Ready Lightweight Laptops of 2026: CHUWI CoreBook Air Series</h2>
+                            <div class="date">On Mar 13, 2026 &nbsp;| &nbsp;12 days ago</div>
+                            <!--<div class="data-desc"></div>-->
+                            <div class="read-more">Read more</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+                        <div class="swiper-slide">
+                <a href="https://blog.chuwi.com/?p=2056" target="_blank">
+                    <div class="swiper-news-item">
+                        <div class="news-item">
+                            <img src="https://blog.chuwi.com/wp-content/uploads/2025/12/1080x540-1.jpg" alt="CHUWI Challenges 1KG High-End Lightweight Laptops with New CoreBook Air Series Starting Around $500" class="news-img lazy" data-src="https://blog.chuwi.com/wp-content/uploads/2025/12/1080x540-1.jpg">
+                        </div>
+                        <div class="data-box">
+                            <h2 class="data-title">CHUWI Challenges 1KG High-End Lightweight Laptops with New CoreBook Air Series Starting Around $500</h2>
+                            <div class="date">On Dec 18, 2025 &nbsp;| &nbsp;3 month ago</div>
+                            <!--<div class="data-desc"></div>-->
+                            <div class="read-more">Read more</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+                        <div class="swiper-slide">
+                <a href="https://blog.chuwi.com/?p=2050" target="_blank">
+                    <div class="swiper-news-item">
+                        <div class="news-item">
+                            <img src="https://blog.chuwi.com/wp-content/uploads/2025/12/画板-1.jpg" alt="CHUWI Debuts New AI PCs and 1KG Laptops at the 2025 AIE Expo in Macao" class="news-img lazy" data-src="https://blog.chuwi.com/wp-content/uploads/2025/12/画板-1.jpg">
+                        </div>
+                        <div class="data-box">
+                            <h2 class="data-title">CHUWI Debuts New AI PCs and 1KG Laptops at the 2025 AIE Expo in Macao</h2>
+                            <div class="date">On Dec 10, 2025 &nbsp;| &nbsp;3 month ago</div>
+                            <!--<div class="data-desc"></div>-->
+                            <div class="read-more">Read more</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+                    </div>
+                <div class="view-all">
+                        <a href="https://blog.chuwi.com" class="layui-btn layui-btn-warm"><span>View All</span></a>
+                    </div>
+        <!-- 分页器 -->
+        <div class="news-swiper-button-next direction-icon"><i class="layui-icon layui-icon-right"></i></div>
+        <div class="news-swiper-button-prev direction-icon"><i class="layui-icon layui-icon-left"></i></div>
+        <!--<div class="swiper-pagination"></div>-->
+
+    </div>
+</section>
+
+<!--about chuwi-->
+<section class="container-lg two_attract4 wow home-about-chuwi fadeInUp">
+    <div class="title">About CHUWI</div>
+    <video id="home-about-video" autoplay preload playsinline loop muted src="/tpl/pc/images/video/202508081619.mp4">
+    </video>
+    <div class="content">
+        <div class="content-box">
+           <!-- <p>CHUWI is looking forward to believing that high-tech products should be accessible to everyone. We partner with industry leaders such as Intel, AMD, Qualcomm, Microsoft, and Google to bring you the best in cutting-edge technology.</p>-->
+            <h2 class="home-about-chuwi-text-title">CHUWI</h2>
+            <h3 class="home-about-chuwi-text-title">Creates Your Smart Life</h3>
+            <div class="home-about-chuwi-text-desc">Quality products don't always require a high price.<br />Everyone has the opportunity to enjoy the pleasures of technology.</div>
+            <div class="more">
+                <a href="/us/about.html"><span>Learn More</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container-lg two_attract4 wow index-store">
+    <div class="title">Shop with Confidence</div>
+    <div class="container-1480">
+        <div class="content">
+            <div class="index-store-box">
+                <div class="item">
+                    <img src="/public/index/images/icon/14-day-no-hassle returns.png" alt="">
+                    <p>14-Day</p>
+                    <p>No-hassle returns</p>
+                </div>
+                <div class="item">
+                    <img src="/public/index/images/icon/30-day.webp" alt="">
+                    <p>30-Day</p>
+                    <p>Free exchange</p>
+                </div>
+                <div class="item">
+                    <img src="/public/index/images/icon/1-yeary.png" alt="">
+                    <p>Warranty</p>
+                    <p>Protection</p>
+                </div>
+                <div class="item">
+                    <img src="/public/index/images/icon/customer-service.png" alt="">
+                    <p>Lifetime</p>
+                    <p>Customer Service</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="home-help">
+        <div class="container-1480">
+            <div class="content">
+                <div class="layui-row layui-col-space20">
+                    <div class="layui-col-md4 item">
+                        <img src="/tpl/pc/images/icon/icon_help_center.svg" alt="">
+                        <div class="title">Help Center</div>
+                        <a class="link" href="/support-center">Learn More <i class="layui-icon layui-icon-right"></i></a>
+                    </div>
+                    <div class="layui-col-md4 item">
+                        <img src="/tpl/pc/images/icon/icon_where_to_buy.svg" alt="">
+                        <div class="title">Online Store</div>
+                        <a class="link" href="https://us.chuwi.com">Learn More <i class="layui-icon layui-icon-right"></i></a>
+                    </div>
+                    <div class="layui-col-md4 item">
+                        <img src="/tpl/pc/images/icon/icon_explore.svg" alt="">
+                        <div class="title">Explore</div>
+                        <a class="link" href="">Learn More<i class="layui-icon layui-icon-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+</section>
+<!--store support-->
+<section class="container-lg two_attract4 wow home-store-support fadeInUp">
+    <div class="container-1480 store-support-box">
+        <div class="store-box supitem store-support-item">
+            <div class="supitem">
+                <h3>CHUWI Store</h3>
+                <p>Shop for PCs,Tablets Laptops and Accessories.</p>
+            </div>
+            <div class="img">
+                <img src="/public/index/images/single_sale.png" alt="">
+            </div>
+            <a class="link" target="_blank" href="https://us.chuwi.com">Shop Now <i class="layui-icon layui-icon-right"></i></a>
+        </div>
+        <div class="supitem right-box store-support-item">
+            <div class="supitem supitem-right">
+                <h3>Download</h3>
+                <p>Get the latest software,drivers and operation systems.</p>
+                <a class="link" target="_blank" href="https://support.chuwi.com">Learn More <i class="layui-icon layui-icon-right"></i></a>
+            </div>
+            <div class="download-img img-box">
+                <img src="/public/index/images/single_soft_download.png" alt="">
+            </div>
+        </div>
+        <div class="supitem right-box store-support-item">
+            <div class="supitem supitem-right">
+                <h3>Lifetime Customer Service</h3>
+                <p>Always at your service. Fill out the aftersales ticket to get the most detailed and useful answer from our expertise.</p>
+                <a class="link" target="_blank" href="/support-center">Learn More <i class="layui-icon layui-icon-right"></i></a>
+            </div>
+            <div class="support-img img-box">
+                <img src="/public/index/images/single_support.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container-lg two_attract4 wow home-subscribe-email fadeInUp">
+    <div class="title">Stay Up to Date</div>
+    <div class="container-1480">
+        <div class="content">
+            <div class="text-box">
+                <h2>Get all the latest news and exclusive offers.</h2>
+                <!--<div class="form">
+                    <input class="sub-input" name="email" type="text" placeholder="Email Address">
+                    <button class="sub-btn" id="home_subscribe_email">Subscribe</button>
+                </div>
+                <div class="show-error email_valid">Please enter a valid email address (Example: name@domain.com).</div>
+                <div class="show-error agree_policy">Please agree to the Terms of Use and Privacy Policy.</div>
+                <div class="show-error successfully">Subscribed successfully</div>
+                <div class="check-policy">
+                    <label class="checkbox-container">
+                        <input type="checkbox" name="check_policy">
+                        <span class="checkmark"></span>
+                        By submitting this from, I accept the <a href="/support/terms-of-service" target="_blank">Terms of Use</a> and <a href="/support/privacy-policy" target="_blank">Privacy Policy</a>.
+                    </label>
+                </div>-->
+                <script type="text/javascript" async="" src="https://static.klaviyo.com/onsite/js/WiBjxK/klaviyo.js"></script>
+                <div class="subscribe_email_form"><div class="klaviyo-form-Tk5NwQ"></div></div>
+                <div class="notice">By entering your Email, you consent to receive our marketing messages, including the latest offers, services etc. You agree to the Terms of Service and Privacy Policy. You can unsubscribe anytime.</div>
+                <div class="check-policy">
+                    <label class="checkbox-container">
+                        <input type="checkbox" name="check_policy" checked disabled>
+                        <span class="checkmark"></span>
+                        I agree to the <a href="/support/terms-of-service" target="_blank">Terms of Use</a> and <a href="/support/privacy-policy" target="_blank">Privacy Policy</a>.
+                    </label>
+                </div>
+            </div>
+            <div class="img-box">
+                <img src="/public/index/images/email_gift_1.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--<div class="home-shade"></div>-->
+<!--<div class="home-layer">-->
+<!--	<div class="home-img-bg">-->
+<!--		<i class="icon iconfont icon-close"></i>-->
+<!--		<img src="https://promotion.chuwi.com/chuwi-rzbox-amd-ryzen9-mini-pc/html/img/rzbox-g.png" alt="CHUWI RZBOX">-->
+<!--	</div>-->
+<!--</div>-->
+
+
+
+<!--to top-->
+<a href="#" class="scroll-to-top"><i class="layui-icon layui-icon-up"></i></a>
+<footer>
+
+    <div class="container-fluid">
+
+        <div class="footer-box ">
+            <div class="row">
+                <div class="footer-top">
+                    <div class="layui-row layui-col-space20">
+                        <div class="layui-col-md8">
+                            <div class="footer-Link d-flex justify-content-between">
+                                                <div class="active itemLink">
+                            <h5>PRODUCTS</h5>
+                                                        <ul class="list-unstyled">
+                                
+                                <li><a href="/pc.html">Laptop</a></li>
+
+                                
+                                <li><a href="/tablet.html">Tablet PC</a></li>
+
+                                
+                                <li><a href="/minipc.html">Mini PC</a></li>
+
+                                
+                                <li><a href="/aio.html">AIO</a></li>
+
+                                
+                                <li><a href="/e10.html">E10</a></li>
+
+                                                            </ul>
+                                                    </div>
+                                                <div class=" itemLink">
+                            <h5>BUSINESS</h5>
+                                                        <ul class="list-unstyled">
+                                
+                                <li><a href="/beagent.html">Become a Dealer</a></li>
+
+                                
+                                <li><a href="/oem-odm-tablets-laptops.html">OEM/ODM</a></li>
+
+                                                            </ul>
+                                                    </div>
+                                                <div class=" itemLink">
+                            <h5>ABOUT US</h5>
+                                                        <ul class="list-unstyled">
+                                
+                                <li><a href="/buy.html">Where to Buy</a></li>
+
+                                
+                                <li><a href="/about.html">About Chuwi</a></li>
+
+                                
+                                <li><a href="/contact.html">Contact Us</a></li>
+
+                                
+                                <li><a href="https://blog.chuwi.com/">Blogs</a></li>
+
+                                
+                                <li><a href="/news.html">Company News</a></li>
+
+                                
+                                <li><a href="https://www.chuwi.com/support/video-center">Video Center</a></li>
+
+                                                            </ul>
+                                                    </div>
+                                                <div class=" itemLink">
+                            <h5>SUPPORT</h5>
+                                                        <ul class="list-unstyled">
+                                
+                                <li><a href="https://www.chuwi.com/support-faqs">FAQs</a></li>
+
+                                
+                                <li><a href="https://www.chuwi.com/support-center">Support Center</a></li>
+
+                                
+                                <li><a href="https://www.chuwi.com/support-user-guide">User Manual</a></li>
+
+                                
+                                <li><a href="https://www.chuwi.com/support/shipping-delivery">Shipping & Delivery</a></li>
+
+                                
+                                <li><a href="https://www.chuwi.com/support/warranty-policy">Warranty Policy</a></li>
+
+                                                            </ul>
+                                                    </div>
+                                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <div class="footer-right-box">
+                                <div class="footer-logo-desc">
+                                    <div><i class="icon iconfont icon-logo"></i></div>
+                                    <p>Quality products don't always require a high price. Everyone has the opportunity to enjoy the pleasures of technology.</p>
+                                </div>
+                                <div class="footer-form">
+                                    <ul class="list-inline in_icon d-flex align-items-center">
+                                                                                <li>
+                                            <a target="_blank" href="https://www.facebook.com/chuwidotcom">
+                                                <img src="/public/upload/image/20201201/fc2040ce3f98461d9b261d84365bb724.png" alt="facebook" class="img_1">
+                                                <img src="/public/upload/image/20201201/510bc86d8b88062f1787cce522441a6b.png" alt="facebook" class="img_2">
+                                                                                            </a>
+                                        </li>
+                                                                                <li>
+                                            <a target="_blank" href="https://www.tiktok.com/@chuwius">
+                                                <img src="/public/upload/image/20220413/0ed5c30ba78ba2fa83688208833ad5a1.png" alt="tiktok-noclick" class="img_1">
+                                                <img src="/public/upload/image/20220413/8873dda3b81d7d161f755a420aee75bb.png" alt="tiktok-noclick" class="img_2">
+                                                                                            </a>
+                                        </li>
+                                                                                <li>
+                                            <a target="_blank" href="https://twitter.com/chuwidotcom">
+                                                <img src="/public/upload/image/20201201/7ce2052e38d8321c3a3e104b2d96d373.png" alt="twitter" class="img_1">
+                                                <img src="/public/upload/image/20201201/b45aaf8ae86e37c5ee6577d1ed181a8a.png" alt="twitter" class="img_2">
+                                                                                            </a>
+                                        </li>
+                                                                                <li>
+                                            <a target="_blank" href="https://www.instagram.com/ChuwiGlobal/">
+                                                <img src="/public/upload/image/20201201/7b826aa280fbbf201e216c037b01dd96.png" alt="ins-active" class="img_1">
+                                                <img src="/public/upload/image/20201201/21f27cb9b87bee473417cc0322ba55c9.png" alt="ins-active" class="img_2">
+                                                                                            </a>
+                                        </li>
+                                                                                <li>
+                                            <a target="_blank" href="https://www.youtube.com/channel/UCYoQwz32LF8hd5HfYYTK8rA">
+                                                <img src="/public/upload/image/20201201/de74bddd597ef5097e83d2ff3d61f49d.png" alt="youtube-active" class="img_1">
+                                                <img src="/public/upload/image/20201201/3b53184a5f5aefab18b51e414ac48a68.png" alt="youtube-active" class="img_2">
+                                                                                            </a>
+                                        </li>
+                                                                            </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--<div class=" d-flex justify-content-md-between footer-form">
+
+                        <div class="top-left">
+
+                            <h4>Follow us on social media</h4>
+
+                            <ul class="list-inline in_icon d-flex align-items-center">
+                                                                <li>
+                                    <a target="_blank" href="https://www.facebook.com/chuwidotcom">
+                                        <img src="/public/upload/image/20201201/fc2040ce3f98461d9b261d84365bb724.png" alt="facebook" class="img_1">
+                                        <img src="/public/upload/image/20201201/510bc86d8b88062f1787cce522441a6b.png" alt="facebook" class="img_2">
+                                                                            </a>
+                                </li>
+                                                                <li>
+                                    <a target="_blank" href="https://www.tiktok.com/@chuwius">
+                                        <img src="/public/upload/image/20220413/0ed5c30ba78ba2fa83688208833ad5a1.png" alt="tiktok-noclick" class="img_1">
+                                        <img src="/public/upload/image/20220413/8873dda3b81d7d161f755a420aee75bb.png" alt="tiktok-noclick" class="img_2">
+                                                                            </a>
+                                </li>
+                                                                <li>
+                                    <a target="_blank" href="https://twitter.com/chuwidotcom">
+                                        <img src="/public/upload/image/20201201/7ce2052e38d8321c3a3e104b2d96d373.png" alt="twitter" class="img_1">
+                                        <img src="/public/upload/image/20201201/b45aaf8ae86e37c5ee6577d1ed181a8a.png" alt="twitter" class="img_2">
+                                                                            </a>
+                                </li>
+                                                                <li>
+                                    <a target="_blank" href="https://www.instagram.com/ChuwiGlobal/">
+                                        <img src="/public/upload/image/20201201/7b826aa280fbbf201e216c037b01dd96.png" alt="ins-active" class="img_1">
+                                        <img src="/public/upload/image/20201201/21f27cb9b87bee473417cc0322ba55c9.png" alt="ins-active" class="img_2">
+                                                                            </a>
+                                </li>
+                                                                <li>
+                                    <a target="_blank" href="https://www.youtube.com/channel/UCYoQwz32LF8hd5HfYYTK8rA">
+                                        <img src="/public/upload/image/20201201/de74bddd597ef5097e83d2ff3d61f49d.png" alt="youtube-active" class="img_1">
+                                        <img src="/public/upload/image/20201201/3b53184a5f5aefab18b51e414ac48a68.png" alt="youtube-active" class="img_2">
+                                                                            </a>
+                                </li>
+                                                            </ul>
+                        </div>
+
+                        &lt;!&ndash;<div class="top-right">
+                            <h4>Let's stay in touch</h4>
+                            <form action="//chuwi.us1.list-manage.com/subscribe/post?u=ad6e44568342f10d67ba9dd7a&id=be26770e3f"
+                                  class="d-flex justify-content-between align-items-center email-address" method="post" target="_blank">
+                                &lt;!&ndash; <span>Enter e-mail address</span> &ndash;&gt;
+                                <input type="text" placeholder="Enter e-mail address" name="EMAIL">
+                                <img src="/tpl/pc/images/arrowRight.png" id="mc-embedded-subscribe" alt=""/>
+                            </form>
+                        </div>&ndash;&gt;
+
+                    </div>-->
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+        <div class="foot_bottom">
+        <div class="footer-box payment-icp-box">
+            <div class="icp-Policy-box">
+                <p>Copyright©2026 CHUWI INNOVATION LIMITED </p>
+                <ul class="legal-links">
+                    <li><a target="_blank" href="/support/privacy-policy">CHUWI Privacy Policy</a></li>
+                    <li><a target="_blank" href="/support/cookie-notice">Use of Cookies</a></li>
+                    <li><a target="_blank" href="/support/terms-of-service">Terms of Use</a></li>
+                </ul>
+            </div>
+            <ul class="payment-icons">
+                <li class="icon-item">
+                    <img src="/tpl/pc/images/icon/paypal.svg" alt="">
+                </li>
+                <li class="icon-item">
+                    <img src="/tpl/pc/images/icon/visa.svg" alt="">
+                </li>
+                <li class="icon-item">
+                    <img src="/tpl/pc/images/icon/master.svg" alt="">
+                </li>
+                <li class="icon-item">
+                    <img src="/tpl/pc/images/icon/american_express.svg" alt="">
+                </li>
+                <li class="icon-item">
+                    <img src="/tpl/pc/images/icon/discover.svg" alt="">
+                </li>
+                <li class="icon-item">
+                    <img src="/tpl/pc/images/icon/jcb.svg" alt="">
+                </li>
+                <li class="icon-item">
+                    <img src="/tpl/pc/images/icon/diners_club.svg" alt="">
+                </li>
+                <li class="icon-item">
+                    <img src="/tpl/pc/images/icon/maestro.svg" alt="">
+                </li>
+                <li class="icon-item">
+                    <img src="/tpl/pc/images/icon/klarna.svg" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+</footer>
+
+
+<style>
+    .a-glo-dialog-box {position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 9999;border-radius: 20px;height: 368px;width: 640px;background: url("/tpl/pc/images/aubox_x1_form.jpg?1");display: none;}
+    .a-glo-dialog-box .close{position: absolute;right: 10px;top: 10px;color: #ccc;cursor: pointer;height: 20px;width: 20px;display: flex;}
+    .a-glo-dialog-box .dialog-content{width: 100%;height: 100%;display: flex;align-content: space-around;}
+    .a-glo-dialog-box .dialog-content > div {flex: 1;}
+    .a-glo-dialog-box .dialog-content .left-box{padding:10px;margin-top:8%;}
+    .a-glo-dialog-box .dialog-content .left-box h2{font-size: 18px;text-align: center;background: linear-gradient(to right, #0e08ff, #30f3ff);-webkit-background-clip: text; background-clip: text;color: transparent;margin-bottom: 4px;line-height: 1.5;font-family: var(--chuwi-font-family);}
+    .a-glo-dialog-box .dialog-content .left-box p{font-size: 14px;text-align: center;color:#fff;line-height: 1.5;}
+    .a-glo-dialog-box .dialog-content .right-box {display: flex;flex-direction: column;justify-content: center;align-items: center;padding: 10px;}
+
+    /* 调整right-box内部元素间距 */
+    .a-glo-dialog-box .dialog-content .right-box .form-title {margin-bottom: 22px;font-size: 18px;font-weight: bold;color:#fff;text-align: center;font-family: var(--chuwi-font-family);line-height: 1.5;}
+
+    .a-glo-dialog-box .dialog-content .right-box input {margin-bottom: 22px;width: 240px;height: 30px;background-color: #20222d;border: 2px solid #ccc;padding-left: 15px;border-radius: 5px;font-size: 14px;color: #fff;}
+    .a-glo-dialog-box .dialog-content .right-box input::placeholder {color: #aaa;}
+    .a-glo-dialog-box .dialog-content .right-box .submit{width: 240px;height: 30px;background: #20222d;border: 2px solid #ccc;border-radius: 5px;}
+    .a-glo-dialog-box .dialog-content .right-box .submit span{background: linear-gradient(to right, #0e08ff 10%, #30f3ff 90%);-webkit-background-clip: text;background-clip: text;color: transparent;font-size: 14px;display: flex;justify-content: center;font-weight: bold;}
+    .a-glo-dialog-box .dialog-content .right-box .submit:hover{background: #09090a;}
+    .a-glo-dialog-box .dialog-content .right-box .success-msg{color: #ff6b00;font-size: 12px;text-align: center;position: absolute;bottom: 50px;line-height: 1.5;}
+
+    .mini-a-glo-dialog-box{z-index: 90000;position: fixed;filter: drop-shadow(rgba(0, 0, 0, 0.15) 0px 0px 30px);top: 50%;right: 0;transform: rotate(90deg) translate(50%, 0px);transform-origin: right top;margin-right: 0;width: 85px;display: none;transition: transform 0.3s ease-out;}
+    .mini-a-glo-dialog-box span{overflow: hidden;box-sizing: border-box;border-radius: 0 0 4px 4px; /*background-color: rgb(49 54 100);*/background: linear-gradient(to left, #fef2cb, #a5702b);min-height: 50px;height: 100%;padding: 8px;display: flex;flex-direction: column;justify-content: center;color: #000;cursor: pointer;}
+</style>
+
+<div class="a-glo-dialog-box">
+    <div class="close"><i class="layui-icon layui-icon-close"></i></div>
+    <div class="dialog-content" >
+        <div class="left-box" data-href="https://store.chuwi.com/pages/aubox-x1">
+            <h2>Whisper-Quiet Intel Lunar Lake AI Mini PC</h2>
+            <!--<p>Copilot+ AI performance. Desktop-class power. </p>
+            <p>Whisper-quiet operation.</p>-->
+        </div>
+        <div class="right-box">
+            <div class="form-title">Enjoy early updates and unlock exclusive savings.</div>
+            <input class="a-email" type="text" name="email" placeholder="Enter email address" autocomplete="off">
+            <button class="submit"><span>Get Early Access & Savings</span></button>
+            <p class="success-msg" style="display: none;">Early‑bird access confirmed. We'll send your exclusive discount on launch day — keep an eye on your inbox.</p>
+        </div>
+    </div>
+</div>
+<div class="mini-a-glo-dialog-box">
+    <span>AuBox X</span>
+</div>
+<script>
+    // 页面加载后2秒显示弹窗
+    $(document).ready(function() {
+        setTimeout(function() {
+            let cache_key = "glo_email_form_center_ad_show_pc_" + "en";
+            let isShow = $.cookie(cache_key);
+            if (isShow == "1") {
+                $('.mini-a-glo-dialog-box').css("display", "block");
+                return;
+            }
+            $('.a-glo-dialog-box').css("display", "block");
+
+            //设置cookie 1天过期
+            $.cookie(cache_key, "1", { expires: 1 });
+        }, 2000);
+
+        // 关闭弹窗
+        $(".a-glo-dialog-box .close").on("click", function(){
+            $(this).parent().hide(200);
+            $(".mini-a-glo-dialog-box").show(200);
+        });
+
+        $(".a-glo-dialog-box .submit").on("click", function(){
+            var email = $(".a-glo-dialog-box .a-email").val();
+            if(email == ""){
+                $(".a-glo-dialog-box .a-email").css("border-color", "#ff6b00");
+                return false;
+            }
+            //邮件正则表达式
+            var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            if (!emailRegex.test(email)) {
+                $(".a-glo-dialog-box .a-email").css("border-color", "#ff6b00");
+                return false;
+            }
+
+            let loading = layui.layer.load();
+            $.post("/index/index/addEmailForm",{email:email,label:"fw3R5kh2"},function(res){
+                layui.layer.close(loading);
+                $(".a-glo-dialog-box .success-msg").css("display", "block");
+                $(".a-glo-dialog-box .a-email").val("");
+            })
+        });
+
+        //监听输入框输入事件
+        $(".a-glo-dialog-box .a-email").on("input", function() {
+            if ($(this).css("border-color") === "rgb(255, 107, 0)") {
+                $(this).css("border-color", "#ccc");
+            }
+        });
+
+        $(".a-glo-dialog-box .left-box").on("click", function(){
+            let href = $(this).data("href");
+            if(href){
+                window.open(href, "_blank");
+            }
+        });
+
+        $(".mini-a-glo-dialog-box").on("click", function(){
+            $(".a-glo-dialog-box").show(200);
+            $(".mini-a-glo-dialog-box").hide(200);
+        })
+    });
+</script>
+
+<script src="/tpl/pc/lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="/tpl/pc/lib/layui/layui.all.js"></script>
+<script src="/tpl/pc/lib/swiper/js/swiper.min.js"></script>
+<script src="/tpl/pc/lib/swiper/js/swiper.animate.min.js"></script>
+<script src="/tpl/pc/lib/wow/js/wow.min.js"></script>
+<script src="/public/index/js/jquery.cookie.js"></script>
+<script src="/public/index/js/common.js?14"></script>
+<script src="/tpl/pc/js/app.js?v=6"></script>
+<script src="/tpl/pc/js/lazyload.js"></script>
+<script>
+    var wow = new WOW({
+        boxClass: 'wow', //设置类名
+        animateClass: 'animated',
+        offset: 30, //距离可视区
+        mobile: true, //移动端是否执行
+        live: true //异步加载
+    });
+    wow.init();
+
+    $("img.lazy").lazyload({effect: "fadeIn"});
+</script>
+
+<style>
+    /*header.active .navbar .dropdown .btn-secondary.dropdown-toggle{*/
+    /*    color: #000;*/
+    /*}*/
+    /*header.active .navbar .icon-search {*/
+    /*    background-image: url(/tpl/pc/images/search-hover.png);*/
+    /*}*/
+</style>
+<!--<script src="https://player.vimeo.com/api/player.js"></script>-->
+<script>
+    // 首页banner
+    var mySwiper = new Swiper('#index-banner', {
+        loop: true, // 循环模式选项
+        speed: 1000,
+        on: {
+            init: function () {
+                swiperAnimateCache(this); //隐藏动画元素
+                swiperAnimate(this); //初始化完成开始动画
+            },
+            slideChangeTransitionEnd: function () {
+                swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+                //this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
+            },
+            slideChangeTransitionStart: function(){
+                var color = $('.swiper-wrapper .swiper-slide:eq('+this.activeIndex+')').data('color');
+                // console.log(color)
+                $('.nav-link').css('color', color);
+                if(color == '#000'){
+                    $('#dropdownMenuButton').css('color', color);
+                    // $('#open_search').css('background-image', 'url(/tpl/pc/images/search-hover.png)');
+                    $('#open_search').css('color', color);
+                }else{
+                    $('#dropdownMenuButton').css('color', color);
+                    // $('#open_search').css('background-image', 'url(/tpl/pc/images/search.png)');
+                    $('#open_search').css('color', color);
+                }
+
+            },
+        },
+        // 如果需要分页器
+        autoplay: {
+            delay: 5000,
+            stopOnLastSlide: false,
+            disableOnInteraction: true,
+        },
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'custom',
+	        clickable: true,
+            autoplayDisableOnInteraction: false,
+            bulletClass:'swiper-pagination-customs',
+            renderCustom: function (swiper, current, total) {
+                var paginationHtml = "";
+                for (var i = 0; i < total; i++) {
+                    //判断是不是激活焦点，是的话添加active类，不是就只添加基本样式类
+                    if (i === (current - 1)) {
+                        paginationHtml += '<svg class="swiper-pagination-customs"  width="30" height="30" viewBox="0 0 30 30"><circle class="Rcircle circle" cx="15" cy="15" r="10"  fill="#fff" /></svg>';
+                    } else {
+                        paginationHtml += '<svg class="swiper-pagination-customs"  width="30" height="30" viewBox="0 0 30 30"><circle class="circle" cx="15" cy="15" r="10"  fill="#fff" /></svg>';
+                    }
+                }
+                return paginationHtml;
+            },
+        }
+    })
+
+    $('#index-banner').hover(function () {
+        // mySwiper.autoplay.stop();
+        mySwiper.autoplay.start();
+    }, function () {
+        mySwiper.autoplay.start();
+    })
+    
+    
+    var nowurl = window.location.href;
+    var h_shade = $('.home-shade'),
+    	h_layer = $('.home-layer'),
+    	h_close = $('.home-layer .home-img-bg .icon-close')
+    	h_img = $('.home-layer .home-img-bg img');
+    if(nowurl.indexOf("/cn") > -1 ) { //判断url地址中是否包含link字符串
+    	console.log('cn');
+    }else{
+    	if ($.cookie('homelayer') == undefined) {
+    		h_shade.show();
+    		h_layer.show();
+    	}
+    }
+    
+    h_close.on('click',function(){
+    	var expiresDate= new Date();
+    	expiresDate.setTime(expiresDate.getTime() + (60*60*1000));
+    	$.cookie('homelayer', "value", { expires: expiresDate });
+    	h_shade.hide();
+    	h_layer.hide();
+    })
+    
+    h_shade.on('click',function(){
+    	h_shade.hide();
+    	h_layer.hide();
+    })
+    
+    h_img.on('click',function(){
+    	window.open("https://promotion.chuwi.com/chuwi-rzbox-amd-ryzen9-mini-pc/"); 
+    })
+
+    //news
+    var newsSwiper = new Swiper("#newsSwiper", {
+        //默认功能属性
+        //speed: 1500,
+        slidesPerView: 3,
+        spaceBetween: 35,
+        slidesPerGroup: 1,
+        loop: true,
+        autoplay: false,
+        breakpoints: {
+            640:{
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            960:{
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            1600: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            }
+        },
+
+        //分页索引
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        },
+    });
+    //按钮翻页事件
+    $(".news-swiper-button-next").on("click", function(){
+        newsSwiper.slideNext();
+    })
+    $(".news-swiper-button-prev").on("click", function(){
+        newsSwiper.slidePrev();
+    })
+
+    //新闻滑动箭头
+    $(".swiper-news").hover(function(){
+        $(".news-swiper .direction-icon").show()
+    }, function(){
+        $(".news-swiper .direction-icon").hide()
+    });
+
+
+    //首页产品swiper
+    var homeProductSwiper = new Swiper(".productSwiper", {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        loop: true,
+        pagination: {
+            el: ".product-swiper-pagination",
+            clickable: true,
+        },
+    });
+    $(".home_our_products .product-swiper-button-prev").on("click", function(){
+        homeProductSwiper.slidePrev();
+    })
+    $(".home_our_products .product-swiper-button-next").on("click", function(){
+        homeProductSwiper.slideNext();
+    });
+
+    //seen-on-swiper 媒体渠道
+    var seenOnSwiper = new Swiper(".seen-on-swiper", {
+        slidesPerView: 3,
+        spaceBetween: 35,
+        slidesPerGroup: 1,
+        loop: true,
+        autoplay: false,
+    });
+
+    //按钮翻页事件
+    $(".seen-swiper-button-next").on("click", function(){
+        seenOnSwiper.slideNext();
+    })
+    $(".seen-swiper-button-prev").on("click", function(){
+        seenOnSwiper.slidePrev();
+    })
+
+    /*媒体聚道 红人视频播放*/
+    $(".soon-play").on('click', function(){
+        let video = $(this).data("video")
+        showVideoWindow(video)
+    })
+
+    /**
+     * 第三方邮箱关注表单处理
+     */
+    /*$(function(){
+        const intervalId = setInterval(function() {
+            const iframe = document.getElementById('hs-form-iframe-0');
+
+            try {
+                const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                if (iframeDoc && iframeDoc.readyState === 'complete') {
+                    const formElement = iframeDoc.getElementsByClassName('hs_recaptcha');
+                    if (formElement) {
+                        formElement[0].remove();
+                    }
+                    const inputE = iframeDoc.getElementsByClassName("hs_email")
+                    if (inputE) {
+                        let input = inputE[0].getElementsByTagName("input")
+                        input[0].style.backgroundColor = 'white';
+                        input[0].style.borderRadius = '20px';
+                    }
+                    const submitBtn = iframeDoc.getElementsByClassName("hs_submit")
+                    if (submitBtn) {
+                        let input = submitBtn[0].getElementsByTagName("input")
+                        input[0].style.background = '#ff6b00';
+                        input[0].style.borderRadius = '20px';
+                        input[0].style.borderColor = '#ff6b00';
+
+                        if (isSmallScreen()) {
+                            let actionsBox = submitBtn[0].getElementsByClassName("actions");
+                            actionsBox[0].style.textAlign = "center"
+                        }
+                    }
+                    clearInterval(intervalId); // 停止定时器
+                }
+            } catch (error) {
+                console.error('An error occurred while accessing iframe document:', error);
+            }
+        }, 300);
+    })*/
+
+</script>
+
+
+
+<!-- 下雪特效 -->
+<!--<style type="text/css">.snow-container{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:100001;}</style>-->
+<!--<div class="snow-container"></div>-->
+<!--<script src="/tpl/pc/js/snow.js"></script>-->
+<!-- 下雪特效 -->
+
+<!-- Global 统计代码 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119887238-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "UA-119887238-1");
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '454446513099593');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=454446513099593&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code --></body>
+</html>
