@@ -1,11 +1,6 @@
 # TechNexus — Product Catalogue March 2026
 **ICT, Office & Infrastructure Hardware | Blantyre, Malawi**
 
-> Live catalogue. <
----
-
----
-
 ## 📞 Contact
 
 **TechNexus MW** | Blantyre, Malawi  
