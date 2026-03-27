@@ -256,7 +256,7 @@ nav .nav-active {
 .no-match { display: none !important; }
 
 /* ── CONTENT WRAPPER ───────────────────────────────────────────────────────── */
-.content { max-width: 1100px; margin: 40px auto; padding: 0 40px; }
+.content { max-width: 1100px; margin: 40px auto; padding: 0 40px; overflow-x: hidden; }
 
 /* ── SECTION HEADER ────────────────────────────────────────────────────────── */
 .sh { border-left: 3px solid var(--accent); padding-left: 12px; margin: 36px 0 18px; }
@@ -420,7 +420,7 @@ tbody tr:hover { background: var(--fl-blue-light); }
 .sub { font-size: .62rem; color: var(--fl-blue-mid); letter-spacing: .5px; text-transform: uppercase; margin-top: 1px; font-weight: 600; }
 
 /* ── SECTION BANNER ────────────────────────────────────────────────────────── */
-.section-banner { position: relative; height: 120px; overflow: hidden; border-radius: var(--radius-lg); margin-bottom: 24px; background: var(--fl-neutral-4); }
+.section-banner { position: relative; height: 120px; overflow: hidden; border-radius: var(--radius-lg); margin-bottom: 24px; background: var(--fl-neutral-4); width: 100%; box-sizing: border-box; }
 .section-banner img { width: 100%; height: 100%; object-fit: cover; opacity: .6; }
 .section-banner .ov { background: linear-gradient(90deg, rgba(0,0,0,.7) 0%, transparent 70%); }
 
@@ -533,3 +533,261 @@ footer a:hover { color: #fff; }
 
 /* ── PERFORMANCE HINT ──────────────────────────────────────────────────────── */
 .logo-col img { contain: layout; }
+
+/* Hero banner full-width fix */
+main > div[style*="height"] { max-width: 100%; overflow: hidden; }
+table { max-width: 100%; }
+div[style*="overflow-x:auto"] { max-width: 100%; }
+
+/* ═══════════════════════════════════════════════════════════════════
+   FUNCTIONALITY ADDITIONS
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── FIXED FAB CLUSTER (WhatsApp + Back to Top) ───────────────────── */
+.fab-cluster {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  z-index: 9999;
+}
+.wa-fab {
+  width: 54px; height: 54px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 16px rgba(37,211,102,.45);
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform .2s, box-shadow .2s;
+  flex-shrink: 0;
+}
+.wa-fab:hover { transform: scale(1.1); box-shadow: 0 6px 24px rgba(37,211,102,.55); text-decoration: none; }
+.top-fab {
+  width: 42px; height: 42px;
+  background: var(--fl-neutral-90);
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  display: none;
+  align-items: center; justify-content: center;
+  box-shadow: 0 3px 12px rgba(0,0,0,.25);
+  cursor: pointer;
+  transition: transform .2s, background .2s;
+  flex-shrink: 0;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1;
+}
+.top-fab:hover { background: var(--accent); transform: translateY(-2px); }
+.top-fab.visible { display: flex; }
+
+/* ── WA QUOTE BUTTON on cards ─────────────────────────────────────── */
+.wa-quote {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 7px 12px;
+  background: #25D366;
+  color: #fff;
+  border-radius: var(--radius);
+  font-size: .75rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .15s;
+  width: 100%;
+  justify-content: center;
+}
+.wa-quote:hover { background: #1da851; color: #fff; text-decoration: none; }
+.wa-quote svg { flex-shrink: 0; }
+
+/* ── WA QUOTE BUTTON on table rows ───────────────────────────────── */
+.wa-row-quote {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  background: #25D366;
+  color: #fff;
+  border-radius: 3px;
+  font-size: .7rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background .15s;
+}
+.wa-row-quote:hover { background: #1da851; color: #fff; text-decoration: none; }
+
+/* ── STICKY QUOTE CTA BAR ─────────────────────────────────────────── */
+.quote-bar {
+  background: var(--fl-neutral-90);
+  border-top: 3px solid var(--accent);
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 0;
+}
+.quote-bar p { color: rgba(255,255,255,.8); font-size: .85rem; margin: 0; }
+.quote-bar strong { color: #fff; }
+.quote-bar-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  background: #25D366;
+  color: #fff;
+  border-radius: var(--radius);
+  font-size: .88rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .15s;
+  white-space: nowrap;
+}
+.quote-bar-btn:hover { background: #1da851; color: #fff; text-decoration: none; }
+.print-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 18px;
+  background: rgba(255,255,255,.1);
+  color: rgba(255,255,255,.85);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: var(--radius);
+  font-size: .82rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background .15s;
+}
+.print-btn:hover { background: rgba(255,255,255,.18); color: #fff; text-decoration: none; }
+
+/* ── QUICK ENQUIRY FOOTER PANEL ───────────────────────────────────── */
+.quick-enquiry {
+  background: var(--fl-neutral-2);
+  border-top: 1px solid var(--border);
+  padding: 32px 40px;
+}
+.quick-enquiry h3 {
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 4px;
+}
+.quick-enquiry p {
+  font-size: .8rem;
+  color: var(--muted);
+  margin: 0 0 20px;
+}
+.quick-enquiry-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 10px;
+  align-items: end;
+  max-width: 860px;
+}
+.quick-enquiry input,
+.quick-enquiry select {
+  padding: 9px 12px;
+  border: 1px solid var(--fl-neutral-20);
+  border-radius: var(--radius);
+  font-size: .82rem;
+  color: var(--text);
+  background: #fff;
+  outline: none;
+  width: 100%;
+  font-family: inherit;
+  transition: border .15s;
+}
+.quick-enquiry input:focus,
+.quick-enquiry select:focus { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(0,120,212,.12); }
+.quick-enquiry button {
+  padding: 9px 20px;
+  background: #25D366;
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: .82rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: inherit;
+  transition: background .15s;
+}
+.quick-enquiry button:hover { background: #1da851; }
+
+/* ── QUICK ENQUIRY FOOTER PANEL ───────────────────────────────────── */
+.quick-enquiry {
+  background: var(--fl-neutral-2);
+  border-top: 3px solid var(--accent);
+}
+.qe-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 32px 40px;
+}
+.quick-enquiry h3 { font-size: 1rem; font-weight: 700; color: var(--text); margin: 0 0 4px; }
+.quick-enquiry > p, .quick-enquiry p { font-size: .8rem; color: var(--muted); margin: 0 0 20px; }
+.qe-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.qe-field { display: flex; flex-direction: column; gap: 4px; }
+.qe-field label { font-size: .72rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .3px; }
+.qe-field input, .qe-field select, .qe-field textarea {
+  padding: 9px 12px; border: 1px solid var(--fl-neutral-20); border-radius: var(--radius);
+  font-size: .84rem; color: var(--text); background: #fff; outline: none;
+  width: 100%; font-family: inherit; transition: border .15s, box-shadow .15s; resize: vertical;
+}
+.qe-field input:focus, .qe-field select:focus, .qe-field textarea:focus {
+  border-color: var(--accent); box-shadow: 0 0 0 2px rgba(0,120,212,.12);
+}
+.qe-msg { grid-column: 1 / -1; }
+.qe-btn-wrap { grid-column: 1 / -1; }
+.quick-enquiry button {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 11px 26px; background: #25D366; color: #fff; border: none;
+  border-radius: var(--radius); font-size: .88rem; font-weight: 700;
+  cursor: pointer; font-family: inherit;
+  transition: background .15s, transform .1s;
+  box-shadow: 0 2px 8px rgba(37,211,102,.3);
+}
+.quick-enquiry button:hover { background: #1da851; transform: translateY(-1px); }
+.quick-enquiry button:active { transform: none; }
+
+/* ── PRINT STYLESHEET ─────────────────────────────────────────────── */
+@media print {
+  header, nav, .wa-fab, .fab-cluster, .quote-bar, .quick-enquiry,
+  footer, .hero .search-wrap, .search-count, .section-banner,
+  .logo-strip, .badges-strip { display: none !important; }
+  body { background: #fff; color: #000; font-size: 11pt; }
+  .hero { background: #fff; color: #000; padding: 12px 0; border-bottom: 2px solid #000; }
+  .hero h2 { color: #000; font-size: 16pt; }
+  .hero p, .hero .pill { color: #333; }
+  table { page-break-inside: avoid; border: 1px solid #ccc; }
+  th { background: #333 !important; color: #fff !important; }
+  .content { margin: 0; padding: 0; max-width: 100%; }
+  .card-grid { grid-template-columns: repeat(3,1fr); gap: 8px; }
+  .card { border: 1px solid #ccc; page-break-inside: avoid; }
+  .sh { page-break-after: avoid; }
+  .wa-quote, .wa-row-quote { display: none !important; }
+  @page { margin: 15mm; }
+}
+
+/* ── LANGUAGE PERSISTENCE ─────────────────────────────────────────── */
+/* No CSS needed — handled by JS */
+
+/* ── RESPONSIVE ADJUSTMENTS ───────────────────────────────────────── */
+@media(max-width: 768px) {
+  .quote-bar { padding: 16px; }
+  .qe-inner { padding: 20px 16px; }
+  .qe-grid { grid-template-columns: 1fr; }
+  .qe-msg, .qe-btn-wrap { grid-column: 1; }
+  .quick-enquiry button { width: 100%; justify-content: center; }
+  .fab-cluster { bottom: 16px; right: 16px; }
+}
