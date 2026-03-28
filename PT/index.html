@@ -76,7 +76,7 @@
   <h2>Tecnologia. Idioma. Infraestrutura.</h2>
   <p>Hardware IT completo, desenvolvimento de software, serviços linguísticos, montagem de PCs e equipamento médico para empresas em toda a África Austral e Oriental.</p>
   <div class="pill">Fornecedores verificados no Malawi, Moçambique, África do Sul, EAU e China</div>
-  <div style="margin-top:20px"><div class="search-wrap"><span class="si">🔍</span><input type="text" id="searchInput" placeholder="Pesquisar serviços..." autocomplete="off"></div><div class="search-count" id="searchCount"></div></div>
+  <div style="margin-top:20px"><div class="search-wrap"><span class="si">🔍</span><input type="text" id="searchInput" placeholder="Pesquisar serviços..." autocomplete="off" aria-label="Pesquisar"></div><div class="search-count" id="searchCount"></div></div>
 </div>
 <div class="grid">
   <a class="gcard scard" href="catalogue.html">
@@ -114,9 +114,9 @@
     <h3>📬 Envio Rápido de Consulta</h3>
     <p>Preencha abaixo — respondemos via WhatsApp em 24 horas.</p>
     <div class="qe-grid">
-      <div class="qe-field"><label>Nome *</label><input type="text" id="qeName" placeholder="O seu nome" autocomplete="name"></div>
-      <div class="qe-field"><label>Organização</label><input type="text" id="qeOrg" placeholder="Empresa / ONG / Instituição" autocomplete="organization"></div>
-      <div class="qe-field"><label>Serviço *</label>
+      <div class="qe-field"><label for="qeName">Nome *</label><input type="text" id="qeName" placeholder="O seu nome" autocomplete="name"></div>
+      <div class="qe-field"><label for="qeOrg">Organização</label><input type="text" id="qeOrg" placeholder="Empresa / ONG / Instituição" autocomplete="organization"></div>
+      <div class="qe-field"><label for="qeService">Serviço *</label>
         <select id="qeService" aria-label="Selecionar serviço">
         <option>Selecionar serviço</option>
         <option>Hardware IT / Catálogo</option>
@@ -130,7 +130,7 @@
         <option>Outro</option>
         </select>
       </div>
-      <div class="qe-field qe-msg"><label>Mensagem *</label><textarea id="qeMsg" rows="3" placeholder="Descreva o seu requisito ou faça uma pergunta..."></textarea></div>
+      <div class="qe-field qe-msg"><label for="qeMsg">Mensagem *</label><textarea id="qeMsg" rows="3" placeholder="Descreva o seu requisito ou faça uma pergunta..."></textarea></div>
       <div class="qe-field qe-btn-wrap">
         <button onclick="sendQE()" type="button"><svg width="16" height="16" aria-hidden="true"><use href="#wa-icon" fill="currentColor"/></svg> Enviar via WhatsApp</button>
       </div>

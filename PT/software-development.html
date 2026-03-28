@@ -88,7 +88,7 @@
   <div class="section-banner"><img height="120" width="1100" src="../Products_placeholders/pexels-photo-7875843.jpeg" alt="Development services" loading="lazy"></div>
   <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--radius)">
   <table style="min-width:520px">
-    <thead><tr><th>Serviço</th><th>Descrição</th><th>A partir de (MWK)</th><th>A partir de (USD)</th><th>Quote</th></tr></thead>
+    <thead><tr><th scope="col">Serviço</th><th scope="col">Descrição</th><th scope="col">A partir de (MWK)</th><th scope="col">A partir de (USD)</th><th scope="col">Quote</th></tr></thead>
     <tbody>
       <tr><td class="pn">Desenvolvimento de Software Personalizado</td><td>Aplicações empresariais por medida — ASP.NET Core, Blazor Server, PostgreSQL, cloud-native</td><td class="mk">MK 7.000.000+</td><td class="pr">$3.700+</td><td><a class="wa-row-quote" href="https://wa.me/265889941700?text=Hi%20TechNexus%2C%20I%20would%20like%20a%20quote%20for%3A%0ADesenvolvimento%20de%20Software%20Personalizado%0APrice%3A%20$3.700+" target="_blank" rel="noopener"><svg width="16" height="16" aria-hidden="true"><use href="#wa-icon" fill="currentColor"/></svg> Quote</a></td></tr>
       <tr><td class="pn">Desenvolvimento de Aplicação Web</td><td>Aplicações web responsivas, portais, dashboards, desenvolvimento de API</td><td class="mk">MK 2.850.000+</td><td class="pr">$1.500+</td><td><a class="wa-row-quote" href="https://wa.me/265889941700?text=Hi%20TechNexus%2C%20I%20would%20like%20a%20quote%20for%3A%0ADesenvolvimento%20de%20Aplicação%20Web%0APrice%3A%20$1.500+" target="_blank" rel="noopener"><svg width="16" height="16" aria-hidden="true"><use href="#wa-icon" fill="currentColor"/></svg> Quote</a></td></tr>
@@ -158,9 +158,9 @@
     <h3>📬 Envio Rápido de Consulta</h3>
     <p>Preencha abaixo — respondemos via WhatsApp em 24 horas.</p>
     <div class="qe-grid">
-      <div class="qe-field"><label>Nome *</label><input type="text" id="qeName" placeholder="O seu nome" autocomplete="name"></div>
-      <div class="qe-field"><label>Organização</label><input type="text" id="qeOrg" placeholder="Empresa / ONG / Instituição" autocomplete="organization"></div>
-      <div class="qe-field"><label>Serviço *</label>
+      <div class="qe-field"><label for="qeName">Nome *</label><input type="text" id="qeName" placeholder="O seu nome" autocomplete="name"></div>
+      <div class="qe-field"><label for="qeOrg">Organização</label><input type="text" id="qeOrg" placeholder="Empresa / ONG / Instituição" autocomplete="organization"></div>
+      <div class="qe-field"><label for="qeService">Serviço *</label>
         <select id="qeService" aria-label="Selecionar serviço">
         <option>Selecionar serviço</option>
         <option>Hardware IT / Catálogo</option>
@@ -174,7 +174,7 @@
         <option>Outro</option>
         </select>
       </div>
-      <div class="qe-field qe-msg"><label>Mensagem *</label><textarea id="qeMsg" rows="3" placeholder="Descreva o seu requisito ou faça uma pergunta..."></textarea></div>
+      <div class="qe-field qe-msg"><label for="qeMsg">Mensagem *</label><textarea id="qeMsg" rows="3" placeholder="Descreva o seu requisito ou faça uma pergunta..."></textarea></div>
       <div class="qe-field qe-btn-wrap">
         <button onclick="sendQE()" type="button"><svg width="16" height="16" aria-hidden="true"><use href="#wa-icon" fill="currentColor"/></svg> Enviar via WhatsApp</button>
       </div>
