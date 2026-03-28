@@ -91,7 +91,7 @@
 
   <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--radius)">
   <table style="min-width:520px">
-    <thead><tr><th>Service</th><th>Languages</th><th>Unit</th><th>MWK</th><th>USD</th><th>Quote</th></tr></thead>
+    <thead><tr><th scope="col">Service</th><th scope="col">Languages</th><th scope="col">Unit</th><th scope="col">MWK</th><th scope="col">USD</th><th scope="col">Quote</th></tr></thead>
     <tbody>
       <tr><td class="pn">Document Translation</td><td>EN↔PT, EN↔NY, EN↔SW</td><td>per page (250 words)</td><td class="mk">MK 17,340</td><td class="pr">$10</td><td><a class="wa-row-quote" href="https://wa.me/265889941700?text=Hi%20TechNexus%2C%20I%20would%20like%20a%20quote%20for%3A%0ADocument%20Translation%0APrice%3A%20$10" target="_blank" rel="noopener"><svg width="16" height="16" aria-hidden="true"><use href="#wa-icon" fill="currentColor"/></svg> Quote</a></td></tr>
       <tr><td class="pn">Certified Translation</td><td>EN↔PT, EN↔NY</td><td>per page (250 words)</td><td class="mk">MK 26,010</td><td class="pr">$15</td><td><a class="wa-row-quote" href="https://wa.me/265889941700?text=Hi%20TechNexus%2C%20I%20would%20like%20a%20quote%20for%3A%0ACertified%20Translation%0APrice%3A%20$15" target="_blank" rel="noopener"><svg width="16" height="16" aria-hidden="true"><use href="#wa-icon" fill="currentColor"/></svg> Quote</a></td></tr>
@@ -112,7 +112,7 @@
   <p style="font-size:.84rem;color:var(--muted);margin-bottom:16px;line-height:1.6">We complete your tender documents, pre-qualification forms, and bid responses with precision — in your language. Available in English, Portuguese, Chichewa, and Swahili.</p>
   <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--radius);margin-bottom:16px">
   <table class="tender-table" style="min-width:480px">
-    <thead><tr><th>Service</th><th>Description</th><th>From (MWK)</th><th>Quote</th></tr></thead>
+    <thead><tr><th scope="col">Service</th><th scope="col">Description</th><th scope="col">From (MWK)</th><th scope="col">Quote</th></tr></thead>
     <tbody>
       <tr><td>Pre-Qualification Registration</td><td style="color:var(--muted);font-size:.8rem">Supplier registration forms, company profiles, compliance docs</td><td>MK 100,000</td></tr>
       <tr><td>Simple Tender Response</td><td style="color:var(--muted);font-size:.8rem">Quotation-based tenders, RFQs, straightforward bid documents</td><td>MK 200,000</td></tr>
@@ -130,7 +130,7 @@
   <div class="sh" style="margin-top:0;border-left-color:var(--teal)"><h2 style="color:var(--teal)">🇲🇼 Local Registrations — Malawi</h2></div>
   <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--radius);margin-bottom:20px">
   <table class="tender-table" style="min-width:480px">
-    <thead><tr><th>Service</th><th>Description</th><th>From (MWK)</th><th>Quote</th></tr></thead>
+    <thead><tr><th scope="col">Service</th><th scope="col">Description</th><th scope="col">From (MWK)</th><th scope="col">Quote</th></tr></thead>
     <tbody>
       <tr><td>MSME / Business Name Registration</td><td style="color:var(--muted);font-size:.8rem">Register sole trader or MSME business name with MBRS (formerly Registrar General)</td><td>MK 50,000</td></tr>
       <tr><td>Company Incorporation</td><td style="color:var(--muted);font-size:.8rem">Private Limited Company registration with MBRS. Memorandum, articles, share allocation</td><td>MK 150,000</td></tr>
@@ -148,7 +148,7 @@
   <p style="font-size:.82rem;color:var(--muted);margin-bottom:16px;line-height:1.6">We coordinate with in-country agents in Zambia, Mozambique, and South Africa to handle registration processes remotely. Documents are prepared, translated where required, and submitted on your behalf.</p>
   <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--radius);margin-bottom:20px">
   <table class="tender-table" style="min-width:520px">
-    <thead><tr><th>Country</th><th>Service</th><th>Description</th><th>From (MWK)</th><th>Quote</th></tr></thead>
+    <thead><tr><th scope="col">Country</th><th scope="col">Service</th><th scope="col">Description</th><th scope="col">From (MWK)</th><th scope="col">Quote</th></tr></thead>
     <tbody>
       <tr><td style="color:var(--amber);font-weight:700">🇿🇲 Zambia</td><td>PACRA Business Registration</td><td style="color:var(--muted);font-size:.8rem">Patents and Companies Registration Agency — company name search, reservation, and registration</td><td>MK 200,000</td></tr>
       <tr><td style="color:var(--amber);font-weight:700">🇿🇲 Zambia</td><td>ZRA TPIN / Tax Registration</td><td style="color:var(--muted);font-size:.8rem">Zambia Revenue Authority taxpayer registration for doing business in Zambia</td><td>MK 100,000</td></tr>
@@ -219,9 +219,9 @@
     <h3>📬 Quick Enquiry</h3>
     <p>Fill in below — we'll respond via WhatsApp within 24 hours.</p>
     <div class="qe-grid">
-      <div class="qe-field"><label>Name *</label><input type="text" id="qeName" placeholder="Your name" autocomplete="name"></div>
-      <div class="qe-field"><label>Organisation</label><input type="text" id="qeOrg" placeholder="Company / NGO / Institution" autocomplete="organization"></div>
-      <div class="qe-field"><label>Service *</label>
+      <div class="qe-field"><label for="qeName">Name *</label><input type="text" id="qeName" placeholder="Your name" autocomplete="name"></div>
+      <div class="qe-field"><label for="qeOrg">Organisation</label><input type="text" id="qeOrg" placeholder="Company / NGO / Institution" autocomplete="organization"></div>
+      <div class="qe-field"><label for="qeService">Service *</label>
         <select id="qeService" aria-label="Select a service">
         <option>Select a service</option>
         <option>IT Hardware / Catalogue</option>
@@ -235,7 +235,7 @@
         <option>Other</option>
         </select>
       </div>
-      <div class="qe-field qe-msg"><label>Message *</label><textarea id="qeMsg" rows="3" placeholder="Describe your requirement or ask a question..."></textarea></div>
+      <div class="qe-field qe-msg"><label for="qeMsg">Message *</label><textarea id="qeMsg" rows="3" placeholder="Describe your requirement or ask a question..."></textarea></div>
       <div class="qe-field qe-btn-wrap">
         <button onclick="sendQE()" type="button"><svg width="16" height="16" aria-hidden="true"><use href="#wa-icon" fill="currentColor"/></svg> Send via WhatsApp</button>
       </div>

@@ -82,7 +82,7 @@
   <div class="sh"><h2>Standard Desktop Build — Component Breakdown</h2><p class="sd">Base specification per unit. All components are new, sourced from verified distributors.</p></div>
   <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--radius)">
   <table style="min-width:520px">
-    <thead><tr><th>#</th><th>Component</th><th>Specification</th><th>MWK</th><th>USD</th><th>Quote</th></tr></thead>
+    <thead><tr><th scope="col">#</th><th scope="col">Component</th><th scope="col">Specification</th><th scope="col">MWK</th><th scope="col">USD</th><th scope="col">Quote</th></tr></thead>
     <tbody>
       <tr><td>1</td><td class="pn">CPU</td><td>Intel Core i5-12400 (6-core, 12-thread, 4.4GHz Turbo)</td><td class="mk">MK 277,440</td><td class="pr">$160</td><td><a class="wa-row-quote" href="https://wa.me/265889941700?text=Hi%20TechNexus%2C%20I%20would%20like%20a%20quote%20for%3A%0ACPU%0APrice%3A%20$160" target="_blank" rel="noopener"><svg width="16" height="16" aria-hidden="true"><use href="#wa-icon" fill="currentColor"/></svg> Quote</a></td></tr>
       <tr><td>2</td><td class="pn">Motherboard</td><td>H610M · LGA1700 · DDR4 · PCIe 4.0 · M.2 NVMe</td><td class="mk">MK 138,720</td><td class="pr">$80</td><td><a class="wa-row-quote" href="https://wa.me/265889941700?text=Hi%20TechNexus%2C%20I%20would%20like%20a%20quote%20for%3A%0AMotherboard%0APrice%3A%20$80" target="_blank" rel="noopener"><svg width="16" height="16" aria-hidden="true"><use href="#wa-icon" fill="currentColor"/></svg> Quote</a></td></tr>
@@ -116,7 +116,7 @@
   <div class="sh"><h2>📊 Volume Pricing Tiers</h2><p class="sd">Contact us for exact quotes on large orders.</p></div>
   <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--radius)">
   <table style="min-width:400px">
-    <thead><tr><th>Quantity</th><th>Discount</th><th>MWK / Unit</th><th>USD / Unit</th><th>Quote</th></tr></thead>
+    <thead><tr><th scope="col">Quantity</th><th scope="col">Discount</th><th scope="col">MWK / Unit</th><th scope="col">USD / Unit</th><th scope="col">Quote</th></tr></thead>
     <tbody>
       <tr><td>1 – 4 Units</td><td>Standard</td><td class="mk">MK 995,316</td><td class="pr">$574</td></tr>
       <tr><td>5 – 9 Units</td><td>-5%</td><td class="mk">MK 945,330</td><td class="pr">$545</td></tr>
@@ -129,7 +129,7 @@
   <div class="sh"><h2>🔧 Customisation Options</h2><p class="sd">Upgrades available on request.</p></div>
   <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--radius)">
   <table style="min-width:400px">
-    <thead><tr><th>Upgrade</th><th>From → To</th><th>Add (USD)</th><th>Quote</th></tr></thead>
+    <thead><tr><th scope="col">Upgrade</th><th scope="col">From → To</th><th scope="col">Add (USD)</th><th scope="col">Quote</th></tr></thead>
     <tbody>
       <tr><td class="pn">RAM</td><td>8GB → 16GB DDR4</td><td class="pr">+$18</td><td><a class="wa-row-quote" href="https://wa.me/265889941700?text=Hi%20TechNexus%2C%20I%20would%20like%20a%20quote%20for%3A%0ARAM%0APrice%3A%20+$18" target="_blank" rel="noopener"><svg width="16" height="16" aria-hidden="true"><use href="#wa-icon" fill="currentColor"/></svg> Quote</a></td></tr>
       <tr><td class="pn">Storage</td><td>256GB → 512GB NVMe</td><td class="pr">+$22</td><td><a class="wa-row-quote" href="https://wa.me/265889941700?text=Hi%20TechNexus%2C%20I%20would%20like%20a%20quote%20for%3A%0AStorage%0APrice%3A%20+$22" target="_blank" rel="noopener"><svg width="16" height="16" aria-hidden="true"><use href="#wa-icon" fill="currentColor"/></svg> Quote</a></td></tr>
@@ -166,9 +166,9 @@
     <h3>📬 Quick Enquiry</h3>
     <p>Fill in below — we'll respond via WhatsApp within 24 hours.</p>
     <div class="qe-grid">
-      <div class="qe-field"><label>Name *</label><input type="text" id="qeName" placeholder="Your name" autocomplete="name"></div>
-      <div class="qe-field"><label>Organisation</label><input type="text" id="qeOrg" placeholder="Company / NGO / Institution" autocomplete="organization"></div>
-      <div class="qe-field"><label>Service *</label>
+      <div class="qe-field"><label for="qeName">Name *</label><input type="text" id="qeName" placeholder="Your name" autocomplete="name"></div>
+      <div class="qe-field"><label for="qeOrg">Organisation</label><input type="text" id="qeOrg" placeholder="Company / NGO / Institution" autocomplete="organization"></div>
+      <div class="qe-field"><label for="qeService">Service *</label>
         <select id="qeService" aria-label="Select a service">
         <option>Select a service</option>
         <option>IT Hardware / Catalogue</option>
@@ -182,7 +182,7 @@
         <option>Other</option>
         </select>
       </div>
-      <div class="qe-field qe-msg"><label>Message *</label><textarea id="qeMsg" rows="3" placeholder="Describe your requirement or ask a question..."></textarea></div>
+      <div class="qe-field qe-msg"><label for="qeMsg">Message *</label><textarea id="qeMsg" rows="3" placeholder="Describe your requirement or ask a question..."></textarea></div>
       <div class="qe-field qe-btn-wrap">
         <button onclick="sendQE()" type="button"><svg width="16" height="16" aria-hidden="true"><use href="#wa-icon" fill="currentColor"/></svg> Send via WhatsApp</button>
       </div>

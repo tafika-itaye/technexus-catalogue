@@ -77,7 +77,7 @@
   <p>Certified hardware from HP, Dell, Lenovo, Samsung, Synology, APC, Canon and ASUS. Business laptops, desktops, NAS, UPS, printers, networking and accessories. Serving Malawi, Zambia, Mozambique and South Africa.</p>
   <div class="pill">Rate: 1 USD = MK 1,734 · March 2026 · Contact for formal quotations</div>
   <div style="margin-top:20px">
-    <div class="search-wrap"><span class="si">🔍</span><input autocomplete="off" id="searchInput" placeholder="Search products..." type="text"/></div>
+    <div class="search-wrap"><span class="si">🔍</span><input autocomplete="off" id="searchInput" placeholder="Search products..." type="text"/ aria-label="Search"></div>
     <div class="search-count" id="searchCount"></div>
   </div>
 </div>
@@ -162,9 +162,9 @@
     <h3>📬 Quick Enquiry</h3>
     <p>Fill in below — we'll respond via WhatsApp within 24 hours.</p>
     <div class="qe-grid">
-      <div class="qe-field"><label>Name *</label><input type="text" id="qeName" placeholder="Your name" autocomplete="name"></div>
-      <div class="qe-field"><label>Organisation</label><input type="text" id="qeOrg" placeholder="Company / NGO / Institution" autocomplete="organization"></div>
-      <div class="qe-field"><label>Service *</label>
+      <div class="qe-field"><label for="qeName">Name *</label><input type="text" id="qeName" placeholder="Your name" autocomplete="name"></div>
+      <div class="qe-field"><label for="qeOrg">Organisation</label><input type="text" id="qeOrg" placeholder="Company / NGO / Institution" autocomplete="organization"></div>
+      <div class="qe-field"><label for="qeService">Service *</label>
         <select id="qeService" aria-label="Select a service">
         <option>Select a service</option>
         <option>IT Hardware / Catalogue</option>
@@ -178,7 +178,7 @@
         <option>Other</option>
         </select>
       </div>
-      <div class="qe-field qe-msg"><label>Message *</label><textarea id="qeMsg" rows="3" placeholder="Describe your requirement or ask a question..."></textarea></div>
+      <div class="qe-field qe-msg"><label for="qeMsg">Message *</label><textarea id="qeMsg" rows="3" placeholder="Describe your requirement or ask a question..."></textarea></div>
       <div class="qe-field qe-btn-wrap">
         <button onclick="sendQE()" type="button"><svg width="16" height="16" aria-hidden="true"><use href="#wa-icon" fill="currentColor"/></svg> Send via WhatsApp</button>
       </div>
