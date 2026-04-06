@@ -1,0 +1,89 @@
+<!--
+  ════════════════════════════════════════════════════════════════
+  TechNexus — Performance <head> patch
+  Target: raise PageSpeed Mobile from 59 → 80+
+  Paste the blocks below into the <head> of EVERY .html page.
+  ════════════════════════════════════════════════════════════════
+
+  ISSUES THIS ADDRESSES
+  ─────────────────────
+  1. LCP 9.6 s      → fetchpriority + preload on hero image
+  2. TBT 660 ms     → defer all non-critical scripts
+  3. 4,999 KiB imgs → WebP <picture> + loading="lazy" + explicit w/h
+  4. 3,587 KiB cache→ handled in _headers file
+  5. Render blocking→ preconnect + swap font display
+
+  ════════════════════════════════════════════════════════════════
+-->
+
+<!-- 1 ░ DNS / connection warm-up (add near top of <head>) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- 2 ░ Preload the LCP image — change src to your actual above-fold hero -->
+<!--    Add fetchpriority="high" so the browser fetches it ASAP             -->
+<link rel="preload"
+      as="image"
+      href="/images/hero.webp"
+      fetchpriority="high">
+
+<!-- 3 ░ Load Google Fonts with display=swap (non-blocking) -->
+<!--    Replace your existing <link> to Google Fonts with this version:      -->
+<link rel="preload"
+      href="https://fonts.googleapis.com/css2?family=YOUR+FONT&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=YOUR+FONT&display=swap">
+</noscript>
+
+<!-- 4 ░ Inline ONLY the critical above-fold CSS; load the rest async -->
+<!--    Extract styles needed for hero / nav into a <style> block here.      -->
+<!--    Then lazy-load the main stylesheet:                                   -->
+<link rel="preload" href="/styles.css" as="style"
+      onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/styles.css"></noscript>
+
+<!--
+  5 ░ Defer ALL scripts (move to end of <body> or add defer/async)
+  ─────────────────────────────────────────────────────────────────
+  Change:   <script src="security.js"></script>
+  To:       <script src="security.js" defer></script>
+
+  Change:   <script src="splash.js"></script>
+  To:       <script src="splash.js" defer></script>
+
+  ════════════════════════════════════════════════════════════════
+
+  6 ░ Image optimisation checklist
+  ─────────────────────────────────
+  For EVERY <img> on the page:
+
+  a) Convert to WebP (use cwebp or Squoosh).
+     Save as image.webp alongside the original.
+
+  b) Wrap in <picture> for fallback:
+     <picture>
+       <source srcset="image.webp" type="image/webp">
+       <img src="image.jpg" alt="..." width="800" height="600"
+            loading="lazy" decoding="async">
+     </picture>
+
+  c) For the HERO (LCP) image only — do NOT lazy-load it:
+     <picture>
+       <source srcset="hero.webp" type="image/webp">
+       <img src="hero.jpg" alt="TechNexus hero" width="1200" height="630"
+            fetchpriority="high" decoding="sync">
+     </picture>
+
+  d) Always include explicit width + height to prevent layout shift (CLS).
+
+  ════════════════════════════════════════════════════════════════
+
+  7 ░ splash.js — add at END of <body> with defer
+  ─────────────────────────────────────────────────
+  <script src="splash.js" defer></script>
+
+  ════════════════════════════════════════════════════════════════
+-->
