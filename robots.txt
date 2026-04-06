@@ -1,0 +1,28 @@
+# robots.txt — TechNexus (www.technexusmw.com)
+# Last updated: April 2026
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /catalogue.html
+Allow: /computer-assembly.html
+Allow: /language-services.html
+Allow: /medical-supplies.html
+Allow: /software-development.html
+Allow: /credentials.html
+Allow: /PT/
+Allow: /NY/
+Allow: /styles.css
+Allow: /manifest.json
+Allow: /Products_logos/
+Allow: /index_main/
+
+# Block build artifacts, internal directories and tmp files
+Disallow: /products_spares/
+Disallow: /*.tmp$
+Disallow: /sw.js
+
+# Crawl-delay for well-behaved bots
+Crawl-delay: 10
+
+Sitemap: https://www.technexusmw.com/sitemap.xml
