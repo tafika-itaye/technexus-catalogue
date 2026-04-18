@@ -902,3 +902,100 @@ div[style*="overflow-x:auto"] { max-width: 100%; }
   .quick-enquiry button { width: 100%; justify-content: center; }
   .fab-cluster { bottom: 16px; right: 16px; }
 }
+
+/* ===================================================================
+   UI MODERNIZATION — Step 6 (Route A)
+   Typography: Inter (body) + Syne (display headings)
+   Reveal animations + Dark mode toggle
+   =================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@700;800&display=swap');
+
+/* --- Typography overrides --- */
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-feature-settings: 'cv02','cv03','cv04','cv11';
+}
+h1, h2, h3, .pdh-brand, .hero h2, .sh h2 {
+  font-family: 'Syne', 'Inter', 'Segoe UI', sans-serif;
+  letter-spacing: -0.01em;
+}
+h1 { font-weight: 800; }
+h2, h3 { font-weight: 700; }
+.hero h2 { letter-spacing: -0.02em; }
+
+/* --- Dark mode variables --- */
+[data-theme="dark"] {
+  --bg:          #0e1116;
+  --surface:     #161b22;
+  --surface-alt: #1c222b;
+  --text:        #e6edf3;
+  --muted:       #9aa5b1;
+  --accent:      #4ca3e0;
+  --accent-dark: #2b7fc0;
+  --border:      #2a313a;
+  --fl-neutral-0:  #0e1116;
+  --fl-neutral-2:  #161b22;
+  --fl-neutral-4:  #1c222b;
+  --fl-neutral-8:  #222932;
+  --fl-neutral-20: #3a434e;
+  --fl-neutral-40: #6e7a88;
+  --fl-neutral-60: #9aa5b1;
+  --fl-neutral-80: #d6dee6;
+  --fl-neutral-90: #0a0d12;
+  --fl-blue-light: #1a2a3b;
+  --fl-blue-mid:   #234463;
+  --shadow-2:  0 1px 2px rgba(0,0,0,.5), 0 0 2px rgba(0,0,0,.4);
+  --shadow-4:  0 2px 4px rgba(0,0,0,.55), 0 0 2px rgba(0,0,0,.4);
+  --shadow-8:  0 4px 10px rgba(0,0,0,.6), 0 0 2px rgba(0,0,0,.4);
+  --shadow-16: 0 8px 18px rgba(0,0,0,.7), 0 0 2px rgba(0,0,0,.4);
+  color-scheme: dark;
+}
+[data-theme="dark"] thead { background: #090c10; }
+[data-theme="dark"] .gcard:hover, [data-theme="dark"] tbody tr:hover { background: var(--fl-blue-light); }
+[data-theme="dark"] .card { border-color: var(--border); }
+[data-theme="dark"] .comp-thumb { background: #f2f2f2; }
+[data-theme="dark"] img { opacity: .95; }
+[data-theme="dark"] .logo-strip img, [data-theme="dark"] .comp-thumb { opacity: 1; }
+[data-theme="dark"] .pill { background: #1c222b; color: var(--text); border-color: var(--border); }
+
+/* --- Theme toggle button --- */
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  width: 34px; height: 34px;
+  display: inline-flex; align-items: center; justify-content: center;
+  cursor: pointer; color: inherit;
+  transition: background .2s, border-color .2s, transform .15s;
+  line-height: 0;
+}
+.theme-toggle:hover { background: var(--surface-alt); transform: rotate(15deg); }
+.theme-toggle svg { width: 18px; height: 18px; }
+.theme-toggle .t-moon { display: inline; }
+.theme-toggle .t-sun  { display: none; }
+[data-theme="dark"] .theme-toggle .t-moon { display: none; }
+[data-theme="dark"] .theme-toggle .t-sun  { display: inline; }
+.contact-bar .theme-toggle { margin-left: 4px; color: #fff; border-color: rgba(255,255,255,.35); }
+.contact-bar .theme-toggle:hover { background: rgba(255,255,255,.08); }
+
+/* --- Reveal-on-scroll animation --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .55s ease-out, transform .55s ease-out;
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* Don't animate in print view */
+@media print {
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .theme-toggle { display: none !important; }
+}

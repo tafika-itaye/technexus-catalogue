@@ -22,7 +22,12 @@ Disallow: /products_spares/
 Disallow: /*.tmp$
 Disallow: /sw.js
 
-# Crawl-delay for well-behaved bots
+# Crawl delay for well-behaved bots
 Crawl-delay: 10
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Goo
 
 Sitemap: https://www.technexusmw.com/sitemap.xml
