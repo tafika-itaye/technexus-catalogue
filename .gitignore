@@ -1,0 +1,23 @@
+# Image optimizer backup (kept locally, not shipped)
+_backup_images/
+
+# Office lock files
+.~lock.*#
+
+# OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Build / dependencies
+node_modules/
+dist/
+.cache/
+
+# Logs
+*.log
