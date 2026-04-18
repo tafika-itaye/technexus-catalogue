@@ -91,6 +91,49 @@ OVERRIDES = {
     "MT-S+RJ10":            ("Mikrotik S+RJ10 SFP+ Copper Module",           "10G RJ45 · Cat6a · 30m reach"),
 }
 
+# Explicit SKU -> image path overrides (authoritative; matches actual files on disk).
+# Paths are relative to repo root. PT/NY get `../` auto-prefixed.
+IMAGE_OVERRIDES = {
+    # Routers
+    "MT-CCR2116-12G-4S+":      "images/networking/routers/mikrotik_ccr2116-12g-4s+.jpg",
+    # Switches
+    "MT-CRS326-24G-2S+RM":     "images/networking/switches/mikrotik_crs326-24g-2s+rm.jpg",
+    "MT-CRS328-24P-4S+RM":     "images/networking/switches/mikrotik_crs328-24p-4s+rm.jpg",
+    "MT-CRS354-48G-4S+2Q+RM":  "images/networking/switches/mikrotik_crs354-48g-4s+2q+rm.jpg",
+    # Transceivers
+    "MT-S+85DLC03D":           "images/networking/transceivers/mikrotik_s+85dlc03d.jpg",
+    "MT-S+RJ10":               "images/networking/transceivers/mikrotik_s+rj10.jpg",
+    # Laptops
+    "LEN-TP-E14-C5":           "images/laptops/lenovo_thinkpad_e14_gen6_core5.jpg",
+    "LEN-TP-E14-U7":           "images/laptops/lenovo_thinkpad_e14_ultra7.jpg",
+    "LEN-TP-E16-R7":           "images/laptops/lenovo_thinkpad_e16_ryzen7.jpg",
+    "HP-PB440-G11":            "images/laptops/hp_probook_440_g11.jpg",
+    # Desktops — tower
+    "LEN-TC-NEO50T-I3":        "images/desktops/tower/lenovo_neo_50t.jpg",
+    "LEN-TC-NEO50T-I5":        "images/desktops/tower/lenovo_neo_50t.jpg",
+    "HP-290-G9-I5":            "images/desktops/tower/hp_290_g9.jpg",
+    "HP-290-G9-I7":            "images/desktops/tower/hp_290_g9.jpg",
+    "DEL-7020-I3":             "images/desktops/tower/dell_optiplex_7020.jpg",
+    # Desktops — SFF
+    "LEN-TC-NEO50S-I3":        "images/desktops/sff/lenovo_neo_50s.jpg",
+    "DEL-QCT1250-I5":          "images/desktops/sff/dell_optiplex_7020_sff.jpg",
+    # Desktops — mini
+    "DEL-MINI-U5":             "images/desktops/mini/dell_optiplex_mini.jpg",
+}
+
+def _sku_tokens(sku: str) -> list[str]:
+    """Derive must-match tokens for fuzzy folder-scan matching.
+    Strips vendor prefixes, splits on '-', drops non-alphanumerics."""
+    s = sku.upper()
+    for prefix in ("MT-", "LEN-TP-", "LEN-TC-", "HP-PB", "HP-", "DEL-", "DELL-"):
+        if s.startswith(prefix):
+            s = s[len(prefix):]
+            break
+    parts = [re.sub(r"[^a-z0-9]", "", p.lower()) for p in s.split("-")]
+    # Keep tokens 2+ chars (single letters like 'I' or 'G' cause false positives)
+    return [p for p in parts if len(p) >= 2]
+
+
 # Per-section (key, emoji, filter_fn, icon_svg). Titles/taglines looked up by key+lang.
 SECTIONS = [
     ("routers",      "📡", lambda sku, sub: sku.startswith("MT-") and "Router" in (sub or ""), "images/icons/router.svg"),
@@ -203,18 +246,44 @@ def split_name(name: str) -> tuple[str, str]:
 def card_html(sku_row, icon_row, icon_svg):
     (sku, cat, sub, name, brand, supplier,
      cost, src, weight, freight, landed, final_usd, final_mwk, include) = sku_row
-    # Primary image strategy:
-    #   - If a real vendor photo exists at the per-SKU path on disk, USE IT.
-    #   - Else fall back to the category SVG placeholder (still visible, professional).
+    # Primary image strategy (in order):
+    #   1. Explicit IMAGE_OVERRIDES mapping (authoritative — matches files on disk)
+    #   2. xlsx Icon_Search_Terms path (for newly-added photos following the guide)
+    #   3. Folder scan: any image in the expected folder whose stem contains SKU tokens
+    #   4. Category SVG placeholder
     filename_base = icon_row[1] if icon_row else sku.lower().replace("+","-").replace("_","-")
     folder = icon_row[2] if icon_row else "images/misc/"
     per_sku_path = f"{folder}{filename_base}.jpg"
     per_sku_png  = f"{folder}{filename_base}.png"
-    if (REPO / per_sku_path).exists():
-        img_path = per_sku_path
-    elif (REPO / per_sku_png).exists():
-        img_path = per_sku_png
-    else:
+
+    img_path = None
+    # 1. Explicit override
+    if sku in IMAGE_OVERRIDES:
+        p = IMAGE_OVERRIDES[sku]
+        if (REPO / p).exists():
+            img_path = p
+    # 2. xlsx-declared path (jpg/png/jpeg/webp)
+    if img_path is None:
+        for ext in ("jpg", "jpeg", "png", "webp"):
+            candidate = f"{folder}{filename_base}.{ext}"
+            if (REPO / candidate).exists():
+                img_path = candidate
+                break
+    # 3. Folder scan for files whose stem matches SKU tokens
+    if img_path is None and folder:
+        folder_dir = REPO / folder
+        if folder_dir.is_dir():
+            tokens = _sku_tokens(sku)
+            if tokens:
+                for f in sorted(folder_dir.iterdir()):
+                    if f.suffix.lower() not in (".jpg", ".jpeg", ".png", ".webp"):
+                        continue
+                    norm_stem = re.sub(r"[^a-z0-9]", "", f.stem.lower())
+                    if all(t in norm_stem for t in tokens):
+                        img_path = f.relative_to(REPO).as_posix()
+                        break
+    # 4. SVG fallback
+    if img_path is None:
         img_path = icon_svg
     # Prefix for PT/NY (files live one level deep)
     img_src = PATH_PREFIX + img_path
