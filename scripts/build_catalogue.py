@@ -96,10 +96,22 @@ OVERRIDES = {
 IMAGE_OVERRIDES = {
     # Routers
     "MT-CCR2116-12G-4S+":      "images/networking/routers/mikrotik_ccr2116-12g-4s+.jpg",
+    "MT-CCR2216-1G-12XS-2XQ":  "images/networking/routers/mikrotik_ccr2216.jpg",
+    "MT-CCR2004-16G-2S+":      "images/networking/routers/mikrotik_ccr2004-16g.jpg",
+    "MT-CCR2004-1G-12S+2XS":   "images/networking/routers/mikrotik_ccr2004-12sfp.jpg",
+    "MT-RB5009UPR+S+IN":       "images/networking/routers/mikrotik_rb5009upr.jpg",
+    "MT-RB5009UG+S+IN":        "images/networking/routers/mikrotik_rb5009ug.jpg",
+    "MT-RB4011iGS+RM":         "images/networking/routers/mikrotik_rb4011.jpg",
+    "MT-RB1100DX4":            "images/networking/routers/mikrotik_rb1100dx4.jpg",
+    "MT-L009UIGS-RM":          "images/networking/routers/mikrotik_l009uigs.jpg",
     # Switches
-    "MT-CRS326-24G-2S+RM":     "images/networking/switches/mikrotik_crs326-24g-2s+rm.jpg",
-    "MT-CRS328-24P-4S+RM":     "images/networking/switches/mikrotik_crs328-24p-4s+rm.jpg",
     "MT-CRS354-48G-4S+2Q+RM":  "images/networking/switches/mikrotik_crs354-48g-4s+2q+rm.jpg",
+    "MT-CRS354-48P-4S+2Q+RM":  "images/networking/switches/mikrotik_crs354-48p.jpg",
+    "MT-CRS328-24P-4S+RM":     "images/networking/switches/mikrotik_crs328-24p-4s+rm.jpg",
+    "MT-CRS326-24G-2S+RM":     "images/networking/switches/mikrotik_crs326-24g-2s+rm.jpg",
+    "MT-CRS326-24S+2Q+RM":     "images/networking/switches/mikrotik_crs326-24sfp.jpg",
+    "MT-CRS318-16P-2S+OUT":    "images/networking/switches/mikrotik_crs318-outdoor.jpg",
+    "MT-CRS112-8P-4S-IN":      "images/networking/switches/mikrotik_crs112-8p.jpg",
     # Transceivers
     "MT-S+85DLC03D":           "images/networking/transceivers/mikrotik_s+85dlc03d.jpg",
     "MT-S+RJ10":               "images/networking/transceivers/mikrotik_s+rj10.jpg",
@@ -111,13 +123,18 @@ IMAGE_OVERRIDES = {
     # Desktops — tower
     "LEN-TC-NEO50T-I3":        "images/desktops/tower/lenovo_neo_50t.jpg",
     "LEN-TC-NEO50T-I5":        "images/desktops/tower/lenovo_neo_50t.jpg",
+    "LEN-TC-M70T-I7":          "images/desktops/tower/lenovo_m70t.jpg",
     "HP-290-G9-I5":            "images/desktops/tower/hp_290_g9.jpg",
     "HP-290-G9-I7":            "images/desktops/tower/hp_290_g9.jpg",
     "DEL-7020-I3":             "images/desktops/tower/dell_optiplex_7020.jpg",
     # Desktops — SFF
     "LEN-TC-NEO50S-I3":        "images/desktops/sff/lenovo_neo_50s.jpg",
+    "LEN-TC-M70S-I5":          "images/desktops/sff/lenovo_m70s.jpg",
+    "HP-400-SFF-I7":           "images/desktops/sff/hp_pro_400_g9_sff.jpg",
+    "HP-800-G9-SFF-I7":        "images/desktops/sff/hp_elitedesk_800_g9_sff.jpg",
     "DEL-QCT1250-I5":          "images/desktops/sff/dell_optiplex_7020_sff.jpg",
     # Desktops — mini
+    "LEN-TC-NEO30S-I5":        "images/desktops/mini/lenovo_neo_30s.jpg",
     "DEL-MINI-U5":             "images/desktops/mini/dell_optiplex_mini.jpg",
 }
 
