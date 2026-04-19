@@ -6,13 +6,14 @@
  *   ✦ Security hardening
  */
 
-# ── Immutable static assets ─────────────────────────────────────────────────
-# Hashed filenames (bundle.abc123.js etc.) → cache forever
+# ── Stylesheets & scripts (non-hashed) ──────────────────────────────────────
+# Short cache + must-revalidate so deploys propagate without hard-refresh.
+# We also cache-bust via ?v=YYYYMMDDHHMM query strings on every push.
 /*.js
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=300, must-revalidate
 
 /*.css
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=300, must-revalidate
 
 # ── Images ──────────────────────────────────────────────────────────────────
 # Long cache; serve WebP variants via <picture> in HTML
