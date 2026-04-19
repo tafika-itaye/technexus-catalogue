@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@700;800&display=swap');
+
 :root {
   --fl-blue:       #0078D4;
   --fl-blue-dark:  #005A9E;
@@ -909,8 +911,6 @@ div[style*="overflow-x:auto"] { max-width: 100%; }
    Reveal animations + Dark mode toggle
    =================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@700;800&display=swap');
-
 /* --- Typography overrides --- */
 body {
   font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
@@ -959,6 +959,34 @@ h2, h3 { font-weight: 700; }
 [data-theme="dark"] .logo-strip img, [data-theme="dark"] .comp-thumb { opacity: 1; }
 [data-theme="dark"] .pill { background: #1c222b; color: var(--text); border-color: var(--border); }
 
+/* --- Dark mode: fix hardcoded light backgrounds --- */
+[data-theme="dark"] .compliance {
+  background: #10231f;
+  border-color: #0e3a34;
+}
+[data-theme="dark"] .compliance h3 { color: #5fd0c7; }
+[data-theme="dark"] .compliance p  { color: #c8d4da; }
+
+[data-theme="dark"] .cred-box {
+  background: #0e1f2e;
+  border-color: #1d3b5a;
+}
+[data-theme="dark"] .cred-box h3 { color: #6cb8ef; }
+[data-theme="dark"] .cred-box p  { color: #c8d4da; }
+
+[data-theme="dark"] .qe-field input,
+[data-theme="dark"] .qe-field select,
+[data-theme="dark"] .qe-field textarea {
+  background: #1c222b;
+  color: var(--text);
+  border-color: var(--border);
+}
+[data-theme="dark"] .qe-field input::placeholder,
+[data-theme="dark"] .qe-field textarea::placeholder { color: #6e7a88; }
+
+[data-theme="dark"] .search-wrap input { background: #1c222b; color: var(--text); border-color: var(--border); }
+[data-theme="dark"] .search-wrap input::placeholder { color: #6e7a88; }
+
 /* --- Theme toggle button --- */
 .theme-toggle {
   background: transparent;
@@ -999,3 +1027,13 @@ h2, h3 { font-weight: 700; }
   .reveal { opacity: 1 !important; transform: none !important; }
   .theme-toggle { display: none !important; }
 }
+
+
+/* Quick Enquiry safety */
+.quick-enquiry, .qe-inner, .qe-grid, .qe-field, .qe-field * {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
+.qe-inner { display: block !important; }
+.qe-grid { display: grid !important; }

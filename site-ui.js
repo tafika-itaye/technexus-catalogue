@@ -40,7 +40,7 @@
   // ---------------- Reveal animations ----------------
   function initReveal() {
     var targets = document.querySelectorAll(
-      '.card, .gcard, .scard, .stack-item, .sh, .hero, .badges-strip, .compliance, .qe-inner'
+      '.card, .gcard, .scard, .stack-item, .sh, .hero, .badges-strip, .compliance'
     );
     if (!targets.length) return;
     if (!('IntersectionObserver' in window)) {
@@ -55,8 +55,13 @@
           io.unobserve(en.target);
         }
       });
-    }, { rootMargin: '0px 0px -60px 0px', threshold: 0.08 });
+    }, { rootMargin: '0px 0px 0px 0px', threshold: 0.01 });
     targets.forEach(function (el) { io.observe(el); });
+
+    // Safety net: force-reveal anything still hidden after 2s (e.g. if IO misses)
+    setTimeout(function () {
+      targets.forEach(function (el) { el.classList.add('is-visible'); });
+    }, 2000);
   }
 
   if (document.readyState === 'loading') {
