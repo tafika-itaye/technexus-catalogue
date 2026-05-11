@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TechNexus EIS — Software Splash Screen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; background: #0a0e14; }
+
+  .splash {
+    width: 900px;
+    min-height: 540px;
+    background: #040a0f;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 32px 80px rgba(0,0,0,.8), 0 0 0 1px rgba(37,211,102,.15);
+  }
+
+  /* Background decorative elements */
+  .splash::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 80% at -5% 50%, rgba(37,211,102,.08) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 50% at 105% 20%, rgba(0,120,212,.1) 0%, transparent 55%),
+      radial-gradient(ellipse 30% 40% at 70% 100%, rgba(37,211,102,.05) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  /* Grid lines */
+  .splash-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(37,211,102,.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(37,211,102,.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+  }
+
+  /* Left content */
+  .splash-left {
+    flex: 1;
+    padding: 52px 48px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .splash-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+  .splash-brand-logo {
+    width: 36px; height: 36px;
+    background: #25D366;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .6rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    font-family: 'Syne', sans-serif;
+    flex-shrink: 0;
+  }
+  .splash-brand-name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: .9rem;
+    color: rgba(255,255,255,.9);
+    letter-spacing: -.01em;
+  }
+  .splash-brand-tag {
+    font-size: .6rem;
+    color: rgba(255,255,255,.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 1px;
+  }
+
+  .splash-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 5px 12px;
+    background: rgba(37,211,102,.1);
+    border: 1px solid rgba(37,211,102,.25);
+    border-radius: 999px;
+    font-size: .65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #7effc2;
+    margin-bottom: 18px;
+    width: fit-content;
+  }
+  .splash-eyebrow-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #25D366;
+    animation: pdot 2s infinite;
+  }
+  @keyframes pdot { 0%,100%{opacity:1}50%{opacity:.2} }
+
+  .splash-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -.04em;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+  .splash-title em {
+    font-style: normal;
+    color: #25D366;
+  }
+  .splash-subtitle {
+    font-size: .9rem;
+    color: rgba(255,255,255,.55);
+    line-height: 1.5;
+    margin-bottom: 32px;
+    max-width: 320px;
+  }
+
+  .splash-features {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 36px;
+  }
+  .splash-feat {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: .78rem;
+    color: rgba(255,255,255,.75);
+  }
+  .splash-feat-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #25D366;
+    flex-shrink: 0;
+  }
+
+  .splash-contact {
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,.07);
+  }
+  .splash-contact-line {
+    font-size: .72rem;
+    color: rgba(255,255,255,.45);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .splash-contact-line strong { color: rgba(255,255,255,.7); }
+
+  /* Right side */
+  .splash-right {
+    width: 320px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 28px;
+    border-left: 1px solid rgba(255,255,255,.06);
+    gap: 16px;
+  }
+
+  /* MRA certified badge */
+  .mra-badge {
+    width: 180px;
+    height: 180px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .mra-badge-ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 3px solid rgba(37,211,102,.3);
+    animation: spin-slow 12s linear infinite;
+  }
+  .mra-badge-ring-2 {
+    position: absolute;
+    inset: 10px;
+    border-radius: 50%;
+    border: 1px dashed rgba(37,211,102,.2);
+    animation: spin-slow 20s linear infinite reverse;
+  }
+  @keyframes spin-slow { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+  .mra-badge-inner {
+    position: relative;
+    z-index: 2;
+    width: 130px; height: 130px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 40% 35%, #1a3a2a, #06130d);
+    border: 2px solid rgba(37,211,102,.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    box-shadow: 0 0 30px rgba(37,211,102,.15), inset 0 1px 0 rgba(37,211,102,.1);
+  }
+  .mra-badge-check {
+    font-size: 1.8rem;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .mra-badge-label {
+    font-size: .58rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: rgba(255,255,255,.5);
+  }
+  .mra-badge-main {
+    font-family: 'Syne', sans-serif;
+    font-size: .82rem;
+    font-weight: 800;
+    color: #25D366;
+    letter-spacing: -.5px;
+  }
+  .mra-badge-sub {
+    font-size: .58rem;
+    color: rgba(255,255,255,.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 2px;
+  }
+
+  /* Pkg mini-cards */
+  .splash-pkgs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .splash-pkg {
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 6px;
+    padding: 10px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .splash-pkg-name {
+    font-size: .72rem;
+    color: rgba(255,255,255,.65);
+    font-weight: 500;
+  }
+  .splash-pkg-price {
+    font-size: .72rem;
+    font-weight: 700;
+    color: #25D366;
+    white-space: nowrap;
+  }
+  .splash-pkg-sub {
+    font-size: .6rem;
+    color: rgba(255,255,255,.3);
+    margin-top: 1px;
+  }
+
+  /* Bottom strip */
+  .splash-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, #25D366, #0078D4, #25D366);
+    background-size: 200% 100%;
+    animation: shimmer 3s linear infinite;
+  }
+  @keyframes shimmer { 0%{background-position:0% 0%} 100%{background-position:200% 0%} }
+
+  /* Version tag */
+  .splash-version {
+    position: absolute;
+    top: 18px;
+    right: 24px;
+    font-size: .6rem;
+    color: rgba(255,255,255,.25);
+    font-family: 'Inter', monospace;
+    z-index: 10;
+  }
+
+  /* Print / export hint */
+  .export-hint {
+    text-align: center;
+    color: rgba(255,255,255,.3);
+    font-size: .72rem;
+    margin: 16px auto 0;
+    font-family: 'Inter', sans-serif;
+  }
+  .export-hint a {
+    color: #25D366;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  @media print {
+    body { background: #040a0f; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .splash { margin: 0; border-radius: 0; box-shadow: none; }
+    .export-hint { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="splash">
+  <div class="splash-grid"></div>
+  <div class="splash-version">v1.0 · May 2026</div>
+
+  <!-- Left -->
+  <div class="splash-left">
+    <div>
+      <div class="splash-brand">
+        <div class="splash-brand-logo">TN</div>
+        <div>
+          <div class="splash-brand-name">TechNexus</div>
+          <div class="splash-brand-tag">Blantyre, Malawi</div>
+        </div>
+      </div>
+
+      <div class="splash-eyebrow"><span class="splash-eyebrow-dot"></span> MRA EIS Certified Platform</div>
+
+      <div class="splash-title">EIS Bridge<br>&amp; POS<br><em>Software</em></div>
+      <div class="splash-subtitle">MRA-compliant electronic invoicing for VAT-registered businesses. QR receipts. Automated submissions. Local support.</div>
+
+      <div class="splash-features">
+        <div class="splash-feat"><span class="splash-feat-dot"></span> Real-time EIS submission to MRA</div>
+        <div class="splash-feat"><span class="splash-feat-dot"></span> QR-signed receipts on every sale</div>
+        <div class="splash-feat"><span class="splash-feat-dot"></span> Offline queue — no missed submissions</div>
+        <div class="splash-feat"><span class="splash-feat-dot"></span> Multi-tenant · multi-branch ready</div>
+        <div class="splash-feat"><span class="splash-feat-dot"></span> Connects to QuickBooks, Sage &amp; more</div>
+        <div class="splash-feat"><span class="splash-feat-dot"></span> Onboarding in 72 hours</div>
+      </div>
+    </div>
+
+    <div class="splash-contact">
+      <div class="splash-contact-line">
+        <svg viewBox="0 0 24 24" fill="#25D366" width="12" height="12"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        <strong>+265 889 941 700</strong>
+      </div>
+      <div class="splash-contact-line">✉ <strong>technexus_mw@proton.me</strong></div>
+      <div class="splash-contact-line">🌐 <strong>www.technexusmw.com/eis.html</strong></div>
+    </div>
+  </div>
+
+  <!-- Right -->
+  <div class="splash-right">
+    <div class="mra-badge">
+      <div class="mra-badge-ring"></div>
+      <div class="mra-badge-ring-2"></div>
+      <div class="mra-badge-inner">
+        <div class="mra-badge-check">✅</div>
+        <div class="mra-badge-label">Certified</div>
+        <div class="mra-badge-main">MRA EIS</div>
+        <div class="mra-badge-sub">Malawi Revenue Authority</div>
+      </div>
+    </div>
+
+    <div class="splash-pkgs">
+      <div class="splash-pkg">
+        <div>
+          <div class="splash-pkg-name">Bridge Only</div>
+          <div class="splash-pkg-sub">+ MWK 35k/mo</div>
+        </div>
+        <div class="splash-pkg-price">MWK 120,000</div>
+      </div>
+      <div class="splash-pkg">
+        <div>
+          <div class="splash-pkg-name">Mobile POS Starter</div>
+          <div class="splash-pkg-sub">+ MWK 50k/mo</div>
+        </div>
+        <div class="splash-pkg-price">MWK 520,000</div>
+      </div>
+      <div class="splash-pkg" style="border-color:rgba(37,211,102,.25);background:rgba(37,211,102,.05)">
+        <div>
+          <div class="splash-pkg-name" style="color:#7effc2">Counter POS Business</div>
+          <div class="splash-pkg-sub">+ MWK 70k/mo · Popular</div>
+        </div>
+        <div class="splash-pkg-price">MWK 750,000</div>
+      </div>
+      <div class="splash-pkg">
+        <div>
+          <div class="splash-pkg-name">Retail Pro</div>
+          <div class="splash-pkg-sub">+ MWK 110k/mo</div>
+        </div>
+        <div class="splash-pkg-price">MWK 1,250,000</div>
+      </div>
+      <div class="splash-pkg">
+        <div>
+          <div class="splash-pkg-name">Enterprise / Multi-Branch</div>
+          <div class="splash-pkg-sub">+ MWK 150k–300k/mo</div>
+        </div>
+        <div class="splash-pkg-price">From 1,500,000</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="splash-bottom"></div>
+</div>
+
+<div class="export-hint">
+  <a onclick="window.print()">🖨 Print / Save as PDF</a>
+  &nbsp;·&nbsp;
+  <a href="eis.html">View full EIS page →</a>
+</div>
+</body>
+</html>
