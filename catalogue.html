@@ -26,7 +26,9 @@
 <link rel="alternate" hreflang="ny" href="https://www.technexusmw.com/NY/catalogue.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="styles.css?v=202604190622">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@700;800&display=swap"></noscript>
+<link rel="stylesheet" href="styles.css?v=202605110002">
 <link rel="preload" as="image" href="Products_logos/technexuslogo1.webp" fetchpriority="high">
 <link rel="manifest" href="/manifest.json">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"TechNexus","legalName":"TechNexus MW","url":"https://www.technexusmw.com","logo":"https://www.technexusmw.com/Products_logos/technexuslogo1.webp","telephone":"+265-889-941-700","email":"technexus_mw@proton.me","address":{"@type":"PostalAddress","addressLocality":"Blantyre","addressCountry":"MW"},"sameAs":["https://wa.me/265889941700"],"identifier":"BRN.A6SNWQY","description":"Pan-African supplier of IT hardware, custom PC assembly, software development, language services and medical equipment."}</script>
@@ -197,7 +199,13 @@ function sendQE(){
   if(o&&o.value.trim())t+='Org: '+encodeURIComponent(o.value.trim())+'%0A';
   if(s&&s.value&&s.selectedIndex>0)t+='Service: '+encodeURIComponent(s.value)+'%0A';
   if(m&&m.value.trim())t+='Message: '+encodeURIComponent(m.value.trim());
-  window.open('https://wa.me/265889941700?text='+t,'_blank');
+  var plainMsg='TechNexus Enquiry';
+  var _n=document.getElementById('qeName'),_o=document.getElementById('qeOrg'),_s=document.getElementById('qeService'),_m=document.getElementById('qeMsg');
+  if(_n&&_n.value.trim())plainMsg+='\nName: '+_n.value.trim();
+  if(_o&&_o.value.trim())plainMsg+='\nOrg: '+_o.value.trim();
+  if(_s&&_s.selectedIndex>0)plainMsg+='\nService: '+_s.value;
+  if(_m&&_m.value.trim())plainMsg+='\nMessage: '+_m.value.trim();
+  if(window._tnWaOpen){window._tnWaOpen(plainMsg);}else{window.open('https://wa.me/265889941700?text='+encodeURIComponent(plainMsg),'_blank');}
 }
 </script>
 <footer>
@@ -271,4 +279,5 @@ if('serviceWorker' in navigator){window.addEventListener('load',function(){navig
 })();
 </script>
 <script src="site-ui.js?v=202604190622" defer></script>
+<script src="wa-chat.js?v=202605110001" defer></script>
 </body></html>
