@@ -210,13 +210,24 @@
   padding: 0 40px;
 }
 .eis-pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
   gap: 1px;
   background: var(--border);
   border-radius: 8px;
-  overflow: hidden;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
 }
+.eis-pricing-grid::-webkit-scrollbar { display: none; }
+.eis-scroll-hint {
+  text-align: center;
+  font-size: .72rem;
+  color: var(--muted);
+  margin-top: 10px;
+  display: none;
+}
+@media(max-width:1160px) { .eis-scroll-hint { display: block; } }
 .eis-pkg {
   background: var(--surface);
   padding: 28px 20px;
@@ -225,6 +236,9 @@
   gap: 4px;
   position: relative;
   transition: background .15s;
+  flex: 0 0 220px;
+  scroll-snap-align: start;
+  min-width: 0;
 }
 .eis-pkg:hover { background: var(--fl-blue-light); }
 .eis-pkg-featured {
