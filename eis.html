@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@700;800&display=swap"></noscript>
-<link rel="stylesheet" href="styles.css?v=202605110002">
+<link rel="stylesheet" href="styles.css?v=202605150001">
 <link rel="preload" as="image" href="Products_logos/technexuslogo1.webp" fetchpriority="high">
 <link rel="manifest" href="/manifest.json">
 <style>
@@ -204,30 +204,48 @@
 .eis-step h4 { font-size: .8rem; font-weight: 700; color: var(--text); margin-bottom: 5px; }
 .eis-step p { font-size: .72rem; color: var(--muted); line-height: 1.5; margin: 0; }
 /* Pricing */
+/* ── Pricing slider — clean single source of truth ── */
 .eis-pricing {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 40px;
+  padding: 0;
+}
+.eis-pricing-slider-wrap {
+  position: relative;
 }
 .eis-pricing-grid {
   display: flex;
   gap: 1px;
   background: var(--border);
-  border-radius: 8px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+  border-radius: 12px;
+  overflow: hidden;
 }
-.eis-pricing-grid::-webkit-scrollbar { display: none; }
-.eis-scroll-hint {
-  text-align: center;
-  font-size: .72rem;
-  color: var(--muted);
-  margin-top: 10px;
-  display: none;
+.eis-slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text);
+  z-index: 10;
+  transition: background .15s, box-shadow .15s;
 }
-@media(max-width:1160px) { .eis-scroll-hint { display: block; } }
+.eis-slider-btn:hover { background: var(--surface); box-shadow: 0 4px 20px rgba(0,0,0,.2); }
+.eis-slider-btn:disabled { opacity: .3; cursor: default; }
+.eis-slider-btn-prev { left: -20px; }
+.eis-slider-btn-next { right: -20px; }
+.eis-slider-dots {
+  display: flex; justify-content: center; gap: 6px; margin-top: 14px;
+}
+.eis-slider-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--border); transition: background .2s, transform .2s;
+  cursor: pointer; border: none; padding: 0;
+}
+.eis-slider-dot.active { background: #25D366; transform: scale(1.3); }
 .eis-pkg {
   background: var(--surface);
   padding: 28px 20px;
@@ -235,9 +253,8 @@
   flex-direction: column;
   gap: 4px;
   position: relative;
-  transition: background .15s;
-  flex: 0 0 220px;
-  scroll-snap-align: start;
+  transition: background .15s, opacity .2s;
+  flex: 1 1 0;
   min-width: 0;
 }
 .eis-pkg:hover { background: var(--fl-blue-light); }
@@ -322,27 +339,8 @@
   border: 1px solid rgba(255,255,255,.25);
 }
 .eis-pkg-cta-ghost:hover { background: rgba(255,255,255,.2); color: #fff; }
-/* Pricing scroll wrapper */
-.eis-pricing-wrap {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
-  scrollbar-color: #25D366 var(--border);
-}
-.eis-pricing-wrap::-webkit-scrollbar { height: 4px; }
-.eis-pricing-wrap::-webkit-scrollbar-track { background: var(--border); }
-.eis-pricing-wrap::-webkit-scrollbar-thumb { background: #25D366; border-radius: 2px; }
-.eis-pricing-grid { min-width: 860px; }
-.eis-scroll-hint {
-  display: none;
-  text-align: center;
-  font-size: .72rem;
-  color: var(--muted);
-  margin-top: 10px;
-  letter-spacing: .3px;
-}
+/* scroll wrapper removed — JS slider handles navigation */
 @media (max-width: 900px) {
-  .eis-scroll-hint { display: block; }
 }
 /* Incentives */
 .eis-incentive-strip {
@@ -546,6 +544,9 @@
     </div>
   </div>
   <nav aria-label="Main navigation">
+    <button class="ham-btn" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+      <span class="ham-bar"></span>
+    </button>
     <a href="index.html">Home</a>
     <a href="catalogue.html">IT Catalogue</a>
     <a href="computer-assembly.html">PC Assembly</a>
@@ -642,7 +643,14 @@
       <h2>Pricing — no hidden costs</h2>
       <p>Setup is once-off. Monthly fee covers monitoring, support, and all MRA update handling.</p>
     </div>
-    <div class="eis-pricing-wrap"><div class="eis-pricing-grid">
+    <div class="eis-pricing-slider-wrap">
+      <button class="eis-slider-btn eis-slider-btn-prev" id="eisPrev" aria-label="Previous package">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="eis-slider-btn eis-slider-btn-next" id="eisNext" aria-label="Next package">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+      <div class="eis-pricing-grid" id="eisGrid">
       <div class="eis-pkg">
         <div class="eis-pkg-name">Bridge Only</div>
         <div class="eis-pkg-setup">MWK 120,000</div>
@@ -699,9 +707,9 @@
           Request site visit
         </a>
       </div>
-    </div><!-- /eis-pricing-grid -->
-    </div><!-- /eis-pricing-wrap -->
-    <p class="eis-scroll-hint">← Swipe to see all packages →</p>
+      </div><!-- /eis-pricing-grid -->
+      <div class="eis-slider-dots" id="eisDots"></div>
+    </div><!-- /eis-pricing-slider-wrap -->
 
     <div class="eis-incentive-strip">
       <div class="eis-incentive">
@@ -865,10 +873,44 @@
 </div>
 
 <footer>
-  <strong>TechNexus</strong> | Blantyre, Malawi<br>
-  <a href="#" id="footer-wa" aria-label="WhatsApp"><svg width="18" height="18" aria-hidden="true"><use href="#wa-icon" fill="#25D366"/></svg></a>
-  <a href="tel:+265889941700">+265 889 941 700</a> · <a href="mailto:technexus_mw@proton.me">technexus_mw@proton.me</a><br>
-  <div style="margin-top:12px;font-size:.72rem;opacity:.6">© 2026 TechNexus. All rights reserved. Prices indicative and subject to change. &nbsp;·&nbsp; <a href="/privacy.html" style="color:inherit;text-decoration:underline">Privacy Policy</a> &nbsp;·&nbsp; <a href="/terms.html" style="color:inherit;text-decoration:underline">Terms of Service</a></div>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h4>TechNexus</h4>
+      <p>Pan-African supplier of IT hardware, custom software, language services, and medical equipment. PPDA registered. Blantyre, Malawi.</p>
+      <div class="footer-contact-item"><svg width="16" height="16" aria-hidden="true"><use href="#wa-icon" fill="#25D366"/></svg><a href="https://wa.me/265889941700" target="_blank" rel="noopener">+265 889 941 700</a></div>
+      <div class="footer-contact-item">📍 Blantyre, Malawi</div>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="catalogue.html">IT Catalogue</a></li>
+        <li><a href="computer-assembly.html">PC Assembly</a></li>
+        <li><a href="software-development.html">Software Dev</a></li>
+        <li><a href="language-services.html">Language Services</a></li>
+        <li><a href="medical-supplies.html">Medical Supplies</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Platform</h5>
+      <ul>
+        <li><a href="eis.html">EIS Compliance</a></li>
+        <li><a href="demos.html">Software Demos</a></li>
+        <li><a href="credentials.html">Credentials</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Language</h5>
+      <ul>
+        <li><a href="index.html">English</a></li>
+        <li><a href="PT/index.html">Português</a></li>
+        <li><a href="NY/index.html">Chichewa</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 TechNexus. All rights reserved. Prices indicative and subject to change.</span>
+    <span><a href="/privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="/terms.html">Terms of Service</a></span>
+  </div>
 </footer>
 
 <div class="fab-cluster" id="fabCluster">
@@ -900,7 +942,76 @@ function sendEisQE(){
   });
 })();
 </script>
-<script src="wa-chat.js?v=202605110001" defer></script>
+
+<script>
+(function(){
+  var grid = document.getElementById('eisGrid');
+  var prev = document.getElementById('eisPrev');
+  var next = document.getElementById('eisNext');
+  var dotsWrap = document.getElementById('eisDots');
+  if(!grid || !prev || !next) return;
+
+  var pkgs = Array.from(grid.querySelectorAll('.eis-pkg'));
+  var total = pkgs.length;
+  var current = 0;
+
+  function visible() {
+    var w = window.innerWidth;
+    if(w >= 1100) return 5;
+    if(w >= 800) return 3;
+    if(w >= 560) return 2;
+    return 1;
+  }
+
+  function show(idx) {
+    var vis = visible();
+    var max = Math.max(0, total - vis);
+    current = Math.min(Math.max(0, idx), max);
+    pkgs.forEach(function(p, i) {
+      var inView = i >= current && i < current + vis;
+      p.style.display = inView ? 'flex' : 'none';
+    });
+    prev.disabled = current === 0;
+    next.disabled = current >= max;
+    var dots = dotsWrap ? dotsWrap.querySelectorAll('.eis-slider-dot') : [];
+    dots.forEach(function(d, i){ d.classList.toggle('active', i === current); });
+  }
+
+  function buildDots() {
+    if(!dotsWrap) return;
+    dotsWrap.innerHTML = '';
+    var vis = visible();
+    var steps = Math.max(1, total - vis + 1);
+    var needNav = steps > 1;
+    [prev, next].forEach(function(b){ b.style.display = needNav ? '' : 'none'; });
+    dotsWrap.style.display = needNav ? '' : 'none';
+    if(!needNav) return;
+    for(var i = 0; i < steps; i++) {
+      (function(idx){
+        var btn = document.createElement('button');
+        btn.className = 'eis-slider-dot' + (idx === current ? ' active' : '');
+        btn.setAttribute('aria-label', 'Package ' + (idx+1));
+        btn.addEventListener('click', function(){ show(idx); });
+        dotsWrap.appendChild(btn);
+      })(i);
+    }
+  }
+
+  prev.addEventListener('click', function(){ show(current - 1); });
+  next.addEventListener('click', function(){ show(current + 1); });
+
+  var startX = 0;
+  grid.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; },{passive:true});
+  grid.addEventListener('touchend', function(e){
+    var dx = e.changedTouches[0].clientX - startX;
+    if(Math.abs(dx) > 40){ dx < 0 ? show(current+1) : show(current-1); }
+  },{passive:true});
+
+  buildDots(); show(0);
+  window.addEventListener('resize', function(){ buildDots(); show(current); });
+})();
+</script>
+<script src="wa-chat.js?v=202605150001" defer></script>
 <script src="/security.js" defer></script>
 </body>
 </html>

@@ -70,3 +70,50 @@
     initReveal();
   }
 })();
+
+// ── Hamburger mobile nav toggle ──────────────────────────────────────────────
+(function () {
+  var btn = document.querySelector('.ham-btn');
+  var hdr = document.querySelector('header');
+  if (!btn || !hdr) return;
+
+  btn.addEventListener('click', function () {
+    var isOpen = hdr.classList.toggle('nav-open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  });
+
+  // close on nav link click (mobile UX)
+  document.querySelectorAll('nav a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      hdr.classList.remove('nav-open');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // close on outside click
+  document.addEventListener('click', function (e) {
+    if (hdr.classList.contains('nav-open') && !hdr.contains(e.target)) {
+      hdr.classList.remove('nav-open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
+
+// ── Sticky header scroll-glass ───────────────────────────────────────────────
+(function () {
+  var hdr = document.querySelector('header');
+  if (!hdr) return;
+  var threshold = 60;
+
+  function onScroll() {
+    if (window.scrollY > threshold) {
+      hdr.classList.add('header-scrolled');
+    } else {
+      hdr.classList.remove('header-scrolled');
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll(); // run once on load
+})();
