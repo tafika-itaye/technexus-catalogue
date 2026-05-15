@@ -54,15 +54,39 @@
     banner.setAttribute('role', 'dialog');
     banner.setAttribute('aria-live', 'polite');
     banner.setAttribute('aria-label', 'Cookie consent');
-    banner.innerHTML =
-      '<div class="tn-cb-inner">' +
-        '<p class="tn-cb-text">We use anonymised analytics (Google Analytics, IP anonymised) to understand how visitors use our site. No advertising cookies. No data sold. ' +
-        '<a href="/privacy.html">Privacy Policy</a>.</p>' +
-        '<div class="tn-cb-btns">' +
-          '<button id="tn-consent-deny" type="button">Decline analytics</button>' +
-          '<button id="tn-consent-accept" type="button" class="tn-cb-primary">Accept analytics</button>' +
-        '</div>' +
-      '</div>';
+
+    // Build DOM — no innerHTML to avoid XSS risk in static strings
+    var inner = document.createElement('div');
+    inner.className = 'tn-cb-inner';
+
+    var p = document.createElement('p');
+    p.className = 'tn-cb-text';
+    p.textContent = 'We use anonymised analytics (Google Analytics, IP anonymised) to understand how visitors use our site. No advertising cookies. No data sold. ';
+    var link = document.createElement('a');
+    link.href = '/privacy.html';
+    link.textContent = 'Privacy Policy';
+    p.appendChild(link);
+    p.appendChild(document.createTextNode('.'));
+
+    var btns = document.createElement('div');
+    btns.className = 'tn-cb-btns';
+
+    var deny = document.createElement('button');
+    deny.id = 'tn-consent-deny';
+    deny.type = 'button';
+    deny.textContent = 'Decline analytics';
+
+    var accept = document.createElement('button');
+    accept.id = 'tn-consent-accept';
+    accept.type = 'button';
+    accept.className = 'tn-cb-primary';
+    accept.textContent = 'Accept analytics';
+
+    btns.appendChild(deny);
+    btns.appendChild(accept);
+    inner.appendChild(p);
+    inner.appendChild(btns);
+    banner.appendChild(inner);
 
     // Styles injected inline so no extra CSS file is needed
     var style = document.createElement('style');

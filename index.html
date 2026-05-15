@@ -170,6 +170,11 @@
     <h3>📬 Quick Enquiry</h3>
     <p>Fill in below — we'll respond via WhatsApp within 24 hours.</p>
     <div class="qe-grid">
+      <!-- Honeypot: hidden from humans, filled by bots -->
+      <div class="qe-field" style="display:none!important;position:absolute;left:-9999px" aria-hidden="true">
+        <label for="qeWebsite">Website</label>
+        <input type="text" id="qeWebsite" name="website" tabindex="-1" autocomplete="off">
+      </div>
       <div class="qe-field"><label for="qeName">Name *</label><input type="text" id="qeName" placeholder="Your name" autocomplete="name"></div>
       <div class="qe-field"><label for="qeOrg">Organisation</label><input type="text" id="qeOrg" placeholder="Company / NGO / Institution" autocomplete="organization"></div>
       <div class="qe-field"><label for="qeService">Service *</label>
@@ -195,6 +200,9 @@
 </div>
 <script>
 function sendQE(){
+  // Honeypot check — bots fill hidden fields, humans don't
+  var hp=document.getElementById('qeWebsite');
+  if(hp&&hp.value.trim()){return;}
   var n=document.getElementById('qeName'),o=document.getElementById('qeOrg'),s=document.getElementById('qeService'),m=document.getElementById('qeMsg');
   if(!n||!n.value.trim()){if(n){n.focus();n.style.borderColor='red';setTimeout(function(){n.style.borderColor='';},2000);}return;}
   var t='TechNexus Enquiry%0AName: '+encodeURIComponent(n.value.trim())+'%0A';
@@ -255,23 +263,48 @@ if('serviceWorker' in navigator){window.addEventListener('load',function(){navig
 </div>
 <script>
 (function(){
-  var path=window.location.pathname;
-  var inPT=path.indexOf('/PT/')!==-1,inNY=path.indexOf('/NY/')!==-1;
-  var cur=inPT?'pt':inNY?'ny':'en';
-  var saved=localStorage.getItem('tn_lang');
-  if(saved&&saved!==cur){
-    var base=path.replace('/PT/','/').replace('/NY/','/');
-    var fn=base.split('/').pop()||'index.html';
-    if(!fn.endsWith('.html'))fn='index.html';
-    var root=window.location.origin+'/';
-    var t=saved==='pt'?root+'PT/'+fn:saved==='ny'?root+'NY/'+fn:root+fn;
-    if(t!==window.location.href)window.location.replace(t);
+  // Allowlisted languages — validate before any redirect
+  var ALLOWED_LANGS = {'en':true,'pt':true,'ny':true};
+  // Allowlisted page filenames — prevent path traversal
+  var ALLOWED_PAGES = {
+    'index.html':true,'catalogue.html':true,'computer-assembly.html':true,
+    'language-services.html':true,'medical-supplies.html':true,
+    'software-development.html':true,'credentials.html':true,
+    'eis.html':true,'demos.html':true,'404.html':true,
+    'privacy.html':true,'terms.html':true
+  };
+
+  var path = window.location.pathname;
+  var inPT = path.indexOf('/PT/') !== -1;
+  var inNY = path.indexOf('/NY/') !== -1;
+  var cur  = inPT ? 'pt' : inNY ? 'ny' : 'en';
+
+  var saved;
+  try { saved = localStorage.getItem('tn_lang'); } catch(e) {}
+
+  if (saved && ALLOWED_LANGS[saved] && saved !== cur) {
+    var base = path.replace('/PT/','/').replace('/NY/','/');
+    var fn   = base.split('/').pop() || 'index.html';
+    fn = fn.replace(/[^a-zA-Z0-9\-_.]/g,'');
+    if (!fn || !ALLOWED_PAGES[fn]) fn = 'index.html';
+    var root = window.location.origin + '/';
+    var dest = saved === 'pt' ? root + 'PT/' + fn
+             : saved === 'ny' ? root + 'NY/' + fn
+             : root + fn;
+    if (dest.indexOf(window.location.origin) === 0 && dest !== window.location.href) {
+      window.location.replace(dest);
+    }
   }
+
   document.querySelectorAll('.lang-switch a').forEach(function(a){
-    a.addEventListener('click',function(){
-      var h=this.getAttribute('href');
-      var l=h.indexOf('/PT/')!==-1||h.startsWith('PT/')?'pt':h.indexOf('/NY/')!==-1||h.startsWith('NY/')?'ny':'en';
-      localStorage.setItem('tn_lang',l);
+    a.addEventListener('click', function(){
+      var h = this.getAttribute('href') || '';
+      var l = (h.indexOf('/PT/') !== -1 || h.startsWith('PT/')) ? 'pt'
+            : (h.indexOf('/NY/') !== -1 || h.startsWith('NY/')) ? 'ny'
+            : 'en';
+      if (ALLOWED_LANGS[l]) {
+        try { localStorage.setItem('tn_lang', l); } catch(e) {}
+      }
     });
   });
 })();

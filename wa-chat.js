@@ -188,7 +188,14 @@
     if (wrap) {
       const b = document.createElement('div');
       b.className = 'tn-wa-bubble tn-wa-bubble-out';
-      b.innerHTML = '<span>' + msg.replace(/</g,'&lt;') + '</span><span class="tn-wa-time">You · now</span>';
+      // Use DOM API — never innerHTML with user input
+      const msgSpan = document.createElement('span');
+      msgSpan.textContent = msg;
+      const timeSpan = document.createElement('span');
+      timeSpan.className = 'tn-wa-time';
+      timeSpan.textContent = 'You · now';
+      b.appendChild(msgSpan);
+      b.appendChild(timeSpan);
       wrap.appendChild(b);
       b.scrollIntoView({ behavior: 'smooth' });
     }
