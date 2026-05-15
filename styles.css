@@ -1211,44 +1211,7 @@ header.header-scrolled {
   color: #fff;
 }
 
-/* ═══ Hero stat bar ═══ */
-.hero-stats {
-  display: flex;
-  gap: 0;
-  margin-top: 28px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  background: var(--surface);
-  max-width: 560px;
-}
-.hero-stat {
-  flex: 1;
-  padding: 14px 12px;
-  text-align: center;
-  border-right: 1px solid var(--border);
-}
-.hero-stat:last-child { border-right: none; }
-.hero-stat strong {
-  display: block;
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: var(--accent);
-  line-height: 1.1;
-}
-.hero-stat span {
-  display: block;
-  font-size: .65rem;
-  text-transform: uppercase;
-  letter-spacing: .8px;
-  color: var(--muted);
-  margin-top: 2px;
-}
-
 @media (max-width: 500px) {
-  .hero-stats { max-width: 100%; }
-  .hero-stat { padding: 10px 6px; }
-  .hero-stat strong { font-size: 1.1rem; }
 }
 
 /* ═══ Footer responsive ═══ */
