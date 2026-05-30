@@ -214,23 +214,48 @@ if('serviceWorker' in navigator){window.addEventListener('load',function(){navig
 </div>
 <script>
 (function(){
-  var path=window.location.pathname;
-  var inPT=path.indexOf('/PT/')!==-1,inNY=path.indexOf('/NY/')!==-1;
-  var cur=inPT?'pt':inNY?'ny':'en';
-  var saved=localStorage.getItem('tn_lang');
-  if(saved&&saved!==cur){
-    var base=path.replace('/PT/','/').replace('/NY/','/');
-    var fn=base.split('/').pop()||'index.html';
-    if(!fn.endsWith('.html'))fn='index.html';
-    var root=window.location.origin+'/';
-    var t=saved==='pt'?root+'PT/'+fn:saved==='ny'?root+'NY/'+fn:root+fn;
-    if(t!==window.location.href)window.location.replace(t);
+  // Allowlisted languages — validate before any redirect
+  var ALLOWED_LANGS = {'en':true,'pt':true,'ny':true};
+  // Allowlisted page filenames — prevent path traversal
+  var ALLOWED_PAGES = {
+    'index.html':true,'catalogue.html':true,'computer-assembly.html':true,
+    'language-services.html':true,'medical-supplies.html':true,
+    'software-development.html':true,'credentials.html':true,
+    'eis.html':true,'demos.html':true,'404.html':true,
+    'privacy.html':true,'terms.html':true
+  };
+
+  var path = window.location.pathname;
+  var inPT = path.indexOf('/PT/') !== -1;
+  var inNY = path.indexOf('/NY/') !== -1;
+  var cur  = inPT ? 'pt' : inNY ? 'ny' : 'en';
+
+  var saved;
+  try { saved = localStorage.getItem('tn_lang'); } catch(e) {}
+
+  if (saved && ALLOWED_LANGS[saved] && saved !== cur) {
+    var base = path.replace('/PT/','/').replace('/NY/','/');
+    var fn   = base.split('/').pop() || 'index.html';
+    fn = fn.replace(/[^a-zA-Z0-9\-_.]/g,'');
+    if (!fn || !ALLOWED_PAGES[fn]) fn = 'index.html';
+    var root = window.location.origin + '/';
+    var dest = saved === 'pt' ? root + 'PT/' + fn
+             : saved === 'ny' ? root + 'NY/' + fn
+             : root + fn;
+    if (dest.indexOf(window.location.origin) === 0 && dest !== window.location.href) {
+      window.location.replace(dest);
+    }
   }
+
   document.querySelectorAll('.lang-switch a').forEach(function(a){
-    a.addEventListener('click',function(){
-      var h=this.getAttribute('href');
-      var l=h.indexOf('/PT/')!==-1||h.startsWith('PT/')?'pt':h.indexOf('/NY/')!==-1||h.startsWith('NY/')?'ny':'en';
-      localStorage.setItem('tn_lang',l);
+    a.addEventListener('click', function(){
+      var h = this.getAttribute('href') || '';
+      var l = (h.indexOf('/PT/') !== -1 || h.startsWith('PT/')) ? 'pt'
+            : (h.indexOf('/NY/') !== -1 || h.startsWith('NY/')) ? 'ny'
+            : 'en';
+      if (ALLOWED_LANGS[l]) {
+        try { localStorage.setItem('tn_lang', l); } catch(e) {}
+      }
     });
   });
 })();
