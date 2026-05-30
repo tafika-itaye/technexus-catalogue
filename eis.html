@@ -795,6 +795,66 @@
       .plans-grid .plan:last-child { grid-column: span 1; }
       .offers-grid { grid-template-columns: 1fr; }
     }
+
+    /* FAQ */
+    #faq { background: var(--c-surface); border-top: 1px solid var(--c-border); }
+
+    .faq-list {
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      background: var(--c-border);
+      border: 1px solid var(--c-border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .faq-item {
+      background: var(--c-bg);
+      transition: background 0.15s;
+    }
+
+    .faq-item[open] { background: var(--c-surface2); }
+
+    .faq-q {
+      padding: 20px 24px;
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--c-white);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      user-select: none;
+    }
+
+    .faq-q::-webkit-details-marker { display: none; }
+
+    .faq-q::after {
+      content: '+';
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--c-green);
+      flex-shrink: 0;
+      margin-left: 16px;
+      transition: transform 0.2s;
+    }
+
+    .faq-item[open] .faq-q::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-a {
+      padding: 0 24px 20px;
+      font-size: 14px;
+      color: var(--c-text-muted);
+      line-height: 1.7;
+      font-weight: 300;
+      max-width: 720px;
+    }
   </style>
 </head>
 <body>
@@ -1086,6 +1146,46 @@
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">Common questions</h2>
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary class="faq-q">Do I need to buy new hardware?</summary>
+          <p class="faq-a">Not always. If you already have a POS or accounting system, the Bridge Only plan connects it to MRA EIS with no hardware changes. If you need a full POS terminal, we supply and configure it as part of the Mobile POS, Counter POS, or Retail Pro packages.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">What happens when the internet goes down?</summary>
+          <p class="faq-a">The system queues all transactions locally and submits them to MRA when connectivity resumes. You keep trading without interruption. MRA allows a defined offline window and our system handles the sync automatically.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">How long does MRA registration take?</summary>
+          <p class="faq-a">Bridge-only clients are typically live within 1 to 3 business days. Counter and Retail POS installations take 3 to 5 days depending on the number of terminals. We handle the MRA registration and device activation on your behalf.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">Can I keep my existing POS or accounting software?</summary>
+          <p class="faq-a">Yes. The Bridge Only plan is designed exactly for this. We integrate with common systems used in Malawi including Pastel, QuickBooks, and custom setups. We assess your system before recommending the right plan.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">What does the monthly fee cover?</summary>
+          <p class="faq-a">Ongoing monitoring, same-day support, and all MRA update handling. When MRA releases firmware or compliance updates, we apply them at no extra charge. The monthly fee is fixed with no hidden integration costs.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">What if I have multiple branches?</summary>
+          <p class="faq-a">The Multi-Branch plan covers deployments across multiple sites. We do a site visit, assess each location, and provide a custom quote. Each branch gets its own MRA-registered terminals and is monitored centrally.</p>
+        </details>
+
+      </div>
+    </div>
+  </section>
   <!-- CONTACT -->
   <section class="contact-section">
     <div class="container">
@@ -1209,4 +1309,6 @@
 
 </body>
 </html>
+
+
 
