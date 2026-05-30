@@ -24,3 +24,6 @@ dist/
 
 # Generator scratch fragments
 scripts/.catalogue_fragment.html
+
+CLAUDE.md
+AUDIT.md
