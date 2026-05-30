@@ -1,22 +1,21 @@
-/**
- * TechNexus — security.js
+﻿/**
+ * TechNexus - security.js
  * Provides:
- *   1. Cookie/analytics consent banner (GDPR)
+ *   1. Cookie/analytics consent banner
  *   2. Client-side enquiry form rate limiting
+ *   3. Mobile navigation toggle
  *
- * Drop this file in the repo root and add to every HTML page:
+ * Included on every page via:
  *   <script src="/security.js" defer></script>
- * Place the call BEFORE your Google Analytics script tags so
- * GA is only initialised after consent is granted.
  */
 
 (function () {
   'use strict';
 
-  /* ─────────────────────────────────────────
+  /* -------------------------------------------
      1. COOKIE CONSENT BANNER
      Storage key: tn_consent  ('granted' | 'denied')
-  ───────────────────────────────────────── */
+  ------------------------------------------- */
 
   var CONSENT_KEY = 'tn_consent';
 
@@ -29,9 +28,7 @@
   }
 
   function applyConsent(value) {
-    // Control Google Analytics loading based on consent
     if (value === 'granted') {
-      // Load GA only after consent
       if (!document.getElementById('tn-ga-script')) {
         var s = document.createElement('script');
         s.id = 'tn-ga-script';
@@ -45,7 +42,6 @@
         gtag('config', 'G-JZG3NK1DGM', { anonymize_ip: true });
       }
     }
-    // If denied, GA is simply never loaded — no action needed.
   }
 
   function buildBanner() {
@@ -55,7 +51,6 @@
     banner.setAttribute('aria-live', 'polite');
     banner.setAttribute('aria-label', 'Cookie consent');
 
-    // Build DOM — no innerHTML to avoid XSS risk in static strings
     var inner = document.createElement('div');
     inner.className = 'tn-cb-inner';
 
@@ -88,7 +83,6 @@
     inner.appendChild(btns);
     banner.appendChild(inner);
 
-    // Styles injected inline so no extra CSS file is needed
     var style = document.createElement('style');
     style.textContent =
       '#tn-consent-banner{position:fixed;bottom:0;left:0;right:0;z-index:9999;' +
@@ -125,10 +119,8 @@
   function initConsent() {
     var existing = getConsent();
     if (existing) {
-      // Already decided — apply without showing banner
       applyConsent(existing);
     } else {
-      // Show banner after DOM is ready
       if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', buildBanner);
       } else {
@@ -140,18 +132,14 @@
   initConsent();
 
 
-  /* ─────────────────────────────────────────
+  /* -------------------------------------------
      2. CLIENT-SIDE RATE LIMITING FOR FORMS
-     Limits: max 3 submissions per 5-minute window.
-     Stored in localStorage (client-side only —
-     a real backend would enforce server-side limits,
-     but for this static WhatsApp-redirect form this
-     prevents accidental rapid-fire submissions).
-  ───────────────────────────────────────── */
+     Max 3 submissions per 5-minute window.
+  ------------------------------------------- */
 
   var RATE_KEY = 'tn_form_rate';
   var MAX_SUBMISSIONS = 3;
-  var WINDOW_MS = 5 * 60 * 1000; // 5 minutes
+  var WINDOW_MS = 5 * 60 * 1000;
 
   function getRateData() {
     try {
@@ -170,7 +158,6 @@
   function isRateLimited() {
     var data = getRateData();
     var now = Date.now();
-    // Purge entries outside the window
     data.timestamps = data.timestamps.filter(function (t) {
       return now - t < WINDOW_MS;
     });
@@ -188,9 +175,7 @@
     saveRateData(data);
   }
 
-  // Attach rate limiting to any WhatsApp-redirect form/button on the page
   function attachRateLimiting() {
-    // Patch the sendQE function used on index.html
     if (typeof window.sendQE === 'function') {
       var originalSendQE = window.sendQE;
       window.sendQE = function () {
@@ -203,7 +188,6 @@
       };
     }
 
-    // Patch the credentials.html enquiryForm submit handler
     var form = document.getElementById('enquiryForm');
     if (form) {
       form.addEventListener('submit', function (e) {
@@ -222,7 +206,7 @@
         } else {
           recordSubmission();
         }
-      }, true); // capture phase — runs before the existing submit handler
+      }, true);
     }
   }
 
@@ -230,6 +214,55 @@
     document.addEventListener('DOMContentLoaded', attachRateLimiting);
   } else {
     attachRateLimiting();
+  }
+
+
+  /* -------------------------------------------
+     3. MOBILE NAVIGATION TOGGLE
+     Toggles .nav-open on <header>.
+     CSS in styles.css handles show/hide and
+     the hamburger-to-X animation.
+  ------------------------------------------- */
+
+  function initMobileNav() {
+    var btn = document.querySelector('.ham-btn');
+    if (!btn) return;
+
+    var header = btn.closest('header');
+    if (!header) return;
+
+    btn.addEventListener('click', function () {
+      var isOpen = header.classList.toggle('nav-open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+
+    // Close on nav link click
+    var nav = header.querySelector('nav');
+    if (nav) {
+      nav.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+          header.classList.remove('nav-open');
+          btn.setAttribute('aria-expanded', 'false');
+          btn.setAttribute('aria-label', 'Open menu');
+        }
+      });
+    }
+
+    // Close on outside click
+    document.addEventListener('click', function (e) {
+      if (header.classList.contains('nav-open') && !header.contains(e.target)) {
+        header.classList.remove('nav-open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-label', 'Open menu');
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileNav);
+  } else {
+    initMobileNav();
   }
 
 })();
